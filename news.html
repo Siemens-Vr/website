@@ -1,3 +1,5 @@
+news.html
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -441,7 +443,7 @@
           <div class="news-content">
             <div class="news-header">
               <div class="tags">
-                ${news.tags ? news.tags.map(tag => <span class="tag">${tag}</span>).join('') : ''}
+                ${news.tags ? news.tags.map(tag => `<span class="tag">${tag}</span>`).join('') : ''}
               </div>
               <div class="meta-info">
                 <span class="author">${news.author}</span>
@@ -449,7 +451,7 @@
                 <span class="date">${news.date}</span>
               </div>
               <h1>${news.title}</h1>
-              ${news.brief ? <p class="brief">${news.brief}</p> : ''}
+              ${news.brief ? `<p class="brief">${news.brief}</p>` : ''}
             </div>
             <div class="news-body">
               ${news.content}

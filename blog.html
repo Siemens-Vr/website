@@ -24,573 +24,274 @@
     <!-- Libraries Stylesheet -->
     <link href="lib/animate/animate.min.css" rel="stylesheet">
     <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+
+
 
     <!-- Customized Bootstrap Stylesheet -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Template Stylesheet -->
     <link href="css/style.css" rel="stylesheet">
-    <style>
-        body {
-          font-family: system-ui, -apple-system, sans-serif;
-          max-width: 1500px;
-          margin: 0 auto;
-          padding-top: 20px;
-          background-color: #f9fafb;
-        }
-        .blog-container {
-          display: grid;
-          grid-template-columns: 60% 38%;
-          gap: 2%;
-          padding-left: 100px;
-          padding-right: 100px;
-        }
-        .main-blog {
-          background-color: #fff;
-          border-radius: 8px;
-          overflow: hidden;
-        }
-        .main-blog img {
-          width: 100%;
-          height: 450px;
-          border-radius: 12px;
-          object-fit: cover;
-        }
-        .sideBlogsContainer{
-            height: auto;
-        }
-        .side-blogs {
-          display: flex;
-          flex-direction: column;
-          gap: 20px;
-        }
-        .blog-card {
-          display: grid;
-          grid-template-columns: 1fr 1.5fr;
-          gap: 15px;
-          background-color: #ccc4c486;
-          border-radius: 8px;
-          align-items: center;
-          overflow: hidden;
-          padding: 10px;
-          transition: all 0.3s ease;
-          color: #000000;
-        }
-        .blog-card:hover {
-          transform: translateX(5px);
-          box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-          background-color: #f8f9fa;
-        }
-        .blog-card img {
-          width: 200px;
-          height: 200px;
-          object-fit: cover;
-          border-radius: 4px;
-          transition: transform 0.3s ease;
-        }
-        .blog-card:hover img {
-          transform: scale(1.05);
-        }
-        .blog-card:hover h2 {
-          color: #1363c6;
-        }
-        .tag {
-          display: inline-block;
-          padding: 4px 12px;
-          background-color: #f5f5f5e3;
-          border-radius: 20px;
-          margin-right: 8px;
-          font-size: 14px;
-          border: 1px solid #000000;
-          color: #000000;
-          transition: background-color 0.3s ease;
-        }
-        .blog-card:hover .tag {
-          background-color: #e9ecef;
-        }
-  
-        .meta-info {
-          color: #666;
-          font-size: 14px;
-          margin-bottom: 16px;
-        }
-        .meta-info .author {
-          font-weight: 500;
-        }
-        .meta-info .dot {
-          margin: 0 6px;
-        }
-        .blog-content {
-          padding: 20px;
-        }
-        .blog-header {
-          display: flex;
-          flex-direction: column;
-          gap: 16px;
-          margin-bottom: 24px;
-          padding-bottom: 24px;
-          border-bottom: 1px solid #e5e7eb;
-        }
-        .blog-header .tags {
-          order: -1;
-        }
-        .blog-body {
-          color: #374151;
-          font-size: 16px;
-          line-height: 1.8;
-        }
-        .blog-body h2 {
-          font-size: 20px;
-          margin: 32px 0 16px;
-          color: #111827;
-        }
-        .blog-body p {
-          margin-bottom: 16px;
-          color: #374151;
-        }
-        h1 {
-          font-size: 24px;
-          margin: 10px 0;
-          color: #111827;
-        }
-        h2 {
-          font-size: 18px;
-          margin: 8px 0;
-          color: #111827;
-        }
-        /* Sponsor Logos Styles */
-        .sponsor-logos-wrapper {
-    overflow: hidden;
-    position: relative;
-    width: 100%;
-    background: white;
-    padding: 20px 0;
-}
+    <link href="css/hero.css" rel="stylesheet">
+</head>
 
-.sponsor-logos {
-    display: flex;
-    animation: scroll 20s linear infinite;
-    min-width: 150%;
-}
-
-.logo-col {
-    flex: 0 0 auto;
-    width: 180px;
-    height: 180px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-right: 20px;
-    background-color: transparent; /* Set to transparent to remove background */
-    border-radius: 0; /* Remove rounded corners */
-}
-
-.sponsor-logo {
-    max-width: 100%;
-    max-height: 100%;
-    transition: transform 0.3s;
-}
-
-.sponsor-logo:hover {
-    transform: scale(1.1);
-}
-
-/* Scrolling animation */
-@keyframes scroll {
-    0% {
-        transform: translateX(100%);
-    }
-    100% {
-        transform: translateX(-100%);
-    }
-}
-
-/* Footer */
-.footer {
-    background: url(../img/footer.png) center center no-repeat;
-    background-size: contain;
-}
-
-.footer .btn.btn-social {
-    margin-right: 5px;
-    width: 40px;
-    height: 40px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: rgba(255,255,255,.5);
-    border: 1px solid rgba(256, 256, 256, .1);
-    border-radius: 40px;
-    transition: .3s;
-}
-
-.footer .btn.btn-social:hover {
-    color: var(--primary);
-}
-
-.footer .btn.btn-link {
-    display: block;
-    margin-bottom: 10px;
-    padding: 0;
-    text-align: left;
-    color: rgba(255,255,255,.5);
-    font-weight: normal;
-    transition: .3s;
-}
-
-.footer .btn.btn-link:hover {
-    color: #FFFFFF;
-}
-
-.footer .btn.btn-link::before {
-    position: relative;
-    content: "\f105";
-    font-family: "Font Awesome 5 Free";
-    font-weight: 900;
-    margin-right: 10px;
-}
-
-.footer .btn.btn-link:hover {
-    letter-spacing: 1px;
-    box-shadow: none;
-}
-
-.footer .copyright {
-    padding: 25px 0;
-    font-size: 14px;
-    border-top: 1px solid rgba(256, 256, 256, .1);
-}
-
-.footer .copyright a {
-    color: rgba(255,255,255,.5);
-}
-
-.footer .copyright a:hover {
-    color: #FFFFFF;
-}
-
-.footer .footer-menu a {
-    margin-right: 15px;
-    padding-right: 15px;
-    border-right: 1px solid rgba(255, 255, 255, .1);
-}
-
-.footer .footer-menu a:last-child {
-    margin-right: 0;
-    padding-right: 0;
-    border-right: none;
-}
+<body>
+    <!-- Spinner Start -->
+    <div id="spinner"
+        class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+        <div class="spinner-grow text-primary" style="width: 3rem; height: 3rem;" role="status">
+            <span class="sr-only">Loading...</span>
+        </div>
+    </div>
+    <!-- Spinner End -->
 
 
-/* Additional styles for the footer */
-.footer {
-    background-color: #343a40; /* Dark background color */
-}
-
-.btn-link {
-    padding: 0; /* Remove padding from links */
-    color: white; /* White color for links */
-    transition: color 0.3s ease; /* Smooth transition for hover effect */
-}
-
-.btn-link:hover {
-    color: #f8f9fa; /* Lighter color on hover */
-}
-
-.btn-social {
-    width: 38px; /* Adjust size for social buttons */
-    height: 38px; /* Adjust size for social buttons */
-    border-radius: 50%; /* Make buttons circular */
-    display: flex; /* Center icons in buttons */
-    align-items: center; /* Center icons in buttons */
-    justify-content: center; /* Center icons in buttons */
-    margin-right: 5px; /* Add spacing between buttons */
-    transition: background-color 0.3s ease; /* Smooth transition for hover effect */
-}
-
-.btn-social:hover {
-    background-color: rgba(255, 255, 255, 0.2); /* Slightly lighter background on hover */
-}
-
-.footer-menu a {
-    margin: 0 10px; /* Space out footer menu links */
-    color: white; /* White color for footer menu links */
-    transition: color 0.3s ease; /* Smooth transition for hover effect */
-}
-
-.footer-menu a:hover {
-    color: #f8f9fa; /* Lighter color on hover */
-}
-        .blog-card {
-          cursor: pointer;
-        }
-        .blog-card.active {
-        border: 2px solid #1363c6;
-        background-color: #f0f7ff;
-        }
-        
-  
-        /* .brief {
-          color: #6b7280;
-          font-size: 16px;
-          line-height: 1.5;
-        } */
-      </style>
-      s
-    </head>
-  
-    <body>
-      <!-- Navbar Start -->
-      <div class="container-fluid sticky-top">
+    <!-- Navbar Start -->
+    <div class="container-fluid sticky-top">
         <div class="container">
-          <nav class="navbar navbar-expand-lg navbar-dark p-0">
-            <a href="index.html" class="navbar-brand">
-              <img
-                class="logo"
-                src="./img/logos/Virtual Mechatronics Lab Logo V2-01.png"
-                alt="Sponsor 5"
-              />
-            </a>
-            <button
-              type="button"
-              class="navbar-toggler ms-auto me-0"
-              data-bs-toggle="collapse"
-              data-bs-target="#navbarCollapse"
-            >
-              <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarCollapse">
-              <div class="navbar-nav ms-auto">
-                <a href="index.html" class="nav-item nav-link fw-bolder blk"
-                  >Home</a
-                >
-                <a href="about.html" class="nav-item nav-link fw-bolder blk"
-                  >About</a
-                >
-                <a href="wordskill.html" class="nav-item nav-link fw-bolder blk"
-                  >Wordskill</a
-                >
-                <a href="sifa.html" class="nav-item nav-link fw-bolder blk"
-                  >Sifa</a
-                >
-                <a href="blog.html" class="nav-item nav-link fw-bolder blk active"
-                  >Blog</a
-                >
-                <a href="contact.html" class="nav-item nav-link fw-bolder blk"
-                  >Contact</a
-                >
-              </div>
-              <button
-                type="button"
-                class="btn text-white p-0 d-none d-lg-block"
-                data-bs-toggle="modal"
-                data-bs-target="#searchModal"
-              >
-                <i class="fa fa-search"></i>
-              </button>
-            </div>
-          </nav>
-        </div>
-      </div>
-      <!-- Navbar End -->
-  
-      <!-- Video Background -->
-      <div class="video-wrap-others mt-5">
-        <video autoplay loop muted class="custom-video-others" poster="">
-          <source src="video/background2.mp4" type="video/mp4" />
-          Your browser does not support the video tag.
-        </video>
-        <div class="video-overlay">
-          <h1>Virtual Mechatronics Lab</h1>
-        </div>
-      </div>
-  
-      <!-- Blog Main Content Start -->
-      <div class="blog-container">
-        <div class="main-blog" id="mainBlogContent">
-          <img
-            src="./img/blog/The-Power-of-SCADA-Systems.png"
-            alt="Scada systems"
-          />
-          <div class="blog-content">
-            <div class="blog-header">
-              <div class="tags">
-                <span class="tag">Industrial Automation</span>
-              </div>
-              <div class="meta-info">
-                <span class="author">Prof Jean Bosco Byiringiro</span>
-                <span class="dot">·</span>
-                <span class="date">14 Feb 2024</span>
-              </div>
-              <h1>The Power of SCADA Systems</h1>
-            </div>
-  
-            <div class="blog-body">
-              <p>
-                As our nation forges ahead with the ambitious goal of enhancing
-                manufacturing under the banner of the Big 4 agenda, the spotlight
-                shines on transformative technologies that promise not only to
-                optimize industry operations but also to revolutionize STEM
-                education. One such transformative technology is Supervisory Control and Data Acquisition (SCADA) systems. It has been effectively transforming industries by ensuring efficiency, control, and the reliable operation of critical systems. SCADA systems have been the unsung heroes of industrial automation for several decades.
-              </p>
-              <p>
-                In the early days of SCADA, its primary purpose was process
-                control, monitoring, and data acquisition. It was not a novelty
-                but a necessity, providing industries with the tools needed to visualize complex industrial processes and gather essential data. Fast forward to today, and SCADA systems have evolved into powerful platforms that reach far beyond data visualization. They are the backbone of real-time monitoring and control in industries spanning manufacturing, energy production, water treatment, and infrastructure management.
-              </p>
-              <p>
-                SCADA systems typically consist of a central control unit, remote
-                terminal units (RTUs), sensors, and a robust network
-                infrastructure, all working in concert to provide real-time data from the field and deliver efficient control capabilities to operators.
-              </p>
-              <p>
-                Here is where SCADA systems come to the forefront. While VR offers
-                immersive virtual environments, SCADA systems empower education by
-                facilitating remote monitoring and control of industrial
-                processes. These systems provide the perfect solution to the challenges of accessibility and practical training. By offering real-time data access and control, SCADA systems allow students to interact with machines and processes from anywhere, eliminating the need to procure costly physical machines and ensuring accessibility for all.
-              </p>
-              <p>
-                In conclusion, the potential of SCADA systems in education and industrial automation is vast and transformative.As we march forward into the future, it is clear that this technology is not science fiction but rather an essential revolution that is destined to reshape our institutions of higher learning and the industries that rely on them. SCADA systems, with their real-time data acquisition and control capabilities, are the unsung heroes that empower us to unlock the potential of the next generation of engineers and industry leaders.
-              </p>
-            </div>
-          </div>
+           
+            <nav class="navbar navbar-expand-lg navbar-dark p-0">
+                <a href="index.html" class="navbar-brand">
+                    <img class="logo" src="./img/logos/Virtual Mechatronics Lab Logo V2-01.png" alt="Sponsor 5">
+
+                    <!-- <h1 class="text-white">Virtual<span class="text-dark"> </span>Mechatronics</h1> -->
+                </a>
+                <button type="button" class="navbar-toggler ms-auto me-0" data-bs-toggle="collapse"
+                    data-bs-target="#navbarCollapse">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarCollapse">
+                    <div class="navbar-nav ms-auto">
+                        <a href="index.html" class="nav-item nav-link fw-bolder blk  ">Home</a>
+                       
+                                <div class="nav-item dropdown">
+                                    <a href="#" class="nav-link dropdown-toggle fw-bolder blk" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                        About
+                                    </a>
+                                   <div class="bg-transparent text-white">
+                                        <ul class="dropdown-menu bg-transparent text-white" aria-labelledby="navbarDropdown">
+                                            <li><a href="about.html" class="nav-item nav-link font-bold text-white text-2xl">About</a></li>
+                                            <li><a href="readmore.html" class="nav-item nav-link font-bold text-white text-2xl">Team</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                        <a href="wordskill.html" class="nav-item nav-link  fw-bolder blk">Wordskill</a>
+                        <a href="sifa.html" class="nav-item nav-link fw-bolder blk">Sifa</a>
+                        <a href="blog.html" class="nav-item nav-link fw-bolder blk active">Blog</a>
+
+                        <a href="contact.html" class="nav-item nav-link fw-bolder blk">Contact</a>
+                    </div>
+                    <butaton type="button" class="btn text-white p-0 d-none d-lg-block" data-bs-toggle="modal"
+                        data-bs-target="#searchModal"><i class="fa fa-search"></i></butaton>
+                </div>
+            </nav>
         </div>
       
-  
-        <!-- Side Blog Cards Start -->
-        <div class="side-blogs" id="sideBlogsContainer">
-            <!-- Blog cards will be dynamically inserted here -->
-          </div>
-
-        </div>
-    <!-- sponsors Start -->
-<div class="container-fluid newsletter py-3" style="background-color: white;">
-    <div class="container mx-auto px-24 mt-5 py-3"> 
-        <h1 class="text-center" style="color: #1363C6; font-size: 2rem;">Partners</h1>
-        <div class="sponsor-logos-wrapper">
-            <div class="sponsor-logos">
-                <div class="logo-col">
-                    <a href="https://vml.dkut.ac.ke/sifa.html" target="_blank">
-                        <img src="./img/logos/SIFA FC.png" alt="Sponsor 1" class="sponsor-logo">
-                    </a>
-                </div>
-                <div class="logo-col">
-                    <a href="https://https://au.int/" target="_blank">
-                        <img src="./img/logos/AU_LOGO_ENGLISH_CMYK.png" alt="Sponsor 2" class="sponsor-logo">
-                    </a>
-                </div>
-                <div class="logo-col">
-                    <a href="https://www.nepad.org/" target="_blank">
-                        <img src="./img/logos/AUDA-NEPAD_LOGO_EN.png" alt="Sponsor 3" class="sponsor-logo">
-                    </a>
-                </div>
-                <div class="logo-col">
-                    <a href="https://www.bmz.de/en" target="_blank">
-                        <img src="./img/logos/BMZ Logo.png" alt="Sponsor 4" class="sponsor-logo">
-                    </a>
-                </div>
-                <div class="logo-col">
-                    <a href="https://www.europanostra.org/agora/en-co-funded-by-the-eu_pantone/" target="_blank">
-                        <img src="./img/logos/EN Co-funded by the EU_PANTONE.jpg" alt="Sponsor 5" class="sponsor-logo">
-                    </a>
-                </div>
-                <div class="logo-col">
-                    <a href="https://www.kfw-entwicklungsbank.de/International-financing/KfW-Entwicklungsbank/" target="_blank">
-                        <img src="./img/logos/KfW_LOGO.png" alt="Sponsor 6" class="sponsor-logo">
-                    </a>
-                </div>
-                <div class="logo-col">
-                    <a href="https://vml.dkut.ac.ke/" target="_blank">
-                        <img src="./img/logos/Virtual Mechatronics Lab Logo V2-01.png" alt="Sponsor 7" class="sponsor-logo">
-                    </a>
-                </div>
-                <div class="logo-col">
-                    <a href="https://www.epr.eu/event/epr-communications-network-meeting-2/attachment/en-co-funded-by-the-eu_pos-6/" target="_blank">
-                        <img src="./img/logos/EN Co-Funded by the EU_POS.png" alt="Sponsor 8" class="sponsor-logo">
-                    </a>
-                </div>
-                <div class="logo-col">
-                    <a href="https://www.nepad.org/" target="_blank">
-                        <img src="./img/logos/AU+NEPAD Logo.png" alt="Sponsor 9" class="sponsor-logo">
-                    </a>
-                </div>
-                <!-- <div class="logo-col">
-                    <a href="https://festo-link.com" target="_blank">
-                        <img src="./img/logos/FESTO.png" alt="Sponsor 10" class="sponsor-logo">
-                    </a>
-                </div>
-                <div class="logo-col">
-                    <a href="https://siemens-link.com" target="_blank">
-                        <img src="./img/logos/SIEMENS.png" alt="Sponsor 11" class="sponsor-logo">
-                    </a>
-                </div> -->
-            </div>
-        </div>
     </div>
-</div>
+      <!-- <div class="video-wrap-others mt-5">
+            <video autoplay="" loop="" muted="" class="custom-video-others" poster="">
+                <source src="video/background2.mp4" type="video/mp4">
 
-<!-- Footer Start -->
-<div class="container-fluid bg-dark text-white footer pt-4">
-    <div class="container py-4">
-        <div class="row g-4">
-            <div class="col-md-6 col-lg-3 wow fadeIn" data-wow-delay="0.1s">
-                <a href="index.html" class="d-inline-block mb-3">
-                    <h1 class="text-white">Virtual Mechatronics</h1>
-                </a>
-                <p class="mb-0">Unlocking the potential: Virtually</p>
+                Your browser does not support the video tag.
+            </video>
+            <div class="video-overlay">
+                <h1>Explore our Blogs</h1>
             </div>
-            <div class="col-md-6 col-lg-3 wow fadeIn" data-wow-delay="0.3s">
-                <h5 class="text-white mb-3">Get In Touch</h5>
-                <p><i class="fa fa-map-marker-alt me-2"></i>Nyeri, Kenya</p>
-                <p><i class="fa fa-phone-alt me-2"></i>+25416150627</p>
-                <p><i class="fa fa-envelope me-2"></i>vr.africa@dkut.ac.ke</p>
-                <div class="d-flex pt-2">
-                    <a class="btn btn-outline-light btn-social me-2" href="#"><i class="fab fa-twitter"></i></a>
-                    <a class="btn btn-outline-light btn-social me-2" href="#"><i class="fab fa-facebook-f"></i></a>
-                    <a class="btn btn-outline-light btn-social me-2" href="#"><i class="fab fa-youtube"></i></a>
-                    <a class="btn btn-outline-light btn-social me-2" href="#"><i class="fab fa-instagram"></i></a>
-                    <a class="btn btn-outline-light btn-social" href="#"><i class="fab fa-linkedin-in"></i></a>
-                </div>
-            </div>
-            <div class="col-md-6 col-lg-3 wow fadeIn" data-wow-delay="0.5s">
-                <h5 class="text-white mb-3">Popular Links</h5>
-                <a class="btn btn-link text-white-50" href="#">About Us</a>
-                <a class="btn btn-link text-white-50" href="#">Contact Us</a>
-                <a class="btn btn-link text-white-50" href="#">Privacy Policy</a>
-                <a class="btn btn-link text-white-50" href="#">Terms & Conditions</a>
-                <a class="btn btn-link text-white-50" href="#">Careers</a>
-            </div>
-            <div class="col-md-6 col-lg-3 wow fadeIn" data-wow-delay="0.7s">
-                <h5 class="text-white mb-3">Our Projects</h5>
-                <a class="btn btn-link text-white-50" href="#">Virtual Reality</a>
-                <a class="btn btn-link text-white-50" href="#">Virtual Mechatronics</a>
-                <a class="btn btn-link text-white-50" href="#">Designs</a>
-                <a class="btn btn-link text-white-50" href="#">Trainings</a>
-                <a class="btn btn-link text-white-50" href="#">Virtual Reality</a>
-            </div>
-        </div>
+    
+
+
+    <!-- Navbar End -->
+     <section class="hero" id="hero">
+    <div class="hero-carousel">
+      <!-- Carousel images will be dynamically inserted here -->
     </div>
-    <div class="container wow fadeIn" data-wow-delay="0.1s">
-        <div class="copyright">
-            <div class="row">
-                <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
-                    &copy; <a class="border-bottom text-white" href="#">Virtual Mechatronics</a>, All Rights Reserved.
+    <div class="hero-content">
+      <h1 class="hero-title"></h1>
+      <p class="hero-subtitle" ></p>
+      <a href="#" class="hero-cta" id="hero-contact"></a>
+    </div>
+    <div class="hero-controls">
+      <button class="hero-control prev" aria-label="Previous slide">&lt;</button>
+      <button class="hero-control next" aria-label="Next slide">&gt;</button>
+    </div>
+  </section>
+    <div class="content-container ">
+    <!-- Case Start -->
+    <div class="container-fluid py-1 ">
+        <div class="container ">
+            <div class="mx-auto text-center wow fadeIn " data-wow-delay="0.1s" style="max-width: 500px;">
+                <!-- <div class="btn btn-sm border rounded-pill text-primary px-3 mb-3">Blogs</div> -->
+                <h1 class="mb-4">Explore Our Blogs</h1>    
+            </div>
+            <div class="row g-4">
+                <div class="col-lg-4 wow fadeIn" data-wow-delay="0.3s">
+                    <div class="case-item position-relative overflow-hidden rounded mb-2">
+                        <img class="img-fluid" src="img/pic1.png" alt="">
+                        <a class="case-overlay text-decoration-none" href="">
+                            <small>Robotic Automation</small>
+                            <h5 class="lh-base text-white mb-3">Management of software robots that emulate humans actions interacting with digital systems and software. </h5>
+                            <span class="btn btn-square btn-primary"><i class="fa fa-arrow-right"></i></span>
+                        </a>
+                    </div>
                 </div>
-                <div class="col-md-6 text-center text-md-end">
-                    <div class="footer-menu">
-                        <a class="text-white-50" href="#">Home</a>
-                        <a class="text-white-50" href="#">Cookies</a>
-                        <a class="text-white-50" href="#">Help</a>
-                        <a class="text-white-50" href="#">FAQs</a>
+                <div class="col-lg-4 wow fadeIn" data-wow-delay="0.5s">
+                    <div class="case-item position-relative overflow-hidden rounded mb-2">
+                        <img class="img-fluid" src="img/project1.png" alt="">
+                        <a class="case-overlay text-decoration-none" href="">
+                            <small>Machine learning</small>
+                            <h5 class="lh-base text-white mb-3">Subfield of artificial intelligence enabling a machine to imitate intelligent human behavior.</h5>
+                            <span class="btn btn-square btn-primary"><i class="fa fa-arrow-right"></i></span>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-4 wow fadeIn" data-wow-delay="0.7s">
+                    <div class="case-item position-relative overflow-hidden rounded mb-2">
+                        <img class="img-fluid" src="img/project3.png" alt="">
+                        <a class="case-overlay text-decoration-none" href="">
+                            <small>Predictive Analysis</small>
+                            <h5 class="lh-base text-white mb-3">Use of data analysis, machine learning and artificial intelligence to forecast future outcomes.</h5>
+                            <span class="btn btn-square btn-primary"><i class="fa fa-arrow-right"></i></span>
+                        </a>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-</div>
-<!-- Footer End -->
+    </div>
+    <!-- Case End -->
 
-<!-- Footer End -->
+
+
+
+
+    <!-- sponsors Start -->
+    <div class="container-fluid bg-light newsletter mt-5 py-5">
+        <div class="container">
+                     <h1 style="color:#1363C6; text-align:center" >Partners</h1>
+            <div class="row g-5 align-items-center">
+                <!-- <div class="col-md-5 ps-lg-0 pt-5 pt-md-0 text-start wow fadeIn" data-wow-delay="0.3s"> -->
+                  
+                        <div class="sponsor-logos">
+                           <div class="row justify-content-center">
+                               <div class="col-auto">
+                                   <img src="./img/logos/SIFA FC.png" alt="Sponsor 1">
+                               </div>
+                               <div class="col-auto">
+                                <img src="./img/logos/AU_LOGO_ENGLISH_CMYK.png" alt="Sponsor 4">
+                              </div>
+                              <div class="col-auto">
+                                <img src="./img/logos/AUDA-NEPAD_LOGO_EN.png" alt="Sponsor 5">
+                              </div>
+                              <div class="col-auto">
+                                <img src="./img/logos/BMZ Logo.png" alt="Sponsor 2">
+                                </div>
+                                <div class="col-auto">
+                                    <img src="./img/logos/EN Co-funded by the EU_PANTONE.jpg" alt="Sponsor 4">
+                                  </div>
+                              <div class="col-auto">
+                                <img src="./img/logos/KfW_LOGO.png" alt="Sponsor 3">
+                              </div>
+                              <div class="col-auto">
+                                <img src="img/SSF_Logo_transparent_RGB.png" alt="Sponsor 3">
+                              </div>
+                              <div class="col-auto">
+                                <img src="img/TVETA.png" alt="Sponsor 3">
+                              </div>
+                              <div class="col-auto">
+                                <img src="img/ARSO-LOGO-2-pr.jpg" alt="Sponsor 3">
+                              </div>
+                              <div class="col-auto">
+                                <img src="img/FESTO.png" alt="Sponsor 3">
+                              </div>
+                              <div class="col-auto">
+                                <img src="img/SIEMENS.png" alt="Sponsor 3">
+                              </div>
+                              
+                               
+                              
+                              
+                            </div>
+               
+                     </div>
+               
+                 
+                
+            <!-- </div> -->
+        </div>
+    </div>
+    </div>
+
+    <!-- Newsletter End -->
+
+
+    <!-- Footer Start -->
+    <div class="container-fluid bg-dark text-white-50 footer pt-5">
+        <div class="container py-5">
+            <div class="row g-5">
+                <div class="col-md-6 col-lg-3 wow fadeIn" data-wow-delay="0.1s">
+                    <a href="index.html" class="d-inline-block mb-3">
+                        <h1 class="text-white">Virtual Mechatronics</h1>
+                    </a>
+                    <p class="mb-0">Unlocking the potential: Virtually</p>
+                </div>
+                <div class="col-md-6 col-lg-3 wow fadeIn" data-wow-delay="0.3s">
+                    <h5 class="text-white mb-4">Get In Touch</h5>
+                    <p><i class="fa fa-map-marker-alt me-3"></i>Nyeri, Kenya</p>
+                    <p><i class="fa fa-phone-alt me-3"></i>+25416150627</p>
+                    <p><i class="fa fa-envelope me-3"></i>vr.africa@dkut.ac.ke</p>
+                    <div class="d-flex pt-2">
+                        <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-twitter"></i></a>
+                        <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-facebook-f"></i></a>
+                        <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-youtube"></i></a>
+                        <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-instagram"></i></a>
+                        <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3 wow fadeIn" data-wow-delay="0.5s">
+                    <h5 class="text-white mb-4">Popular Link</h5>
+                    <a class="btn btn-link" href="">About Us</a>
+                    <a class="btn btn-link" href="">Contact Us</a>
+                    <a class="btn btn-link" href="">Privacy Policy</a>
+                    <a class="btn btn-link" href="">Terms & Condition</a>
+                    <a class="btn btn-link" href="">Career</a>
+                </div>
+                <div class="col-md-6 col-lg-3 wow fadeIn" data-wow-delay="0.7s">
+                    <h5 class="text-white mb-4">Our Projects</h5>
+                    <a class="btn btn-link" href="">Virtual Reality</a>
+                    <a class="btn btn-link" href="">virtual Mechatronics</a>
+                    <a class="btn btn-link" href="">Designs</a>
+                    <a class="btn btn-link" href="">Trainings</a>
+                    <a class="btn btn-link" href="">Virtual Reality</a>
+                </div>
+            </div>
+        </div>
+        <div class="container wow fadeIn" data-wow-delay="0.1s">
+            <div class="copyright">
+                <div class="row">
+                    <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+                        &copy; <a class="border-bottom" href="#">Virtual Mechatronics</a>, All Right Reserved.
+
+                       
+                    </div>
+                    <div class="col-md-6 text-center text-md-end">
+                        <div class="footer-menu">
+                            <a href="">Home</a>
+                            <a href="">Cookies</a>
+                            <a href="">Help</a>
+                            <a href="">FAQs</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Footer End -->
 
 
     <!-- Back to Top -->
@@ -607,169 +308,40 @@
     <script src="lib/owlcarousel/owl.carousel.min.js"></script>
 
     <!-- Template Javascript -->
-      <script src="js/main.js"></script>
-      <script>
-        // Blog data object to store all blog content
-        const blogData = {
-        
-          1: {
-            id: 1,
-            image: './img/blog/Student using VR equipment.jpg',
-            title: 'Virtual Reality',
-            author: 'June Jebiwott',
-            date: '09 June 2024',
-            tags: ['Virtual Reality'],
-            content: `
-              <p>As the country continues to strive towards enhancing manufacturing  under the big 4 agenda, it is imperative that we leverage on emerging technologies to not only make the industries efficient but to also facilitate education in STEM programs. One of the technologies that offers great prospects in promoting STEM education is Virtual Reality (VR).</p>
-              <p>Back in the 90s, Virtual Reality was a concept that harbored its fair share of novelties  amongst the “techie” community. What was only a vague concept in the 1960s by the likes of Ivan  Sutherland and Mort Heilig was now coming to the mainstream masses. Granted, its main use case  then was as entertainment, especially gaming. Despite the hype within the mainstream space,  researchers were still learning the ropes, exploring what the technology had to offer. Two decades  in and VR has its place in various circles of our society from Education, Entertainment, Medicine,  Manufacturing etc. VR is characterized by synthetic environments, stereoscopic views, head tracked displays, hand/body tracking and binaural sound; it aims to offer a virtual and immersive  experience that typifies the physical/real world in terms of sensory components.</p>
-              <p>Today, a question that lingers in our minds is, how can we take advantage of this technology that  seems to offer so great a promise. Our interest is in Industrial Automation (Mechatronic) Systems  and more so, technical training and education of the same. The only way to justify the worthiness  of such a technology is by identifying its value propositions which are tied to the issues that are  inherent in the current systems that the technology aims to provide a solution for. It goes without  saying that engineering demands a hands-on approach; this entails interaction with machines,  visualization of outputs, tuning of parameters among other activities. A universal issue that comes  to mind is the accessibility of the physical machine. There are at least two nuances for such a case.  First, in developing countries, an institution may lack physical machines that can be used by their  students. Second, the number of machines available may be few relative to the number of students  that have to use it; resultant from such is a case where a student can only spectate their  colleagues that are within reach of a machine during a practical exercise.</p>
-              <p>One remedy lies in the idea that VR allows for the creation of whole virtual environments which  are capable of hosting 3-dimensional objects as well as simulating real-world physics.  Furthermore, having concurrency for multiple parties carrying out practical exercises is possible  thereby eliminating “spectators”. Being able to work in an immersive environment with “virtual machines” can eliminate the need to procure new machines whose cost can be rather staggering  for an Institution of Higher Learning while maintaining accessibility to all students.</p>
-              <p>Besides the universal issue of Accessibility, VR can also be used to enhance learning activities.  Researchers from the University of Northampton conducted an experiment to evaluate the use of  VR in teaching. Their results suggested that VR offers an advantage when it comes to delivering  knowledge on concept, principles and/or methodology compared to the use of PowerPoint  presentation slides. One of their conclusions then was that VR is an ideal tool in the context of  blended learning in an institution of higher learning. That said, how about a segue into Digital  Twin(DT); similar to how VR can enhance learning, VR can also enhance Cyber-Physical systems  and more importantly Digital Twins. A DT can be simply defined as a digital replica of a physical  entity that runs in synchrony with the physical entity. DTs can be considered as an upgrade to  SCADA systems offering more room for technical analysis and intuition. Given that Digital Twins  are dependent on high volumes of data, the immersion offered by VR enhances the consumption  and interpretation of these data. Furthermore, operations of machines in the field become easier  and far more intuitive, to say the least since the body motions that would have been undertaken in  the field are the same in the virtual environment regardless of the operation being performed.</p>
-              <p>With all the aforementioned ideas, it is imperative that their consolidation be made to realize a  Virtual Laboratory that will facilitate holistic learning and training on Mechatronic Systems.  Fortunately, in the Virtual Machine Control (VMC) Lab at Dedan Kimathi University of Technology (DeKUT), these ideologies have been a part and parcel of our endeavors for over three (3) years  now. We envision a learning environment that is not constrained by the physical yet excels in  delivering high quality and world-class training when it comes to Industrial Automation. In 2019,  Digital Twin was a prelude to our work on Virtual Reality; we explored its application in  Geothermal Drilling Operations and subsequently went on to explore Digital Triplet for Control  of an Elevator Security System in 2020. So far, our research has resulted in a firm foundation for the design and development of a Virtual Laboratory that will not only provide access to training  equipment for all regardless of their location but also enhance the learning process. This is not  science fiction but rather a revolution that is inevitable in our institutions of higher learning.</p>
-            `
-          },
-          2: {
-            id: 2,
-            image: './img/blog/VR-Navigation-in-Lab-1.jpeg',
-            title: 'VR Development',
-            author: 'Cheldean Mutheu',
-            date: '26 Sep 2024',
-            tags: ['VR', 'Technology'],
-            content: `
-              <p>VR development is at the heart of the modern immersive experiences. It involves the creation of virtual reality applications and simulations that can be experienced through VR headsets. These applications range from simple 3D environments to complex, dynamic worlds used for gaming, education, training, or social interaction. VR development is a vast field that blends both creative and technical skills, enabling developers to build intuitive and interactive virtual experiences.</p> 
-              <h2>Understanding VR Development: Hardware vs Software</h2> 
-              <p>This is what users experience and interact with in the virtual world. It’s all about the immersion, interactivity, and user experience (UX) within the virtual environment.</p>
-              <p>Core Technologies:</p>
-              <ul>
-              <li>3D Modeling: 3D models form the foundation of virtual environments. They define the objects, characters, and scenes within the virtual space.</li>
-              <li>Game Engines: Engines like Unity and Unreal Engine are commonly used in VR development. They control the interaction, physics, and rendering of the virtual world.</li>
-              <li>Scripting Languages: Languages such as C# (in Unity) or Blueprints (in Unreal Engine) add logic and interactivity to VR applications, making them responsive to user actions.</li>
-              </ul>
-              <p>VR Development Platforms:</p>
-              <ul>
-                <li>Unity: A widely used game engine for developing VR content. It offers a user-friendly interface and robust tools for creating interactive 3D applications.</li>
-                <li>Unreal Engine: Known for its high-quality rendering capabilities, Unreal Engine is ideal for creating visually stunning VR environments and experiences.</li>
-                <li>Oculus SDK: This SDK is used for developing applications specifically for Oculus VR devices, providing tools and libraries to enhance VR interaction and immersion.</li>
-                </ul>
-                <p>VR development is a dynamic and ever-evolving field that requires a combination of creativity and technical expertise. Whether you're focusing on immersive environments, interactive experiences, or full-scale VR simulations, mastering the concepts, tools, and trends of VR development will empower you to build high-performance, scalable, and engaging virtual reality experiences. As VR technology continues to advance, VR development skills will remain invaluable for shaping the future of immersive technology.</p>
+    <script src="js/main.js"></script>
+    <script src="js/hero.js"></script>
+    <script>
+  document.addEventListener('DOMContentLoaded', function () {
+    let currentIndex = 0;
+    const images = document.querySelectorAll('.slideshow-image');
+    const totalImages = images.length;
 
-            `
-          },
-          3: {
-            id: 3,
-            image: './img/blog/The-Power-of-SCADA-Systems.png',
-            title: 'The Power of SCADA Systems',
-            author: 'Prof Jean Bosco Byiringiro',
-            date: '14 Feb 2024',
-            tags: ['Industrial Automation'],
-            content: `
-              <p>As our nation forges ahead with the ambitious goal of enhancing manufacturing under the banner of the Big 4 agenda, the spotlight shines on transformative technologies that promise not only to optimize industry operations but also to revolutionize STEM education. One such transformative technology is Supervisory Control and Data Acquisition (SCADA) systems. It has been effectively transforming industries by ensuring efficiency, control, and the reliable operation of critical systems. SCADA systems have been the unsung heroes of industrial automation for several decades.</p>
-              <p>In the early days of SCADA, its primary purpose was process control, monitoring, and data acquisition. It was not a novelty but a necessity, providing industries with the tools needed to visualize complex industrial processes and gather essential data. Fast forward to today, and SCADA systems have evolved into powerful platforms that reach far beyond data visualization. They are the backbone of real-time monitoring and control in industries spanning manufacturing, energy production, water treatment, and infrastructure management.</p>
-              <p>SCADA systems typically consist of a central control unit, remote terminal units (RTUs), sensors, and a robust network infrastructure, all working in concert to provide real-time data from the field and deliver efficient control capabilities to operators.</p>
-              
-              <p>Here is where SCADA systems come to the forefront. While VR offers immersive virtual environments, SCADA systems empower education by facilitating remote monitoring and control of industrial processes. These systems provide the perfect solution to the challenges of accessibility and practical training. By offering real-time data access and control, SCADA systems allow students to interact with machines and processes from anywhere, eliminating the need to procure costly physical machines and ensuring accessibility for all.</p>
-               <p>In conclusion, the potential of SCADA systems in education and industrial automation is vast and transformative.As we march forward into the future, it is clear that this technology is not science fiction but rather an essential revolution that is destined to reshape our institutions of higher learning and the industries that rely on them. SCADA systems, with their real-time data acquisition and control capabilities, are the unsung heroes that empower us to unlock the potential of the next generation of engineers and industry leaders.</p>
-            `
-          },
-          // Add data for other blog posts
-        };
-        
-        // Function to update the main blog content
-        function updateMainBlog(blogId) {
-          const blog = blogData[blogId];
-          const mainBlogContent = document.getElementById('mainBlogContent');
-          
-          mainBlogContent.innerHTML = `
-            <img src="${blog.image}" alt="${blog.title}" />
-            <div class="blog-content">
-              <div class="blog-header">
-                <div class="tags">
-                  ${blog.tags.map(tag => `<span class="tag">${tag}</span>`).join('')}
-                </div>
-                <div class="meta-info">
-                  <span class="author">${blog.author}</span>
-                  <span class="dot">·</span>
-                  <span class="date">${blog.date}</span>
-                </div>
-                <h1>${blog.title}</h1>
-              </div>
-              <div class="blog-body">
-                ${blog.content}
-              </div>
-            </div>
-          `;
-        }
-        
-        // Add click event listeners to all blog cards
-        document.addEventListener('DOMContentLoaded', function() {
-          const blogCards = document.querySelectorAll('.blog-card');
-          blogCards.forEach(card => {
-            card.addEventListener('click', function() {
-              const blogId = this.getAttribute('data-blog-id');
-              updateMainBlog(blogId);
-              
-              // Add active class to clicked card and remove from others
-              blogCards.forEach(c => c.classList.remove('active'));
-              this.classList.add('active');
-            });
-          });
+    function showNextImage() {
+        images[currentIndex].classList.remove('active');
+        currentIndex = (currentIndex + 1) % totalImages;
+        images[currentIndex].classList.add('active');
+    }
+
+    images[currentIndex].classList.add('active'); // Ensure the first image is visible initially
+    setInterval(showNextImage, 1000);
+});
+document.addEventListener('DOMContentLoaded', function() {
+            setHero(
+                'Virtual Mechatronics Blogs ',
+                'Discover amazing news with us',
+                '',
+                '#features',
+                [
+                   'img/Blogs/Untitled 2.png',
+                   'img/Blogs/Untitled 3.png',
+                   'img/Blogs/Untitled 5.png',
+                   'img/Blogs/Untitled 6.png',
+                   'img/Blogs/Untitled 7.png',
+                ]
+            );
         });
-        </script>
-        <script src="js/blog-implementation.js"></script>
-        <script>
-            // Function to create blog cards
-            function createBlogCards() {
-              const sideBlogs = document.getElementById('sideBlogsContainer');
-              sideBlogs.innerHTML = ''; // Clear existing content
-              
-              // Loop through blogData and create cards
-              Object.values(blogData).forEach(blog => {
-                const card = document.createElement('div');
-                card.className = 'blog-card';
-                card.setAttribute('data-blog-id', blog.id);
-                
-                card.innerHTML = `
-                  <img src="${blog.image}" alt="${blog.title}" />
-                  <div class="blog-content">
-                    <div class="meta-info">
-                      <span class="author">${blog.author}</span>
-                      <span class="dot">·</span>
-                      <span class="date">${blog.date}</span>
-                    </div>
-                    <h2>${blog.title}</h2>
-                    <p>${blog.content.split(' ').slice(0, 30).join(' ')}...</p>
-                    <div class="tags">
-                      ${blog.tags.map(tag => `<span class="tag">${tag}</span>`).join('')}
-                    </div>
-                  </div>
-                `;
-                
-                sideBlogs.appendChild(card);
-              });
-            }
-            
-            // Modified event listener
-            document.addEventListener('DOMContentLoaded', function() {
-              // Create blog cards
-              createBlogCards();
-              
-              // Add click event listeners to all blog cards
-              const blogCards = document.querySelectorAll('.blog-card');
-              blogCards.forEach(card => {
-                card.addEventListener('click', function() {
-                  const blogId = this.getAttribute('data-blog-id');
-                  updateMainBlog(blogId);
-                  
-                  // Add active class to clicked card and remove from others
-                  blogCards.forEach(c => c.classList.remove('active'));
-                  this.classList.add('active');
-                });
-              });
-              
-              // Initialize with the first blog
-              updateMainBlog(Object.keys(blogData)[0]);
-            });
-            </script>
-    </body>
-  </html>
-  
+</script>
+
+</body>
+
+</html>

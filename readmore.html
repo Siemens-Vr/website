@@ -30,6 +30,7 @@
 
     <!-- Template Stylesheet -->
     <link href="css/style.css" rel="stylesheet">
+    <link href="css/hero.css" rel="stylesheet">
 </head>
 
 <body>
@@ -44,49 +45,79 @@
 
 
     <!-- Navbar Start -->
-    <div class="container-fluid sticky-top">
-        <div class="container">
-           
-            <nav class="navbar navbar-expand-lg navbar-dark p-0">
-                <a href="index.html" class="navbar-brand">
-                    <img class="logo" src="./img/logos/Virtual Mechatronics Lab Logo V2-01.png" alt="Sponsor 5">
+   <!-- Navbar Start -->
+   <div class="container-fluid sticky-top">
+    <div class="container">
+       
+        <nav class="navbar navbar-expand-lg navbar-dark p-0">
+            <a href="index.html" class="navbar-brand">
+                <img class="logo" src="./img/logos/Virtual Mechatronics Lab Logo V2-01.png" alt="Sponsor 5">
 
-                    <!-- <h1 class="text-white">Virtual<span class="text-dark"> </span>Mechatronics</h1> -->
-                </a>
-                <button type="button" class="navbar-toggler ms-auto me-0" data-bs-toggle="collapse"
-                    data-bs-target="#navbarCollapse">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
+                <!-- <h1 class="text-white">Virtual<span class="text-dark"> </span>Mechatronics</h1> -->
+            </a>
+            <button type="button" class="navbar-toggler ms-auto me-0" data-bs-toggle="collapse"
+                data-bs-target="#navbarCollapse">
+                <span class="navbar-toggler-icon"></span>
+            </button>
                 <div class="collapse navbar-collapse" id="navbarCollapse">
                     <div class="navbar-nav ms-auto">
-                        <a href="index.html" class="nav-item nav-link fw-bolder blk ">Home</a>
-                        <a href="about.html" class="nav-item nav-link fw-bolder blk active">About</a>
-                        <a href="wordskill.html" class="nav-item nav-link  fw-bolder blk">Worldskill</a>
+                        <a href="index.html" class="nav-item nav-link fw-bolder blk  ">Home</a>
+                       
+                                <div class="nav-item dropdown">
+                                    <a href="#" class="nav-link dropdown-toggle fw-bolder blk" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                        About
+                                    </a>
+                                   <div class="bg-transparent text-white">
+                                        <ul class="dropdown-menu bg-transparent text-white" aria-labelledby="navbarDropdown">
+                                            <li><a href="about.html" class="nav-item nav-link font-bold text-white text-2xl">About</a></li>
+                                            <li><a href="readmore.html" class="nav-item nav-link font-bold text-white text-2xl">Team</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                        <a href="wordskill.html" class="nav-item nav-link  fw-bolder blk">Wordskill</a>
                         <a href="sifa.html" class="nav-item nav-link fw-bolder blk">Sifa</a>
-                        <a href="blog.html" class="nav-item nav-link fw-bolder blk">Blog</a>
+                        <a href="blog.html" class="nav-item nav-link fw-bolder blk active">Blog</a>
+
                         <a href="contact.html" class="nav-item nav-link fw-bolder blk">Contact</a>
                     </div>
-                    <butaton type="button" class="btn text-white p-0 d-none d-lg-block" data-bs-toggle="modal"
-                        data-bs-target="#searchModal"><i class="fa fa-search"></i></butaton>
-                </div>
-            </nav>
-        </div>
-      
+                <butaton type="button" class="btn text-white p-0 d-none d-lg-block" data-bs-toggle="modal"
+                    data-bs-target="#searchModal"><i class="fa fa-search"></i></butaton>
+            </div>
+        </nav>
     </div>
- 
-        </div>
-    <!-- Navbar End -->
-    <div class="video-wrap-others ">
+  
+</div>
+  <!-- <div class="video-wrap-others">
         <video autoplay="" loop="" muted="" class="custom-video-others" poster="">
             <source src="video/background2.mp4" type="video/mp4">
-    
+
             Your browser does not support the video tag.
         </video>
         <div class="video-overlay">
-            <h1 >Virtual Mechatronics Lab</h1>
+            <h1>Virtual Mechatronics Lab</h1>
+            <!-- <p>Your supporting text goes here.</p> 
         </div>
-    
+        
+    </div> -->
+    <div id="hero-container" style="width: 100%;">
+        <section class="hero" id="hero" style="height: 70vh;">
+            <div class="hero-carousel">
+              <!-- Carousel images dynamically inserted here -->
+            </div>
+            <div class="hero-content">
+              <h1 class="hero-title"></h1>
+              <p class="hero-subtitle"></p>
+              <a href="#" class="hero-cta" id="hero-contact"></a>
+            </div>
+            <div class="hero-controls">
+              <button class="hero-control prev" aria-label="Previous slide">&lt;</button>
+              <button class="hero-control next" aria-label="Next slide">&gt;</button>
+            </div>
+          </section>
     </div>
+<!-- Navbar End -->
+
+
     <!--about team start-->
     <style>
         body {
@@ -360,6 +391,38 @@
 
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
+    <script src="js/hero.js"></script>
+    <script>
+document.addEventListener('DOMContentLoaded', function() {
+            setHero(
+                'TEAM',
+                'Meet our Skilled Team',
+                '',
+                '',
+                [
+                    'video/Prof.-Eng.-Jean-Bosco-Byiringiro.png',
+                    'video/cheldean.jpg',
+                    'video/edwin.png',
+                    'video/elsie.jpg',
+                    'video/Fransis.jpg',
+                    'video/Jeremiah Kanumbi.jpg',
+                    'video/john.jpg',
+                    'video/kevin.jpg',
+                    'video/lavaux.jpg',
+                    'video/mallory.PNG',
+                    'video/maxwel.jpg',
+                    'video/murage.jpg',
+                    'video/newton.jpg',
+                    'video/ray.jpg',
+                    'video/sifa.jpg',
+                    'video/TAMAHJOY.jpg',
+                    'video/Titus.png',
+                    'video/Victor.jpg',
+                    'video/vincent.jpg',
+                ]
+            );
+        });
+    </script>
 </body>
 
 </html>

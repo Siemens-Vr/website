@@ -965,158 +965,86 @@ gap: 1.5rem; /* Reduced gap from 2rem to 1.5rem */
 }
 
 /* Updated Milestone Card Styles */
+/* Updated Milestone Card Styles */
 .project-milestone-card {
-background-color: #1363C6; /* White background color */
-border-radius: 0.5rem; /* Rounded corners */
-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow */
-overflow: hidden; /* Hide overflow content */
-cursor: pointer; /* Change cursor to pointer on hover */
-transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition */
-display: flex; /* Use flexbox to arrange content */
-flex-direction: column; /* Stack children vertically */
-min-height: 250px; /* Reduced from 350px */
-align-items: center;
-align-self: center;
-justify-content: center;
+    background-color: #ffffff; /* White background color */
+    border-radius: 0.5rem; /* Rounded corners */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    overflow: hidden; /* Hide overflow content */
+    cursor: pointer; /* Change cursor to pointer on hover */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition */
+    display: flex; /* Use flexbox to arrange content */
+    flex-direction: column; /* Stack children vertically */
+    min-height: 250px; /* Reduced from 350px */
+    align-items: center;
+    align-self: center;
+    justify-content: center;
 }
 
 .project-milestone-card:hover {
-transform: translateY(-5px); /* Lift effect on hover */
-box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); /* Enhanced shadow on hover */
+    transform: translateY(-5px); /* Lift effect on hover */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); /* Enhanced shadow on hover */
 }
 
 /* Individual Milestone Colors */
 .milestone-1 {
-background-color: #070aec;
-color: #070aec; /* Light red */
-
+    background-color: #070aec;
+    color: #070aec; /* Light red */
 }
 
 .milestone-2 {
-background-color: #e3f2fd; /* Light blue */
+    background-color: #e3f2fd; /* Light blue */
 }
 
 .milestone-3 {
-background-color: #e8f5e9; /* Light green */
+    background-color: #e8f5e9; /* Light green */
 }
 
 .milestone-4 {
-background-color: #fff3e0; /* Light orange */
+    background-color: #fff3e0; /* Light orange */
 }
 
 /* Updated Milestone Content Styles */
 .project-milestone-content {
-max-height: 0; /* Hide content by default */
-overflow: hidden; /* Hide overflowing content */
-transition: max-height 0.5s ease-out; /* Smooth transition for expanding */
-justify-content: center;
-align-items: center;
-
+    max-height: 0; /* Hide content by default */
+    overflow: hidden; /* Hide overflowing content */
+    transition: max-height 0.5s ease-out; /* Smooth transition for expanding */
+    justify-content: center;
+    align-items: center;
 }
 
 .project-milestone-content.active {
-max-height: 800px; /* Expand to show content */
-transition: max-height 0.5s ease-in; /* Smooth transition for collapsing */
+    max-height: 800px; /* Expand to show content */
+    transition: max-height 0.5s ease-in; /* Smooth transition for collapsing */
 }
 
 /* Updated Read More Button Styles */
 .project-milestone-read-more {
-color: #4338ca; /* Initial color */
-font-weight: 600; /* Semi-bold text */
-transition: color 0.3s ease; /* Smooth transition for color */
-font-size: 0.9rem; /* Reduced font size */
-justify-content: center;
-align-self: center;
-align-items: center;
+    color: #4338ca; /* Initial color */
+    font-weight: 600; /* Semi-bold text */
+    transition: color 0.3s ease; /* Smooth transition for color */
+    font-size: 0.9rem; /* Reduced font size */
+    justify-content: center;
+    align-self: center;
+    align-items: center;
 }
 
 .project-milestone-read-more:hover {
-color: #1e3a8a; /* Darker color on hover */
+    color: #1e3a8a; /* Darker color on hover */
 }
 
 /* Ensure Read More buttons are accessible */
 .project-milestone-read-more:focus {
-outline: 2px solid #4338ca; /* Focus outline for accessibility */
-outline-offset: 2px;
-}
-
-/* Typography Styles */
-h2.text-3xl {
-font-size: 1.5rem; /* 24px */
-line-height: 2rem;
-font-weight: 700; /* Bold */
-color: #383566; /* Dark gray */
-text-align: center; /* Centered */
-margin-bottom: 1.5rem; /* Bottom margin */
-align-items: center;
-align-self: center;
-justify-content: center;
-}
-
-h5.text-xl {
-font-size: 1.125rem; /* 18px, reduced from 1.25rem (20px) */
-font-weight: 600; /* Semi-bold */
-margin-bottom: 0.5rem; /* Reduced space below title */
-color: #ffffff; /* Indigo color */
-align-items: center;
-align-self: center;
-justify-content: center;
-}
-
-h6.font-semibold {
-font-size: 0.875rem; /* 14px, reduced from 1rem (16px) */
-font-weight: 600; /* Semi-bold */
-color: #ffffff; /* Gray color */
-margin-bottom: 0.5rem; /* Space below subtitle */
-align-items: center;
-align-self: center;
-justify-content: center;
-}
-
-p.text-gray-600 {
-color: #ffffff; /* Gray color */
-margin-bottom: 1rem; /* Space below paragraphs */
-line-height: 1.6; /* Increased line height for readability */
-text-align: center; /* Center the paragraph text */
-font-weight: normal; /* Changed from bold to normal for better readability */
-font-size: 0.95rem; /* Slightly reduced font size */
-}
-
-/* List Styles */
-ul.list-disc {
-list-style-type: disc; /* Disc bullets */
-padding-left: 1.25rem; /* Indent list */
-color: #ffffff; /* Gray color */
-font-size: 0.9rem; /* Reduced font size */
-}
-
-ul.list-disc li {
-margin-bottom: 0.25rem; /* Space between list items */
-font-weight: 600; /* Semi-bold for emphasis */
-}
-
-/* Ensure Read More buttons are accessible */
-.read-more:focus {
-    outline: 2px solid #f3f3f3; /* Focus outline for accessibility */
+    outline: 2px solid #4338ca; /* Focus outline for accessibility */
     outline-offset: 2px;
 }
-.read-more {
-    outline: 2px solid #ffffff; /* Focus outline for accessibility */
-    outline-offset: 2px;
-    background-color: white;
-}
 
-.btn-sm-square {
-width: 40px; /* Adjust size for square buttons */
-height: 40px; /* Adjust size for square buttons */
-display: flex; /* Center icons in buttons */
-align-items: center; /* Center icons */
-justify-content: center; /* Center icons */
-transition: background-color 0.3s ease; /* Smooth transition on hover */
-}
-
-.btn-sm-square:hover {
-background-color: rgba(255, 255, 255, 0.2); /* Slight background change on hover */
+/* Text color updates */
+.project-milestone-card p,
+.project-milestone-card li,
+.project-milestone-card h5,
+.project-milestone-card h6 {
+    color: rgb(75, 85, 99); /* Set text color to black */
 }
 
 /* Accordion header styling */
@@ -1161,10 +1089,11 @@ background-color: rgba(255, 255, 255, 0.2); /* Slight background change on hover
 
 /* Sponsor Logos Styles */
 .sponsor-logos-wrapper {
-    overflow: auto; /* Hide overflow for a clean effect */
+    overflow: hidden; /* Hide overflow for a clean effect */
     position: relative; /* Position relative for animation */
     width: 100%; /* Full width to contain logos */
     background: white; /* Background color for visibility */
+    height: 300px;
 }
 
 .sponsor-logos {

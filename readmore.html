@@ -119,14 +119,15 @@
 
 
     <!--about team start-->
-    <style>
-        body {
+     <style>
+        .container-read {
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
             display: flex;
             flex-direction: column;
             align-items: center;
+            margin-top: 20px; 
         }
         .team-container {
             width: 80%;
@@ -155,226 +156,1033 @@
         .team-member p {
             margin-top: 10px;
         }
+        .time-span {
+    transition: color 0.3s ease;
+}
+.service-item:hover .time-span {
+    color: white !important;
+}
+.read-more-btn{
+    transition: color 0.3s ease;
+}
+.service-item:hover .read-more-btn{
+    color: white !important; 
+}
+.project-description {
+            overflow: hidden;
+            display: -webkit-box;
+            -webkit-line-clamp: 3;
+            -webkit-box-orient: vertical;
+        }
+        .project-description.expanded {
+            -webkit-line-clamp: unset;
+        }
+        .read-more-btn {
+            color: #007bff;
+            cursor: pointer;
+            display: inline-block;
+            margin-top: 5px;
+        }
+    .additional-content {
+        display: none; /* Initially hide the additional content */
+    }
+
+    .read-more-btn {
+    color: blue; /* Default color */
+    transition: color 0.3s ease; /* Smooth transition */
+}
+
+.read-more-btn:hover {
+    color: white; /* Color on hover */
+}
+.department {
+            margin-bottom: 40px; /* Space between departments */
+        }
+
     </style>
 </head>
 <body>
-    <div class="team-container">
-        <div class="team-header">
-            <img src="video/Prof.-Eng.-Jean-Bosco-Byiringiro.png" alt="Team Leader" style="width: 150px; height: 150px; object-fit: cover; border-radius: 50%;">
-            <h6>Prof.Eng.Jean Bosco Byiringiro</h6>
-            <p>Executive Manager</p>
-        </div>
-        
-        <div class="team-grid">
-            <div class="team-member">
-                <img src="video/edwin.png" alt="Member 1">
-                <h4>Edwin Ngari</h4>
-                <p>VR Development</p>
+    <div class="container-read">
+    <div class="container-fluid bg-light mt-5 py-5">
+        <div class="container py-5">
+            <div class="text-center mb-5 wow fadeIn" data-wow-delay="0.1s">
+                <div class="btn btn-sm border rounded-pill text-primary px-3 mb-3">Our Team</div>
+                <h1 class="mb-4">Meet Our Talented Team Members</h1>
+                <p class="mb-4">Our diverse team of skilled professionals is dedicated to driving innovation and excellence in our projects.</p>
             </div>
-            <div class="team-member">
-                <img src="video/john.jpg" alt="Member 13">
-                <h4>John Mbugi</h4>
-                <p>Administrative Assistant</p>
+            <div class="row g-4">
+<!--div class="department" id="administrative"-->
+    <h2>Administration</h2>
+            <!-- Team Member 1 -->
+<div class="col-lg-4 col-md-3 wow fadeIn" data-wow-delay="0.1s">
+    <div class="service-item d-flex flex-column justify-content-start text-left rounded p-2 position-relative">
+        <div class="d-flex align-items-center mb-3">
+            <div class="service-icon btn-square mr-3">
+                <img src="video/Prof.-Eng.-Jean-Bosco-Byiringiro.png" alt="Profile" class="rounded-circle" style="width: 100%; height: 100%; object-fit: cover;">
             </div>
-            <div class="team-member">
-                <img src="video/Titus.png" alt="Member 2">
-                <h4>Titus Kiplagat</h4>
-                <p>CAD Modeling</p>
-            </div>
-            <div class="team-member">
-                <img src="video/Jeremiah Kanumbi.jpg" alt="Member 3">
-                <h4>Jeremiah Kiarie</h4>
-                <p>CAD Modeling</p>
-            </div>
-            <div class="team-member">
-                <img src="video/Victor.jpg" alt="Member 4">
-                <h4>Victor Kanumbi</h4>
-                <p>CAD Modeling</p>
-            </div>
-            <div class="team-member">
-                <img src="video/maxwel.jpg" alt="Member 5">
-                <h4>Magoi Maxwel</h4>
-                <p>VR Development</p>
-            </div>
-            <div class="team-member">
-                <img src="video/Fransis.jpg" alt="Member 6">
-                <h4>Francis Malombe</h4>
-                <p>Software Development</p>
-            </div>
-            <div class="team-member">
-                <img src="video/ray.jpg" alt="Member 7">
-                <h4>Ray Odira</h4>
-                <p>Web Design</p>
-            </div>
-            <div class="team-member">
-                <img src="video/elsie.jpg" alt="Member 8">
-                <h4>Elsie Makara</h4>
-                <p>Software Development</p>
-            </div>
-            <div class="team-member">
-                <img src="video/lavaux.jpg" alt="Member 9">
-                <h4>Lavaux Esteban</h4>
-                <p>Software Development</p>
-            </div>
-            <div class="team-member">
-                <img src="video/cheldean.jpg" alt="Member 9">
-                <h4>Cheldean Mutheu</h4>
-                <p>Software Development</p>
-            </div>
-            <div class="team-member">
-                <img src="video/TAMAHJOY.jpg" alt="Member 10">
-                <h4>Tamahjoy Mbura</h4>
-                <p>CAD/VR Designer</p>
-            </div>
-            <div class="team-member">
-                <img src="video/vincent.jpg" alt="Member 11">
-                <h4>Vincent Gimenez</h4>
-                <p>VR Development</p>
-            </div>
-            <div class="team-member">
-                <img src="video/mallory.PNG" alt="Member 12">
-                <h4>Gesbert Mallory</h4>
-                <p>Software Development</p>
-            </div>
-            <div class="team-member">
-                <img src="video/newton.jpg" alt="Member 13">
-                <h4>Newton Kariuki</h4>
-                <p>Robotics and Robot OS 2 Developer</p>
-            </div>
-            
-            <div class="team-member">
-                <img src="video/mallory.PNG" alt="Member 13">
-                <h4>Kevin Pere</h4>
-                <p>Research on reconstruction of prothetics</p>
-            </div>
-            <div class="team-member">
-                <img src="video/murage.jpg" alt="Member 13">
-                <h4>Charles Murage</h4>
-                <p>Unity Developer</p>
+            <div>
+                <h5 class="mb-1">Prof. Eng.Jean Bosco</h5>
+                <p class="mb-0">Team Lead</p>
             </div>
         </div>
-    </div>
-    <!--about team end-->
-
-  <!-- sponsors Start -->
-  <div class="container-fluid bg-light newsletter py-5">
-    <div class="container">
-                 <h1 style="color:#1363C6; text-align:center" >Partners</h1>
-        <div class="row g-5 align-items-center">
-            <!-- <div class="col-md-5 ps-lg-0 pt-5 pt-md-0 text-start wow fadeIn" data-wow-delay="0.3s"> -->
-              
-                    <div class="sponsor-logos">
-                       <div class="row justify-content-center">
-                           <div class="col-auto">
-                               <img src="./img/logos/SIFA FC.png" alt="Sponsor 1">
-                           </div>
-                           <div class="col-auto">
-                            <img src="./img/logos/AU_LOGO_ENGLISH_CMYK.png" alt="Sponsor 4">
-                          </div>
-                          <div class="col-auto">
-                            <img src="./img/logos/AUDA-NEPAD_LOGO_EN.png" alt="Sponsor 5">
-                          </div>
-                          <div class="col-auto">
-                            <img src="./img/logos/BMZ Logo.png" alt="Sponsor 2">
-                            </div>
-                            <div class="col-auto">
-                                <img src="./img/logos/EN Co-funded by the EU_PANTONE.jpg" alt="Sponsor 4">
-                              </div>
-                          <div class="col-auto">
-                            <img src="./img/logos/KfW_LOGO.png" alt="Sponsor 3">
-                          </div>
-                          <div class="col-auto">
-                            <img src="img/SSF_Logo_transparent_RGB.png" alt="Sponsor 3">
-                          </div>
-                          <div class="col-auto">
-                            <img src="img/TVETA.png" alt="Sponsor 3">
-                          </div>
-                          <div class="col-auto">
-                            <img src="img/ARSO-LOGO-2-pr.jpg" alt="Sponsor 3">
-                          </div>
-                          <div class="col-auto">
-                            <img src="img/FESTO.png" alt="Sponsor 3">
-                          </div>
-                          <div class="col-auto">
-                            <img src="img/SIEMENS.png" alt="Sponsor 3">
-                          </div>
-                          
-                        </div>
-
-                 </div>
-           
-             
-            
-        <!-- </div> -->
+        <span class="position-absolute top-0 end-0 mt-3 me-3 time-span">Sep 2024 - Present</span>
+        <h6 class="mb-3"><span style="color: #888888;">Project:</span> AI-Powered Analytics Dashboard</h6>
+        <div class="project-description mb-2" style="font-size: 14px; color: black;">
+            <p class="mb-4">Developing an advanced analytics dashboard that utilizes machine learning algorithms to provide real-time insights and predictive analysis for business decision-making.</p>
+            <p class="additional-content" style="display: none;">Additional details about the project...</p>
+        </div>
+        <span class="read-more-btn">Read More</span>
+        <div class="d-flex justify-content-start mt-auto">
+            <a class="btn px-2 me-2" href="https://github.com/johndoe" target="_blank">
+                <i class="fab fa-github"></i>
+            </a>
+            <a class="btn px-2 me-2" onclick="location.href='https:linkedin.com/in/cheldean-musingila-7a6040217'" target="_blank">
+                <i class="fab fa-linkedin-in"></i>
+            </a>
+            <a class="btn px-2" href="mailto:john.doe@example.com">
+                <i class="far fa-envelope"></i>
+            </a>
+        </div>
     </div>
 </div>
+<div class="col-lg-4 col-md-3 wow fadeIn" data-wow-delay="0.1s">
+    <div class="service-item d-flex flex-column justify-content-start text-left rounded p-2 position-relative">
+        <div class="d-flex align-items-center mb-3">
+            <div class="service-icon btn-square mr-3">
+                <img src="video/john.jpg" alt="Profile" class="rounded-circle" style="width: 100%; height: 100%; object-fit: cover;">
+            </div>
+            <div>
+            <h5 class="mb-1">John</h5>
+            <p class="mb-0">Admin</p>
+            </div>
+        </div>
+        <span class="position-absolute top-0 end-0 mt-3 me-3 time-span">Sep 2024 - Present</span>
+        <h6 class="mb-3"><span style="color: #888888;">Project:</span> AI-Powered Analytics Dashboard</h6>
+        <div class="project-description mb-2" style="font-size: 14px; color: black;">
+            <p class="mb-4">Developing an advanced analytics dashboard that utilizes machine learning algorithms to provide real-time insights and predictive analysis for business decision-making.</p>
+            <p class="additional-content" style="display: none;">Additional details about the project...</p>
+        </div>
+        <span class="read-more-btn">Read More</span>
+        <div class="d-flex justify-content-start mt-auto">
+            <a class="btn px-2 me-2" href="https://github.com/johndoe" target="_blank">
+                <i class="fab fa-github"></i>
+            </a>
+            <a class="btn px-2 me-2" onclick="location.href='https:linkedin.com/in/cheldean-musingila-7a6040217'" target="_blank">
+                <i class="fab fa-linkedin-in"></i>
+            </a>
+            <a class="btn px-2" href="mailto:john.doe@example.com">
+                <i class="far fa-envelope"></i>
+            </a>
+        </div>
+    </div>
+</div>
+</div>
+<hr>
+
+<div class="row g-4">
+    <h2>Software Developers</h2>
+<!-- Team Member 2 -->
+<div class="col-lg-4 col-md-3 wow fadeIn" data-wow-delay="0.1s">
+    <div class="service-item d-flex flex-column justify-content-start text-left rounded p-2 position-relative">
+        <div class="d-flex align-items-center mb-3">
+            <div class="service-icon btn-square mr-3">
+                <img src="video/cheldean.jpg" alt="Profile" class="rounded-circle" style="width: 100%; height: 100%; object-fit: cover;">
+            </div>
+        <div>
+            <h5 class="mb-1">Cheldean Mutheu</h5>
+            <p class="mb-0">Software Developer</p>
+        </div>
+    </div>
+    <span class="position-absolute top-0 end-0 mt-3 me-3 time-span">Sep 2024 - Present</span>
+    <h6 class="mb-3"><span style="color: #888888;">Project:</span>An innovative ERP system</h6>
+    <div class="project-description mb-2" style="font-size: 14px; color: black;">
+        <p class="mb-4">This project leverages cutting-edge software engineering practices to streamline business processes, combining efficiency with ease of use for real-time data tracking and automation. By integrating advanced web technologies, we aim to create a scalable, user-friendly platform for companies looking to optimize their resource planning. This ERP solution is designed for flexibility, making it adaptable for various industries and enhancing business intelligence.</p>
+    </div>
+    <span class="read-more-btn">Read More</span>
+    <div class="d-flex justify-content-start mt-auto">
+        <a class="btn px-2 me-2" href="https://github.com/MutheuMC" target="_blank">
+            <i class="fab fa-github"></i>
+        </a>
+        <a class="btn px-2 me-2" onclick="location.href='https:linkedin.com/in/cheldean-musingila-7a6040217'" target="_blank">
+            <i class="fab fa-linkedin-in"></i>
+        </a>
+        <a class="btn px-2" href="mailto:cheldeanmutheu1@gmail.com">
+            <i class="far fa-envelope"></i>
+        </a>
+    </div>
+</div>
+</div> 
+<div class="col-lg-4 col-md-3 wow fadeIn" data-wow-delay="0.1s">
+    <div class="service-item d-flex flex-column justify-content-start text-left rounded p-2 position-relative">
+        <div class="d-flex align-items-center mb-3">
+            <div class="service-icon btn-square mr-3">
+                <img src="video/june.jpg" alt="Profile" class="rounded-circle" style="width: 100%; height: 100%; object-fit: cover;">
+            </div>
+            <div>
+                <h5 class="mb-1">June Jebiwott</h5>
+                <p class="mb-0">Software Developer</p>
+            </div>
+        </div>
+        <span class="position-absolute top-0 end-0 mt-3 me-3 time-span">Sep 2024 - Present</span>
+        <h6 class="mb-3"><span style="color: #888888;">Project:</span> Virtual Mechatronics Website</h6>
+        <div class="project-description mb-2" style="font-size: 14px; color: black;">
+        <p class="mb-4">It involves creating and designing an informational website for the Virtual Reality Mechatronics Lab, serving as a central hub to showcase the lab's innovative projects and products. The website features detailed information about the lab's mission and research activities, along with an integrated e-commerce section that allows users to browse and purchase mechatronic devices and tools developed in the lab. A standout feature is the interactive 3D models of the products, enabling potential buyers to explore items in detail before making a purchase, thereby enhancing the overall shopping experience. This website aims to promote the lab's work, facilitate product sales, and provide an engaging user experience through cutting-edge technology.</p>
+        </div>
+        <span class="read-more-btn">Read More</span>
+        <div class="d-flex justify-content-start mt-auto">
+            <a class="btn px-2 me-2" onclick="location.href='https:github.com/June-Bajim'" target="_blank">
+                <i class="fab fa-github"></i>
+            </a>
+            <a class="btn px-2 me-2"  onclick="location.href='https:linkedin.com/in/june-rotich-8b1699238'" target="_blank">
+                <i class="fab fa-linkedin-in"></i>
+            </a>
+            <a class="btn px-2" href="mailto:john.doe@example.com">
+                <i class="far fa-envelope"></i>
+            </a>
+        </div>
+    </div>
+</div>
+<div class="col-lg-4 col-md-3 wow fadeIn" data-wow-delay="0.1s">
+    <div class="service-item d-flex flex-column justify-content-start text-left rounded p-2 position-relative">
+        <div class="d-flex align-items-center mb-3">
+            <div class="service-icon btn-square mr-3">
+                <img src="video/Kitonyi.jpeg" alt="Profile" class="rounded-circle" style="width: 100%; height: 100%; object-fit: cover;">
+            </div>
+        <div>
+            <h5 class="mb-1">Brian Kitonyi</h5>
+            <p class="mb-0">Front-end Developer</p>
+        </div>
+    </div>
+    <span class="position-absolute top-0 end-0 mt-3 me-3 time-span">Sep 2024 - Present</span>
+        <h6 class="mb-3"><span style="color: #888888;">Project:</span> EUREKA Geothermal Energy</h6>
+        <div class="project-description mb-2" style="font-size: 14px; color: black;">
+        <p class="mb-4">This project entails working on geothermal energy using VAR to display results from potential geothermal sites. As a front-end developer, I visualize predictions analyzed by machine learning algorithms to support data-driven decisions for sustainable energy solutions.</p>
+    </div>
+        <span class="read-more-btn">Read More</span>
+        <div class="d-flex justify-content-start mt-auto">
+        <a class="btn px-2 me-2" href="https://github.com/DevZoeKitonyi" target="_blank">
+            <i class="fab fa-github"></i>
+        </a>
+        <a class="btn px-2 me-2"  onclick="location.href='https:linkedin.com/in/brian-kitonyi-366290281/'" target="_blank">
+            <i class="fab fa-linkedin-in"></i>
+        </a>
+        <a class="btn px-2" href="mailto:john.doe@example.com">
+            <i class="far fa-envelope"></i>
+        </a>
+        </div>
+    </div>
+</div>
+<div class="col-lg-4 col-md-3 wow fadeIn" data-wow-delay="0.1s">
+    <div class="service-item d-flex flex-column justify-content-start text-left rounded p-2 position-relative">
+        <div class="d-flex align-items-center mb-3">
+            <div class="service-icon btn-square mr-3">
+                <img src="video/chris.jpeg" alt="Profile" class="rounded-circle" style="width: 100%; height: 100%; object-fit: cover;">
+            </div>
+        <div>
+            <h5 class="mb-1">Chris Mwangi</h5>
+            <p class="mb-0">Software Developer</p>
+        </div>
+    </div>
+    <span class="position-absolute top-0 end-0 mt-3 me-3 time-span">Sep 2024 - Present</span>
+        <h6 class="mb-3"><span style="color: #888888;">Project:</span>Siemens Website</h6>
+        <div class="project-description mb-2" style="font-size: 14px; color: black;">
+                        <p class="mb-4">It involves creating and designing an informational website for the Virtual Reality Mechatronics Lab, serving as a central hub to showcase the lab's innovative projects and products. The website features detailed information about the lab's mission and research activities, along with an integrated e-commerce section that allows users to browse and purchase mechatronic devices and tools developed in the lab. A standout feature is the interactive 3D models of the products, enabling potential buyers to explore items in detail before making a purchase, thereby enhancing the overall shopping experience. This website aims to promote the lab's work, facilitate product sales, and provide an engaging user experience through cutting-edge technology.</p>
+        </div>
+                        <span class="read-more-btn">Read More</span>
+        <div class="d-flex justify-content-start mt-auto">
+        <a class="btn px-2 me-2" href="https://github.com/Chrismugwimi" target="_blank">
+            <i class="fab fa-github"></i>
+        </a>
+        <a class="btn px-2 me-2" onclick="location.href='https:linkedin.com/in/christopher-mwangi-628388242'" target="_blank">
+            <i class="fab fa-linkedin-in"></i>
+        </a>
+        <a class="btn px-1" href="mailto:chrismugwimi01@gmail.com">
+            <i class="far fa-envelope"></i>
+        </a>
+        </div>
+    </div>
+</div>
+<div class="col-lg-4 col-md-3 wow fadeIn" data-wow-delay="0.1s">
+    <div class="service-item d-flex flex-column justify-content-start text-left rounded p-2 position-relative">
+        <div class="d-flex align-items-center mb-3">
+            <div class="service-icon btn-square mr-3">
+                <img src="video/Kinuthia.jpg" alt="Profile" class="rounded-circle" style="width: 100%; height: 100%; object-fit: cover;">
+            </div>
+        <div>
+            <h5 class="mb-1">Kamali Kinuthia</h5>
+            <p class="mb-0">Software Developer</p>
+        </div>
+    </div>
+    <span class="position-absolute top-0 end-0 mt-3 me-3 time-span">Sep 2024 - Present</span>
+        <h6 class="mb-3"><span style="color: #888888;">Project:</span> EUREKA Geothermal Energy</h6>
+        <div class="project-description mb-2" style="font-size: 14px; color: black;">
+            <p class="mb-4">Developing an advanced analytics dashboard that utilizes machine learning algorithms to provide real-time insights and predictive analysis for business decision-making.</p>
+        </div>
+            <span class="read-more-btn">Read More</span>
+        <div class="d-flex justify-content-start mt-auto">
+        <a class="btn px-2 me-2" href="https://github.com/KamaliKinuthia" target="_blank">
+            <i class="fab fa-github"></i>
+        </a>
+        <a class="btn px-2 me-2" onclick="location.href='https:linkedin.com/in/kamali-kinuthia-357a5a224/'" target="_blank">
+            <i class="fab fa-linkedin-in"></i>
+        </a>
+        <a class="btn px-2" href="mailto: kamalikinuthia3@gmail.com">
+            <i class="far fa-envelope"></i>
+        </a>
+        </div>
+    </div>
+</div>
+<div class="col-lg-4 col-md-3 wow fadeIn" data-wow-delay="0.1s">
+    <div class="service-item d-flex flex-column justify-content-start text-left rounded p-2 position-relative">
+        <div class="d-flex align-items-center mb-3">
+            <div class="service-icon btn-square mr-3">
+                <img src="video/mutunga.jpeg" alt="Profile" class="rounded-circle" style="width: 100%; height: 100%; object-fit: cover;">
+            </div>
+        <div>
+            <h5 class="mb-1">Victor Mutunga</h5>
+            <p class="mb-0">Software Developer</p>
+        </div>
+    </div>
+    <span class="position-absolute top-0 end-0 mt-3 me-3 time-span">Sep 2024 - Present</span>
+        <h6 class="mb-3"><span style="color: #888888;">Project:</span>Virtual Mechatronics Website</h6>
+        <div class="project-description mb-2" style="font-size: 14px; color: black;">
+        <p class="mb-4">It involves creating and designing an informational website for the Virtual Reality Mechatronics Lab, serving as a central hub to showcase the lab's innovative projects and products. The website features detailed information about the lab's mission and research activities, along with an integrated e-commerce section that allows users to browse and purchase mechatronic devices and tools developed in the lab. A standout feature is the interactive 3D models of the products, enabling potential buyers to explore items in detail before making a purchase, thereby enhancing the overall shopping experience. This website aims to promote the lab's work, facilitate product sales, and provide an engaging user experience through cutting-edge technology.</p>
+        </div>
+        <span class="read-more-btn">Read More</span>
+        <div class="d-flex justify-content-start mt-auto">
+        <a class="btn px-2 me-2" href="https://github.com/johndoe" target="_blank">
+            <i class="fab fa-github"></i>
+        </a>
+        <a class="btn px-2 me-2" onclick="location.href='https:linkedin.com/in/cheldean-musingila-7a6040217'" target="_blank">
+            <i class="fab fa-linkedin-in"></i>
+        </a>
+        <a class="btn px-2" href="mailto:john.doe@example.com">
+            <i class="far fa-envelope"></i>
+        </a>
+        </div>
+    </div>
+</div>
+<div class="col-lg-4 col-md-3 wow fadeIn" data-wow-delay="0.1s">
+    <div class="service-item d-flex flex-column justify-content-start text-left rounded p-2 position-relative">
+        <div class="d-flex align-items-center mb-3">
+            <div class="service-icon btn-square mr-3">
+                <img src="video/ray.jpg" alt="Profile" class="rounded-circle" style="width: 100%; height: 100%; object-fit: cover;">
+            </div>
+            <div>
+                <h5 class="mb-1">Ray Odira</h5>
+                <p class="mb-0">Web Developer</p>
+            </div>
+        </div>
+        <span class="position-absolute top-0 end-0 mt-3 me-3 time-span">Sep 2024 - Present</span>
+<h6 class="mb-3"><span style="color: #888888;">Project:</span> AI-Powered Analytics Dashboard</h6>
+<div class="project-description mb-2" style="font-size: 14px; color: black;">
+<p class="mb-4">Developing an advanced analytics dashboard that utilizes machine learning algorithms to provide real-time insights and predictive analysis for business decision-making.</p>
+</div>
+<span class="read-more-btn">Read More</span>
+<div class="d-flex justify-content-start mt-auto">
+            <a class="btn px-2 me-2" href="https://github.com/johndoe" target="_blank">
+                <i class="fab fa-github"></i>
+            </a>
+            <a class="btn px-2 me-2"  onclick="location.href='https:linkedin.com/in/cheldean-musingila-7a6040217'" target="_blank">
+                <i class="fab fa-linkedin-in"></i>
+            </a>
+            <a class="btn px-2" href="mailto:john.doe@example.com">
+                <i class="far fa-envelope"></i>
+            </a>
+            </div>
+        </div>
+    </div>
+<div class="col-lg-4 col-md-3 wow fadeIn" data-wow-delay="0.1s">
+    <div class="service-item d-flex flex-column justify-content-start text-left rounded p-2 position-relative">
+        <div class="d-flex align-items-center mb-3">
+            <div class="service-icon btn-square mr-3">
+                <img src="video/Kimani.jpeg" alt="Profile" class="rounded-circle" style="width: 100%; height: 100%; object-fit: cover;">
+            </div>
+        <div>
+            <h5 class="mb-1">Kimani Nyutu</h5>
+            <p class="mb-0">Software Developer</p>
+        </div>
+    </div>
+    <span class="position-absolute top-0 end-0 mt-3 me-3 time-span">Sep 2024 - Present</span>
+        <h6 class="mb-3"><span style="color: #888888;">Project:</span>An innovative ERP system</h6>
+        <div class="project-description mb-2" style="font-size: 14px; color: black;">
+        <p class="mb-4">This project leverages cutting-edge software engineering practices to streamline business processes, combining efficiency with ease of use for real-time data tracking and automation. By integrating advanced web technologies, we aim to create a scalable, user-friendly platform for companies looking to optimize their resource planning. This ERP solution is designed for flexibility, making it adaptable for various industries and enhancing business intelligence.</p>
+        </div>
+        <span class="read-more-btn">Read More</span>
+        <div class="d-flex justify-content-start mt-auto">
+        <a class="btn px-2 me-2" href="https://github.com/kimaninyutu" target="_blank">
+            <i class="fab fa-github"></i>
+        </a>
+        <a class="btn px-2 me-2"  onclick="location.href='https:linkedin.com/in/kimani-nyutu-06b408227'" target="_blank">
+            <i class="fab fa-linkedin-in"></i>
+        </a>
+        <a class="btn px-2" href="mailto:nyutukimani01@gmail.com">
+            <i class="far fa-envelope"></i>
+        </a>
+        </div>
+    </div>
+</div>
+<div class="col-lg-4 col-md-3 wow fadeIn" data-wow-delay="0.1s">
+    <div class="service-item d-flex flex-column justify-content-start text-left rounded p-2 position-relative">
+        <div class="d-flex align-items-center mb-3">
+            <div class="service-icon btn-square mr-3">
+                <img src="video/lavaux.jpg" alt="Profile" class="rounded-circle" style="width: 100%; height: 100%; object-fit: cover;">
+            </div>
+            <div>
+                <h5 class="mb-1">Lavaux Esteban</h5>
+                <p class="mb-0">Software Developer</p>
+            </div>
+        </div>
+        <span class="position-absolute top-0 end-0 mt-3 me-3">2 years with us</span>
+            <h6 class="mb-3">Project: AI-Powered Analytics Dashboard</h6>
+            <div class="project-description mb-2" style="font-size: 14px; color: black;">
+            <p class="mb-4">Developing an advanced analytics dashboard that utilizes machine learning algorithms to provide real-time insights and predictive analysis for business decision-making.</p>
+            </div>
+            <span class="read-more-btn">Read More</span>
+            <div class="d-flex justify-content-start mt-auto">
+            <a class="btn px-2 me-2" href="https://github.com/johndoe" target="_blank">
+                <i class="fab fa-github"></i>
+            </a>
+            <a class="btn px-2 me-2"  onclick="location.href='https:linkedin.com/in/cheldean-musingila-7a6040217'" target="_blank">
+                <i class="fab fa-linkedin-in"></i>
+            </a>
+            <a class="btn px-2" href="mailto:john.doe@example.com">
+                <i class="far fa-envelope"></i>
+            </a>
+            </div>
+        </div>
+    </div>
+     <div class="col-lg-4 col-md-3 wow fadeIn" data-wow-delay="0.1s">
+            <div class="service-item d-flex flex-column justify-content-start text-left rounded p-2 position-relative">
+                <div class="d-flex align-items-center mb-3">
+                    <div class="service-icon btn-square mr-3">
+                    <img src="video/mallory.PNG" alt="Profile" class="rounded-circle" style="width: 100%; height: 100%; object-fit: cover;">
+                </div>
+                <div>
+                    <h5 class="mb-1">Gesbert Mallory</h5>
+                    <p class="mb-0">Software Developer</p>
+                </div>
+            </div>
+            <span class="position-absolute top-0 end-0 mt-3 me-3 time-span">Sep 2024 - Present</span>
+            <h6 class="mb-3"><span style="color: #888888;">Project:</span> AI-Powered Analytics Dashboard</h6>
+            <div class="project-description mb-2" style="font-size: 14px; color: black;">
+            <p class="mb-4">Developing an advanced analytics dashboard that utilizes machine learning algorithms to provide real-time insights and predictive analysis for business decision-making.</p>
+            </div>
+            <span class="read-more-btn">Read More</span>
+            <div class="d-flex justify-content-start mt-auto">
+                <a class="btn px-2 me-2" href="https://github.com/johndoe" target="_blank">
+                    <i class="fab fa-github"></i>
+                </a>
+                <a class="btn px-2 me-2"  onclick="location.href='https:linkedin.com/in/cheldean-musingila-7a6040217'" target="_blank">
+                    <i class="fab fa-linkedin-in"></i>
+                </a>
+                <a class="btn px-2" href="mailto:john.doe@example.com">
+                    <i class="far fa-envelope"></i>
+                </a>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-4 col-md-3 wow fadeIn" data-wow-delay="0.1s">
+            <div class="service-item d-flex flex-column justify-content-start text-left rounded p-2 position-relative">
+                <div class="d-flex align-items-center mb-3">
+                    <div class="service-icon btn-square mr-3">
+                        <img src="video/ali.JPG" alt="Profile" class="rounded-circle" style="width: 100%; height: 100%; object-fit: cover;">
+                    </div>
+                <div>
+                    <h5 class="mb-1">Ali Zaiter</h5>
+                    <p class="mb-0">Software Developer</p>
+                </div>
+            </div>
+            <span class="position-absolute top-0 end-0 mt-3 me-3 time-span">March 2024 - Present</span>
+                <h6 class="mb-3"><span style="color: #888888;">Project:</span> An innovative ERP system</h6>
+                <div class="project-description mb-2" style="font-size: 14px; color: black;">
+                <p class="mb-4">This project leverages cutting-edge software engineering practices to streamline business processes, combining efficiency with ease of use for real-time data tracking and automation. By integrating advanced web technologies, we aim to create a scalable, user-friendly platform for companies looking to optimize their resource planning. This ERP solution is designed for flexibility, making it adaptable for various industries and enhancing business intelligence.</p>
+                </div>
+                <span class="read-more-btn">Read More</span>
+                <div class="d-flex justify-content-start mt-auto">
+                <a class="btn px-2 me-2" href="https://github.com/AliZaiter" target="_blank">
+                    <i class="fab fa-github"></i>
+                </a>
+                <a class="btn px-2 me-2"  onclick="location.href='https:linkedin.com/in/ali-zaiter-955664279i'" target="_blank">
+                    <i class="fab fa-linkedin-in"></i>
+                </a>
+                <a class="btn px-2" href="mailto:alizaiter83@hotmail.com">
+                    <i class="far fa-envelope"></i>
+                </a>
+                </div>
+            </div>
+        </div>
+<hr>
+<div class="row g-4">
+<h2>Virtual Mechatronics</h2>
+<div class="col-lg-4 col-md-3 wow fadeIn" data-wow-delay="0.1s">
+    <div class="service-item d-flex flex-column justify-content-start text-left rounded p-2 position-relative">
+        <div class="d-flex align-items-center mb-3">
+            <div class="service-icon btn-square mr-3">
+    <img src="video/TAMAHJOY.jpg" alt="Profile" class="rounded-circle" style="width: 100%; height: 100%; object-fit: cover;">
+</div>
+<div>
+    <h5 class="mb-1">Tamahjoy</h5>
+    <p class="mb-0">CAD/VR Designer</p>
+</div>
+</div>
+<span class="position-absolute top-0 end-0 mt-3 me-3 time-span">Sep 2024 - Present</span>
+<h6 class="mb-3"><span style="color: #888888;">Project:</span> 3D Reconstruction.</h6>
+<div class="project-description mb-2" style="font-size: 14px; color: black;">
+<p class="mb-4">This project, in partnership with the AiPEX lab at CMU, is focused on developing a more accessible solution for underserved African communities, especially children who require frequent prosthetic replacements due to growth. By utilizing advanced AI technology, we aim to create customized prosthetic devices at a lower cost, ensuring that these individuals have the opportunity to lead more fulfilling lives</p>
+</div>
+<span class="read-more-btn">Read More</span>
+<div class="d-flex justify-content-start mt-auto">
+<a class="btn px-2 me-2" href="https://github.com/TamahJoy-Mbura" target="_blank">
+    <i class="fab fa-github"></i>
+</a>
+<a class="btn px-2 me-2"  onclick="location.href='https:linkedin.com/in/tamahjoy-mbura-kinyanjui-31567828a/'" target="_blank">
+    <i class="fab fa-linkedin-in"></i>
+</a>
+<a class="btn px-2" href="mailto:kinyanjuitamahjoymbura@gmail.com">
+    <i class="far fa-envelope"></i>
+</a>
+</div>
+</div>
+</div>
+<div class="col-lg-4 col-md-3 wow fadeIn" data-wow-delay="0.1s">
+    <div class="service-item d-flex flex-column justify-content-start text-left rounded p-2 position-relative">
+            <div class="d-flex align-items-center mb-3">
+                <div class="service-icon btn-square mr-3">
+                    <img src="video/Titus.png" alt="Profile" class="rounded-circle" style="width: 100%; height: 100%; object-fit: cover;">
+                </div>
+                <div>
+                <h5 class="mb-1">Titus Kiplagat</h5>
+                 <p class="mb-0">CAD Modelling</p>
+                </div>
+            </div>
+            <span class="position-absolute top-0 end-0 mt-3 me-3 time-span">April 2024 - Present</span>
+            <h6 class="mb-3"><span style="color: #888888;">Project:</span> A VR Tuktuk Assembly Factory in Unity</h6>
+            <div class="project-description mb-2" style="font-size: 14px; color: black;">
+            <p class="mb-4">The project involves the creation of a virtual reality factory that simulates the assembly process of a tuktuk. The goal of the project is to provide an immersive experience where users can explore and understand the different stages of vehicle assembly within a virtual factory environment. My role focuses on designing the 3D assets used in Unity, ensuring that all components of the virtual environment are detailed and realistic.</p>
+            </div>
+            <span class="read-more-btn">Read More</span>
+            <div class="d-flex justify-content-start mt-auto">
+                    <a class="btn px-2 me-2" href="https://github.com/Yator1" target="_blank">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a class="btn px-2 me-2" onclick="location.href='https:linkedin.com/in/titus-kiplagat-899b9a227/'" target="_blank">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                    <a class="btn px-2" href="mailto:titusyatz17@gmail.com">
+                        <i class="far fa-envelope"></i>
+                    </a>
+                    </div>
+                </div>
+            </div>
+
+<div class="col-lg-4 col-md-3 wow fadeIn" data-wow-delay="0.1s">
+    <div class="service-item d-flex flex-column justify-content-start text-left rounded p-2 position-relative">
+        <div class="d-flex align-items-center mb-3">
+            <div class="service-icon btn-square mr-3">
+                <img src="video/Jeremiah Kanumbi.jpg" alt="Profile" class="rounded-circle" style="width: 100%; height: 100%; object-fit: cover;">
+            </div>
+            <div>
+                <h5 class="mb-1">Jeremiah Kiarie</h5>
+                <p class="mb-0">CAD Modelling</p>
+            </div>
+        </div>
+        <span class="position-absolute top-0 end-0 mt-3 me-3 time-span">Sep 2024 - Present</span>
+        <h6 class="mb-3"><span style="color: #888888;">Project:</span> 3D reconstruction of prosthetic</h6>
+        <div class="project-description mb-2" style="font-size: 14px; color: black;">
+            <p>This project involves the creation of prosthetic sockets through 3d reconstruction from videos of the amputees stump. It involves the use of emerging technologies such as photogrammetry and AI models to turn the videos into 3d models that can then be 3d printed with appropriate materials to create the prosthetic sockets. This project, in partnership with the AiPEX lab at CMU(Carnegie Mellon University), is focused on developing a more accessible solution for underserved African communities, especially children who require frequent prosthetic replacements due to growth.</p>
+        </div>
+        <span class="read-more-btn">Read More</span>
+        <div class="d-flex justify-content-start mt-auto">
+            <a class="btn px-2 me-2" href="https://github.com/jeremiahKiarie" target="_blank">
+                <i class="fab fa-github"></i>
+            </a>
+            <a class="btn px-2 me-2" onclick="location.href='https:linkedin.com/in/jeremiah-kiarie-100013222/'" target="_blank">
+                <i class="fab fa-linkedin-in"></i>
+            </a>
+            <a class="btn px-2" href="mailto:jerekiarie01@gmail.com">
+                <i class="far fa-envelope"></i>
+            </a>
+        </div>
+    </div>
+</div>
+<div class="col-lg-4 col-md-3 wow fadeIn" data-wow-delay="0.1s">
+    <div class="service-item d-flex flex-column justify-content-start text-left rounded p-2 position-relative">
+        <div class="d-flex align-items-center mb-3">
+            <div class="service-icon btn-square mr-3">
+            <img src="video/kevin.jpg" alt="Profile" class="rounded-circle" style="width: 100%; height: 100%; object-fit: cover;">
+        </div>
+        <div>
+            <h5 class="mb-1">Kevin Marimbet</h5>
+            <p class="mb-0">Research and Reconstruction on prothetics</p>
+        </div>
+    </div>
+    <span class="position-absolute top-0 end-0 mt-3 me-3 time-span">March 2024 - Present</span>
+    <h6 class="mb-3"><span style="color: #888888;">Project:</span> 3D Reconstruction Prosthetics</h6>
+    <div class="project-description mb-2" style="font-size: 14px; color: black;">
+    <p class="mb-4">This project, in partnership with the AiPEX lab at CMU, Pittsburg, is focused on developing a more accessible solution for underserved African communities, especially children who require frequent prosthetic replacements due to growth. By utilizing advanced AI technology, we aim to create customized prosthetic devices at a lower cost, ensuring that these individuals have the opportunity to lead more fulfilling lives</p>
+    </div>
+    <span class="read-more-btn">Read More</span>
+    <div class="d-flex justify-content-start mt-auto">
+        <a class="btn px-2 me-2" href="https://github.com/pere49" target="_blank">
+            <i class="fab fa-github"></i>
+        </a>
+        <a class="btn px-2 me-2"  onclick="location.href='https:linkedin.com/in/kevin-marimbet-768b421b8'" target="_blank">
+            <i class="fab fa-linkedin-in"></i>
+        </a>
+        <a class="btn px-2" href="mailto:kevinmarimbet@gmail.com">
+            <i class="far fa-envelope"></i>
+        </a>
+        </div>
+    </div>
+</div>
+<div class="col-lg-4 col-md-3 wow fadeIn" data-wow-delay="0.1s">
+    <div class="service-item d-flex flex-column justify-content-start text-left rounded p-2 position-relative">
+        <div class="d-flex align-items-center mb-3">
+            <div class="service-icon btn-square mr-3">
+            <img src="video/murage.jpg" alt="Profile" class="rounded-circle" style="width: 100%; height: 100%; object-fit: cover;">
+        </div>
+    <div>
+        <h5 class="mb-1">Charles Murage</h5>
+        <p class="mb-0">Unity Developer</p>
+    </div>
+</div>
+<span class="position-absolute top-0 end-0 mt-3 me-3 time-span">Sep 2024 - Present</span>
+    <h6 class="mb-3"><span style="color: #888888;">Project:</span>VR Car Assembly Factory in Unity</h6>
+    <div class="project-description mb-2" style="font-size: 14px; color: black;">
+    <p class="mb-4">The project involves the creation of a virtual reality factory that simulates the assembly process of a car. The goal of the project is to provide an immersive experience where users can explore and understand the different stages of vehicle assembly within a virtual factory environment. 
+        I'm the unity developer working on the finished optimized virtual Assembly plant that can be deployed. </p>
+    </div>
+    <span class="read-more-btn">Read More</span>
+    <div class="d-flex justify-content-start mt-auto">
+    <a class="btn px-2 me-2" href="https://github.com/johndoe" target="_blank">
+        <i class="fab fa-github"></i>
+    </a>
+    <a class="btn px-2 me-2"  onclick="location.href='https:linkedin.com/in/cheldean-musingila-7a6040217'" target="_blank">
+        <i class="fab fa-linkedin-in"></i>
+    </a>
+    <a class="btn px-2" href="mailto:john.doe@example.com">
+        <i class="far fa-envelope"></i>
+    </a>
+    </div>
+</div>
+</div>
+</div>
+<hr>
+<div class="row g-4">
+    <h2>Virtual Reality</h2>
+    <div class="col-lg-4 col-md-3 wow fadeIn" data-wow-delay="0.1s">
+        <div class="service-item d-flex flex-column justify-content-start text-left rounded p-2 position-relative">
+        <div class="d-flex align-items-center mb-3">
+            <div class="service-icon btn-square mr-3">
+                <img src="video/elsie.jpg" alt="Profile" class="rounded-circle" style="width: 100%; height: 100%; object-fit: cover;">
+            </div>
+            <div>
+                <h5 class="mb-1">Elsie Makara</h5>
+                    <p class="mb-0">Software Developer</p>
+                </div>
+            </div>
+            <span class="position-absolute top-0 end-0 mt-3 me-3 time-span">June 2024 - Present</span>
+<h6 class="mb-3"><span style="color: #888888;">Project:</span> EUREKA Geothermal Energy</h6>
+<div class="project-description mb-2" style="font-size: 14px; color: black;">
+<p class="mb-4">I am working on the Eureka project and our goal is to Leverage Augmented Reality for Geothermal Resources Exploration in Africa. I am currently researching on how to integrate our Augmented Reality headset with a platform we have created for logging geothermal data.</p>
+</div>
+<span class="read-more-btn">Read More</span>
+<div class="d-flex justify-content-start mt-auto">
+            <a class="btn px-2 me-2" href="https://github.com/Mak-ara" target="_blank">
+                <i class="fab fa-github"></i>
+            </a>
+            <a class="btn px-2 me-2"  onclick="location.href='https:linkedin.com/in/elsie-makara-1a7570222/'" target="_blank">
+                <i class="fab fa-linkedin-in"></i>
+            </a>
+            <a class="btn px-2" href="mailto:makaraelsie3p@gmail.com">
+                <i class="far fa-envelope"></i>
+            </a>
+        </div>
+    </div>
+</div>
+            <div class="col-lg-4 col-md-3 wow fadeIn" data-wow-delay="0.1s">
+                <div class="service-item d-flex flex-column justify-content-start text-left rounded p-3 position-relative">
+                    <div class="d-flex align-items-center mb-3">
+                        <div class="service-icon btn-square mr-3">
+                            <img src="video/Victor.jpg" alt="Profile" class="rounded-circle" style="width: 100%; height: 100%; object-fit: cover;">
+                        </div>
+                    <div>
+                        <h5 class="mb-1">Victor Kanumbi</h5>
+                        <p class="mb-0">CAD Modelling</p>
+                    </div>
+                </div>
+                <span class="position-absolute top-0 end-0 mt-3 me-3 time-span">Sep 2024 - Present</span>
+            <h6 class="mb-3"><span style="color: #888888;">Project:</span> Optimizing the VR Multilab</h6>
+            <div class="project-description mb-2" style="font-size: 14px; color: black;">
+            <p class="mb-4">This is to increase the frame rate of the Multilab projects which are: Compressed Air Energy Process Control System, Hybrid Solar Drier Project, Virtual Machine Control Lab, Virtual Machine Control Lab 2, Digital Twin Open Source Virtual Lab, Analytic Cyber-Physical System and U Factory Xarm Robot
+                project.</p></div>
+                <span class="read-more-btn">Read More</span>
+            <div class="d-flex justify-content-start mt-auto">
+                    <a class="btn px-2 me-2" href="https://github.com/VictorKanumbi" target="_blank">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a class="btn px-2 me-2"  onclick="location.href='https:linkedin.com/in/victor-kanumbi-27b5a7216'" target="_blank">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                    <a class="btn px-2" href="mailto:kanumbivictor.vkk@gmail.com">
+                        <i class="far fa-envelope"></i>
+                    </a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-3 wow fadeIn" data-wow-delay="0.1s">
+                <div class="service-item d-flex flex-column justify-content-start text-left rounded p-2 position-relative">
+                    <div class="d-flex align-items-center mb-3">
+                        <div class="service-icon btn-square mr-3">
+                            <img src="video/maxwel.jpg" alt="Profile" class="rounded-circle" style="width: 100%; height: 100%; object-fit: cover;">
+                        </div>
+                        <div>
+                            <h5 class="mb-1">Magoi Maxwel</h5>
+                            <p class="mb-0">XR developer</p>
+                        </div>
+                    </div>
+                    <span class="position-absolute top-0 end-0 mt-3 me-3 time-span">March 2024 - Present</span>
+            <h6 class="mb-3"><span style="color: #888888;">Project:</span> Sifa Cyber Physical station </h6>
+            <div class="project-description mb-2" style="font-size: 14px; color: black;">
+            <p class="mb-4">Development of a virtual cyber-physical assembly system. By combining immersive virtual reality with advanced simulations of mechatronic systems, we overcome the physical limitations of traditional labs, providing accessible, hands-on learning experiences for students and professionals alike.</p>
+              </div>
+            <span class="read-more-btn">Read More</span>
+            <div class="d-flex justify-content-start mt-auto">
+                        <a class="btn px-2 me-2" href="https://github.com/magoimaxwel" target="_blank">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a class="btn px-2 me-2"  onclick="location.href='https:linkedin.com/in/magoimaxwel/'" target="_blank">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a class="btn px-2" href="mailto:magoimaxwel@gmail.com">
+                            <i class="far fa-envelope"></i>
+                        </a>
+                        </div>
+                    </div>
+                </div>
+            <!-- Team Member 6 -->
+            <div class="col-lg-4 col-md-3 wow fadeIn" data-wow-delay="0.1s">
+                <div class="service-item d-flex flex-column justify-content-start text-left rounded p-2 position-relative">
+                    <div class="d-flex align-items-center mb-3">
+                        <div class="service-icon btn-square mr-3">
+                            <img src="video/Fransis.jpg" alt="Profile" class="rounded-circle" style="width: 100%; height: 100%; object-fit: cover;">
+                        </div>
+                        <div>
+                            <h5 class="mb-1">Francis Malombe</h5>
+                            <p class="mb-0">Software Developer</p>
+                        </div>
+                    </div>
+                    <span class="position-absolute top-0 end-0 mt-3 me-3 time-span">Sep 2024 - Present</span>
+                    <h6 class="mb-3"><span style="color: #888888;">Project:</span> AI-Powered Analytics Dashboard</h6>
+                    <div class="project-description mb-2" style="font-size: 14px; color: black;">
+                    <p class="mb-4">Developing an advanced analytics dashboard that utilizes machine learning algorithms to provide real-time insights and predictive analysis for business decision-making.</p>
+                </div>
+                    <span class="read-more-btn">Read More</span>
+                    <div class="d-flex justify-content-start mt-auto">
+                            <a class="btn px-2 me-2" href="https://github.com/johndoe" target="_blank">
+                                <i class="fab fa-github"></i>
+                            </a>
+                            <a class="btn px-2 me-2"  onclick="location.href='https:linkedin.com/in/cheldean-musingila-7a6040217'" target="_blank">
+                                <i class="fab fa-linkedin-in"></i>
+                            </a>
+                            <a class="btn px-2" href="mailto:john.doe@example.com">
+                                <i class="far fa-envelope"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>         
+                <div class="col-lg-4 col-md-3 wow fadeIn" data-wow-delay="0.1s">
+                    <div class="service-item d-flex flex-column justify-content-start text-left rounded p-3 position-relative">
+                    <div class="d-flex align-items-center mb-3">
+                    <div class="service-icon btn-square mr-3">
+                        <img src="video/edwin.png" alt="Profile" class="rounded-circle" style="width: 100%; height: 100%; object-fit: cover;">
+                    </div>
+                    <div>
+                        <h5 class="mb-1">Edwin Ngari</h5>
+                        <p class="mb-0">VR Developer</p>
+                    </div>
+                </div>
+                <span class="position-absolute top-0 end-0 mt-3 me-3 time-span">March 2024 - Present</span>
+            <h6 class="mb-3"><span style="color: #888888;">Project:</span>Digital Twin in a VR Environment</h6>
+            <div class="project-description mb-2" style="font-size: 14px; color: black;">
+            <p class="mb-4">Developing a digital twin of a machine within a virtual reality environment. By replicating the physical machine's behavior and functionality in VR, it enables both students and professionals to interact with and understand complex systems in a hands-on, immersive setting. This digital twin serves as an innovative tool for training, education, and skill development.</p>
+            </div>
+            <span class="read-more-btn">Read More</span>
+            <div class="d-flex justify-content-start mt-auto">
+                    <a class="btn px-2 me-2" href="https://github.com/Ngari99" target="_blank">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a class="btn px-2 me-2"  onclick="location.href='https:linkedin.com/in/edwin-ngari-1aba8928b'" target="_blank">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                    <a class="btn px-2" href="mailto:ngariedwin8@gmail.com">
+                        <i class="far fa-envelope"></i>
+                    </a>
+                    </div>
+                </div>
+            </div>
+        <div class="col-lg-4 col-md-3 wow fadeIn" data-wow-delay="0.1s">
+            <div class="service-item d-flex flex-column justify-content-start text-left rounded p-2 position-relative">
+                <div class="d-flex align-items-center mb-3">
+                    <div class="service-icon btn-square mr-3">
+                    <img src="video/vincent.jpg" alt="Profile" class="rounded-circle" style="width: 100%; height: 100%; object-fit: cover;">
+                </div>
+            <div>
+                <h5 class="mb-1">Vincent Gimenez</h5>
+                <p class="mb-0">VR Developer</p>
+            </div>
+        </div>
+        <span class="position-absolute top-0 end-0 mt-3 me-3 time-span">Sep 2024 - Present</span>
+            <h6 class="mb-3"><span style="color: #888888;">Project:</span> AI-Powered Analytics Dashboard</h6>
+            <div class="project-description mb-2" style="font-size: 14px; color: black;">
+            <p class="mb-4">Developing an advanced analytics dashboard that utilizes machine learning algorithms to provide real-time insights and predictive analysis for business decision-making.</p>
+            </div>
+            <span class="read-more-btn">Read More</span>
+            <div class="d-flex justify-content-start mt-auto">
+               <a class="btn px-2 me-2" href="https://github.com/johndoe" target="_blank">
+                   <i class="fab fa-github"></i>
+                </a>
+                <a class="btn px-2 me-2"  onclick="location.href='https:linkedin.com/in/cheldean-musingila-7a6040217'" target="_blank">
+                    <i class="fab fa-linkedin-in"></i>
+                </a>
+                <a class="btn px-2" href="mailto:john.doe@example.com">
+                    <i class="far fa-envelope"></i>
+                </a>
+                </div>
+            </div>
+        </div>
+       
+        <div class="col-lg-4 col-md-3 wow fadeIn" data-wow-delay="0.1s">
+            <div class="service-item d-flex flex-column justify-content-start text-left rounded p-2 position-relative">
+                <div class="d-flex align-items-center mb-3">
+                    <div class="service-icon btn-square mr-3">
+                        <img src="video/newton.jpg" alt="Profile" class="rounded-circle" style="width: 100%; height: 100%; object-fit: cover;">
+                    </div>
+                <div>
+                    <h5 class="mb-1">Newton Kariuki</h5>
+                    <p class="mb-0">Robotics and Robots OS 2 Developer</p>
+                </div>
+            </div>
+            <span class="position-absolute top-0 end-0 mt-3 me-3 time-span">July 2023 - Present</span>
+            <h6 class="mb-3"><span style="color: #888888;">Project:</span>  UFactory XArm7 digital twin</h6>
+            <div class="project-description mb-2" style="font-size: 14px; color: black;">
+            <p class="mb-4">This project focuses on the development of a digital twinning solution for the uFactory xArm7 robotic arm, using ROS 2 and Unity for virtual control and real-time synchronization. The primary goal is to enable seamless bidirectional communication between the real robotic arm and its virtual counterpart in Unity. This allows any movement or action performed by the physical robot to be reflected in the virtual model and vice versa.
+
+                Key functionalities include control via both joint space and Cartesian space commands, enabling precise manipulation and coordination between the real and virtual environments. The project aims to leverage the digital twin for applications in simulation, remote control, and advanced robotic interaction scenarios, contributing to advancements in robotics, automation, and system testing</p>
+            </div>
+            <span class="read-more-btn">Read More</span>
+            <div class="d-flex justify-content-start mt-auto">
+                <a class="btn px-2 me-2" href="https://github.com/newtonjeri" target="_blank">
+                    <i class="fab fa-github"></i>
+                </a>
+                <a class="btn px-2 me-2"  onclick="location.href='https:linkedin.com/in/newton-kariuki-5575ab306'" target="_blank">
+                    <i class="fab fa-linkedin-in"></i>
+                </a>
+                <a class="btn px-2" href="mailto:newtonkaris45@gmail.com ">
+                    <i class="far fa-envelope"></i>
+                </a>
+                </div>
+            </div>
+        </div>
+    <div class="col-lg-4 col-md-3 wow fadeIn" data-wow-delay="0.1s">
+        <div class="service-item d-flex flex-column justify-content-start text-left rounded p-2 position-relative">
+            <div class="d-flex align-items-center mb-3">
+                <div class="service-icon btn-square mr-3">
+                    <img src="video/Blair.jpeg" alt="Profile" class="rounded-circle" style="width: 100%; height: 100%; object-fit: cover;">
+                </div>
+            <div>
+                <h5 class="mb-1">Blair Carson</h5>
+                <p class="mb-0">VR Developer</p>
+            </div>
+        </div>
+        <span class="position-absolute top-0 end-0 mt-3 me-3 time-span">March 2024 - Present</span>
+            <h6 class="mb-3"><span style="color: #888888;">Project:</span> UFactory XArm7 digital twin</h6>
+            <div class="project-description mb-2" style="font-size: 14px; color: black;">
+            <p class="mb-4">This project focuses on the development of a digital twinning solution for the uFactory xArm7 robotic arm, using ROS 2 and Unity for virtual control and real-time synchronization. The primary goal is to enable seamless bidirectional communication between the real robotic arm and its virtual counterpart in Unity. This allows any movement or action performed by the physical robot to be reflected in the virtual model and vice versa.
+
+                Key functionalities include control via both joint space and Cartesian space commands, enabling precise manipulation and coordination between the real and virtual environments. The project aims to leverage the digital twin for applications in simulation, remote control, and advanced robotic interaction scenarios, contributing to advancements in robotics, automation, and system testing</p>
+            </div>
+            <span class="read-more-btn">Read More</span>
+            <div class="d-flex justify-content-start mt-auto">
+            <a class="btn px-2 me-2" href="https://github.com/Blair-Carson" target="_blank">
+                <i class="fab fa-github"></i>
+            </a>
+            <a class="btn px-2 me-2"  onclick="location.href='https:linkedin.com/in/blair-carson/'" target="_blank">
+                <i class="fab fa-linkedin-in"></i>
+            </a>
+            <a class="btn px-2" href="mailto:blair.carson.k@gmail.com">
+                <i class="far fa-envelope"></i>
+            </a>
+            </div>
+        </div>
+    </div>
+    <div class="col-lg-4 col-md-3 wow fadeIn" data-wow-delay="0.1s">
+        <div class="service-item d-flex flex-column justify-content-start text-left rounded p-2 position-relative">
+            <div class="d-flex align-items-center mb-3">
+                <div class="service-icon btn-square mr-3">
+                    <img src="video/wesely rotich.jpeg" alt="Profile" class="rounded-circle" style="width: 100%; height: 100%; object-fit: cover;">
+                </div>
+            <div>
+                <h5 class="mb-1">Wesley Rotich</h5>
+                <p class="mb-0">Researcher</p>
+            </div>
+        </div>
+        <span class="position-absolute top-0 end-0 mt-3 me-3 time-span">March 2024 - Present</span>
+            <h6 class="mb-3"><span style="color: #888888;">Project:</span> Human Robot Collaboration</h6>
+            <div class="project-description mb-2" style="font-size: 14px; color: black;">
+            <p class="mb-4">Human-Robot Collaboration (HRC) is being revolutionized by the integration of Augmented Reality (AR) and Machine Learning (ML). AR enhances human-robot interaction by overlaying digital information onto the physical environment, allowing humans to visualize and guide robotic actions in real time. This leads to more intuitive control, safer operations, and hands-free collaboration.
+
+                Meanwhile, ML enables robots to learn from human behavior, adapt to changing environments, and optimize task performance. The synergy of AR and ML creates smarter, more efficient workspaces, where humans and robots collaborate seamlessly, enhancing productivity across industries like manufacturing, healthcare, and education.</p>
+            </div>
+            <span class="read-more-btn">Read More</span>
+            <div class="d-flex justify-content-start mt-auto">
+            <a class="btn px-2 me-2" href="https://github.com/RotichWesley" target="_blank">
+                <i class="fab fa-github"></i>
+            </a>
+            <a class="btn px-2 me-2"  onclick="location.href='https:linkedin.com/in/kipkemoi-wesley'" target="_blank">
+                <i class="fab fa-linkedin-in"></i>
+            </a>
+            <a class="btn px-2" href="mailto:rotichwesley15@gmail.com">
+                <i class="far fa-envelope"></i>
+            </a>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+</div>   
+    
+<!--about team end-->
+
+  <!-- sponsors Start -->
+<div class="container-fluid newsletter py-3 mx-auto" style="background-color: white;">
+    <div class="container mx-auto px-24 mt-10 py-3"> 
+        <h1 class="text-center" style="color: #1363C6; font-size: 2rem;">Partners</h1>
+        <div class="sponsor-logos-wrapper">
+            <div class="sponsor-logos">
+                <div class="logo-col">
+                    <a href="https://vml.dkut.ac.ke/sifa.html" target="_blank">
+                        <img src="./img/logos/SIFA FC.png" alt="Sponsor 1" class="sponsor-logo">
+                    </a>
+                </div>
+                <div class="logo-col">
+                    <a href="https://https://au.int/" target="_blank">
+                        <img src="./img/logos/AU_LOGO_ENGLISH_CMYK.png" alt="Sponsor 2" class="sponsor-logo">
+                    </a>
+                </div>
+                <div class="logo-col">
+                    <a href="https://www.nepad.org/" target="_blank">
+                        <img src="./img/logos/AUDA-NEPAD_LOGO_EN.png" alt="Sponsor 3" class="sponsor-logo">
+                    </a>
+                </div>
+                <div class="logo-col">
+                    <a href="https://www.bmz.de/en" target="_blank">
+                        <img src="./img/logos/BMZ Logo.png" alt="Sponsor 4" class="sponsor-logo">
+                    </a>
+                </div>
+                <div class="logo-col">
+                    <a href="https://www.europanostra.org/agora/en-co-funded-by-the-eu_pantone/" target="_blank">
+                        <img src="./img/logos/EN Co-funded by the EU_PANTONE.jpg" alt="Sponsor 5" class="sponsor-logo">
+                    </a>
+                </div>
+                <div class="logo-col">
+                    <a href="https://www.kfw-entwicklungsbank.de/International-financing/KfW-Entwicklungsbank/" target="_blank">
+                        <img src="./img/logos/KfW_LOGO.png" alt="Sponsor 6" class="sponsor-logo">
+                    </a>
+                </div>
+                <div class="logo-col">
+                    <a href="https://vml.dkut.ac.ke/" target="_blank">
+                        <img src="./img/logos/Virtual Mechatronics Lab Logo V2-01.png" alt="Sponsor 7" class="sponsor-logo">
+                    </a>
+                </div>
+                <div class="logo-col">
+                    <a href="https://www.epr.eu/event/epr-communications-network-meeting-2/attachment/en-co-funded-by-the-eu_pos-6/" target="_blank">
+                        <img src="./img/logos/EN Co-Funded by the EU_POS.png" alt="Sponsor 8" class="sponsor-logo">
+                    </a>
+                </div>
+                <div class="logo-col">
+                    <a href="https://www.nepad.org/" target="_blank">
+                        <img src="./img/logos/AU+NEPAD Logo.png" alt="Sponsor 9" class="sponsor-logo">
+                    </a>
+                </div>
+                <!-- <div class="logo-col">
+                    <a href="https://festo-link.com" target="_blank">
+                        <img src="./img/logos/FESTO.png" alt="Sponsor 10" class="sponsor-logo">
+                    </a>
+                </div>
+                <div class="logo-col">
+                    <a href="https://siemens-link.com" target="_blank">
+                        <img src="./img/logos/SIEMENS.png" alt="Sponsor 11" class="sponsor-logo">
+                    </a>
+                </div> -->
+            </div>
+        </div>
+    </div>
 </div>
 <!-- Newsletter End -->
 
 
-     <!-- Footer Start -->
-     <div class="container-fluid bg-dark text-white-50 footer pt-5">
-        <div class="container py-5">
-            <div class="row g-5">
-                <div class="col-md-6 col-lg-3 wow fadeIn" data-wow-delay="0.1s">
-                    <a href="index.html" class="d-inline-block mb-3">
-                        <h1 class="text-white">Virtual Mechatronics</h1>
-                    </a>
-                    <p class="mb-0">Unlocking the potential: Virtually</p>
-                </div>
-                <div class="col-md-6 col-lg-3 wow fadeIn" data-wow-delay="0.3s">
-                    <h5 class="text-white mb-4">Get In Touch</h5>
-                    <p><i class="fa fa-map-marker-alt me-3"></i>Nyeri, Kenya</p>
-                    <p><i class="fa fa-phone-alt me-3"></i>+25416150627</p>
-                    <p><i class="fa fa-envelope me-3"></i>vr.africa@dkut.ac.ke</p>
-                    <div class="d-flex pt-2">
-                        <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-twitter"></i></a>
-                        <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-facebook-f"></i></a>
-                        <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-youtube"></i></a>
-                        <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-instagram"></i></a>
-                        <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-linkedin-in"></i></a>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-3 wow fadeIn" data-wow-delay="0.5s">
-                    <h5 class="text-white mb-4">Popular Link</h5>
-                    <a class="btn btn-link" href="">About Us</a>
-                    <a class="btn btn-link" href="">Contact Us</a>
-                    <a class="btn btn-link" href="">Privacy Policy</a>
-                    <a class="btn btn-link" href="">Terms & Condition</a>
-                    <a class="btn btn-link" href="">Career</a>
-                </div>
-                <div class="col-md-6 col-lg-3 wow fadeIn" data-wow-delay="0.7s">
-                    <h5 class="text-white mb-4">Our Projects</h5>
-                    <a class="btn btn-link" href="">Virtual Reality</a>
-                    <a class="btn btn-link" href="">virtual Mechatronics</a>
-                    <a class="btn btn-link" href="">Designs</a>
-                    <a class="btn btn-link" href="">Trainings</a>
-                    <a class="btn btn-link" href="">Virtual Reality</a>
+    <!-- Footer Start -->
+<div class="container-fluid bg-dark text-white footer pt-4">
+    <div class="container py-4">
+        <div class="row g-4">
+            <div class="col-md-6 col-lg-3 wow fadeIn" data-wow-delay="0.1s">
+                <a href="index.html" class="d-inline-block mb-3">
+                    <h1 class="text-white">Virtual Mechatronics</h1>
+                </a>
+                <p class="mb-0">Unlocking the potential: Virtually</p>
+            </div>
+            <div class="col-md-6 col-lg-3 wow fadeIn" data-wow-delay="0.3s">
+                <h5 class="text-white mb-3">Get In Touch</h5>
+                <p><i class="fa fa-map-marker-alt me-2"></i>Nyeri, Kenya</p>
+                <p><i class="fa fa-phone-alt me-2"></i>+25416150627</p>
+                <p><i class="fa fa-envelope me-2"></i>vr.africa@dkut.ac.ke</p>
+                <div class="d-flex pt-2">
+                    <a class="btn btn-outline-light btn-social me-2" href="#"><i class="fab fa-twitter"></i></a>
+                    <a class="btn btn-outline-light btn-social me-2" href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a class="btn btn-outline-light btn-social me-2" href="#"><i class="fab fa-youtube"></i></a>
+                    <a class="btn btn-outline-light btn-social me-2" href="#"><i class="fab fa-instagram"></i></a>
+                    <a class="btn btn-outline-light btn-social" href="#"><i class="fab fa-linkedin-in"></i></a>
                 </div>
             </div>
+            <div class="col-md-6 col-lg-3 wow fadeIn" data-wow-delay="0.5s">
+                <h5 class="text-white mb-3">Popular Links</h5>
+                <a class="btn btn-link text-white-50" href="#">About Us</a>
+                <a class="btn btn-link text-white-50" href="#">Contact Us</a>
+                <a class="btn btn-link text-white-50" href="#">Privacy Policy</a>
+                <a class="btn btn-link text-white-50" href="#">Terms & Conditions</a>
+                <a class="btn btn-link text-white-50" href="#">Careers</a>
+            </div>
+            <div class="col-md-6 col-lg-3 wow fadeIn" data-wow-delay="0.7s">
+                <h5 class="text-white mb-3">Our Projects</h5>
+                <a class="btn btn-link text-white-50" href="#">Virtual Reality</a>
+                <a class="btn btn-link text-white-50" href="#">Virtual Mechatronics</a>
+                <a class="btn btn-link text-white-50" href="#">Designs</a>
+                <a class="btn btn-link text-white-50" href="#">Trainings</a>
+                <a class="btn btn-link text-white-50" href="#">Virtual Reality</a>
+            </div>
         </div>
-        <div class="container wow fadeIn" data-wow-delay="0.1s">
-            <div class="copyright">
-                <div class="row">
-                    <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
-                        &copy; <a class="border-bottom" href="#">Virtual Mechatronics</a>, All Right Reserved.
-
-                       
-                    </div>
-                    <div class="col-md-6 text-center text-md-end">
-                        <div class="footer-menu">
-                            <a href="">Home</a>
-                            <a href="">Cookies</a>
-                            <a href="">Help</a>
-                            <a href="">FAQs</a>
-                        </div>
+    </div>
+    <div class="container wow fadeIn" data-wow-delay="0.1s">
+        <div class="copyright">
+            <div class="row">
+                <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+                    &copy; <a class="border-bottom text-white" href="#">Virtual Mechatronics</a>, All Rights Reserved.
+                </div>
+                <div class="col-md-6 text-center text-md-end">
+                    <div class="footer-menu">
+                        <a class="text-white-50" href="#">Home</a>
+                        <a class="text-white-50" href="#">Cookies</a>
+                        <a class="text-white-50" href="#">Help</a>
+                        <a class="text-white-50" href="#">FAQs</a>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    <!-- Footer End -->
-
+</div>
+<!-- Footer End -->
 
     <!-- Back to Top -->
     <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top pt-2"><i class="bi bi-arrow-up"></i></a>
@@ -388,6 +1196,20 @@
     <script src="lib/waypoints/waypoints.min.js"></script>
     <script src="lib/counterup/counterup.min.js"></script>
     <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const readMoreBtns = document.querySelectorAll('.read-more-btn');
+    
+            readMoreBtns.forEach(function(btn) {
+                btn.addEventListener('click', function() {
+                    const description = btn.previousElementSibling; // Get the previous sibling element (the project description)
+                    description.classList.toggle('expanded');
+                    btn.textContent = description.classList.contains('expanded') ? 'Read Less' : 'Read More';
+                });
+            });
+        });
+    </script>
+
 
     <!-- Template Javascript -->
     <script src="js/main.js"></script>

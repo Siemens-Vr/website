@@ -1,7 +1,8 @@
 /********** Template CSS **********/
 :root {
     --black: black;
-    --primary: #1363C6;
+    --primary: #4f7fb9;
+    --background: #f5f8fc;
     --secondary: #15ACE1;
     --light: #F4F7FE;
     --dark: #14183E;
@@ -54,28 +55,7 @@ h6,
 .fw-medium {
     font-weight: 500 !important;
 }
-/* sponsors section start */
-.sponsor-logos {
-    overflow: hidden;
-  
-}
 
-.sponsor-logos img {
-    width: 150px; /* Adjust size as needed */
-    margin: 10px 30px; /* Adjust spacing between logos */
-   
-    padding: 50px 0; /* Add some padding for better spacing */
-    animation: moveLeftToRight 20s linear infinite; /* Adjust animation duration as needed */
-}
-
-@keyframes moveLeftToRight {
-    0% {
-        transform: translateX(-100%);
-    }
-    100% {
-        transform: translateX(100%);
-    }
-}
 
 /* sponsors section end */
 
@@ -101,6 +81,96 @@ h6,
     opacity: 1;
 }
 
+/* Updated Milestone Card Styles */
+.project-milestone-card {
+    background-color: var(--background); /* Light background color for cards */
+    border-radius: 0.5rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    min-height: 250px;
+    align-items: center;
+    align-self: center;
+    justify-content: center;
+}
+
+.project-milestone-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Individual Milestone Colors */
+.milestone-1 {
+    background-color: #070aec;
+    color: #070aec;
+}
+
+.milestone-2 {
+    background-color: #e3f2fd;
+}
+
+.milestone-3 {
+    background-color: #e8f5e9;
+}
+
+.milestone-4 {
+    background-color: #fff3e0;
+}
+
+/* Updated Milestone Content Styles */
+.project-milestone-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease-out;
+    justify-content: center;
+    align-items: center;
+}
+
+.project-milestone-content.active {
+    max-height: 800px;
+    transition: max-height 0.5s ease-in;
+}
+
+/* Updated Read More Button Styles */
+.project-milestone-read-more {
+    color: #4338ca;
+    font-weight: 600;
+    transition: color 0.3s ease;
+    font-size: 0.9rem;
+    justify-content: center;
+    align-self: center;
+    align-items: center;
+}
+
+.project-milestone-read-more:hover {
+    color: #1e3a8a;
+}
+
+/* Ensure Read More buttons are accessible */
+.project-milestone-read-more:focus {
+    outline: 2px solid #4338ca;
+    outline-offset: 2px;
+}
+
+/* Text color updates */
+.project-milestone-card p,
+.project-milestone-card li,
+.project-milestone-card h5,
+.project-milestone-card h6 {
+    color: rgb(75, 85, 99);
+}
+
+/* Accordion styling */
+.hidden {
+    display: none;
+}
+.rotate-180 {
+    transform: rotate(180deg);
+}
+ 
 
 /*** Button ***/
 .btn {
@@ -113,9 +183,29 @@ h6,
     height: 38px;
 }
 
-.btn-sm-square {
-    width: 32px;
-    height: 32px;
+ /* Button styling */
+ .btn-sm-square {
+    width: 40px; /* Adjust size for square buttons */
+    height: 40px; /* Adjust size for square buttons */
+    display: flex; /* Center icons in buttons */
+    align-items: center; /* Center icons */
+    justify-content: center; /* Center icons */
+    transition: background-color 0.3s; /* Smooth transition on hover */
+}
+
+.btn-sm-square:hover {
+    background-color: rgba(255, 255, 255, 0.2); /* Slight background change on hover */
+}
+
+/* Header styling */
+h1 {
+    font-size: 2.5rem; /* Increase the font size of the title */
+    font-weight: bold; /* Bold title */
+}
+
+/* Stats section styling */
+.rounded {
+    border: 1px solid rgba(255, 255, 255, 0.2); /* Light border around stats */
 }
 
 .btn-lg-square {
@@ -494,30 +584,6 @@ h6,
 
 
 /*** FAQs ***/
-.accordion .accordion-item {
-    border: none;
-    margin-bottom: 15px;
-}
-
-.accordion .accordion-button {
-    background: var(--light);
-    border-radius: 2px;
-}
-
-.accordion .accordion-button:not(.collapsed) {
-    color: #FFFFFF;
-    background: var(--primary);
-    box-shadow: none;
-}
-
-.accordion .accordion-button:not(.collapsed)::after {
-    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23fff'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
-}
-
-.accordion .accordion-body {
-    padding: 15px 0 0 0;
-}
-
 
 /*** Testimonial ***/
 .testimonial-carousel {
@@ -591,7 +657,60 @@ h6,
 
     border-color: var(--primary);
 }
+.accordion-body h6 {
+    color: var(#1363C6);
+    margin-bottom: 0.5rem;
+}
 
+.accordion-body p {
+    color: rgb(75, 85, 99);
+    margin-bottom: 1rem;
+} 
+.sponsor-logos-wrapper {
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+    background: white;
+    padding: 20px 0;
+}
+
+.sponsor-logos {
+    display: flex;
+    animation: scroll 20s linear infinite;
+    min-width: 150%;
+}
+
+.logo-col {
+    flex: 0 0 auto;
+    width: 180px;
+    height: 180px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 20px;
+    background-color: transparent; /* Set to transparent to remove background */
+    border-radius: 0; /* Remove rounded corners */
+}
+
+.sponsor-logo {
+    max-width: 100%;
+    max-height: 100%;
+    transition: transform 0.3s;
+}
+
+.sponsor-logo:hover {
+    transform: scale(1.1);
+}
+
+/* Scrolling animation */
+@keyframes scroll {
+    0% {
+        transform: translateX(100%);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
 
 /*** Footer ***/
 .footer {
@@ -670,6 +789,45 @@ h6,
 }
 
 
+/* Additional styles for the footer */
+.footer {
+    background-color: #343a40; /* Dark background color */
+}
+
+.btn-link {
+    padding: 0; /* Remove padding from links */
+    color: white; /* White color for links */
+    transition: color 0.3s ease; /* Smooth transition for hover effect */
+}
+
+.btn-link:hover {
+    color: #f8f9fa; /* Lighter color on hover */
+}
+
+.btn-social {
+    width: 38px; /* Adjust size for social buttons */
+    height: 38px; /* Adjust size for social buttons */
+    border-radius: 50%; /* Make buttons circular */
+    display: flex; /* Center icons in buttons */
+    align-items: center; /* Center icons in buttons */
+    justify-content: center; /* Center icons in buttons */
+    margin-right: 5px; /* Add spacing between buttons */
+    transition: background-color 0.3s ease; /* Smooth transition for hover effect */
+}
+
+.btn-social:hover {
+    background-color: rgba(255, 255, 255, 0.2); /* Slightly lighter background on hover */
+}
+
+.footer-menu a {
+    margin: 0 10px; /* Space out footer menu links */
+    color: white; /* White color for footer menu links */
+    transition: color 0.3s ease; /* Smooth transition for hover effect */
+}
+
+.footer-menu a:hover {
+    color: #f8f9fa; /* Lighter color on hover */
+}
 
 /*---------------------------------------
   ARTISTS              

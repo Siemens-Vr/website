@@ -1,4 +1,4 @@
-   <!-- <!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -82,23 +82,65 @@
  
         </div>
     <!-- Navbar End -->
-
-    
-    <div class="video-wrap ">
-        <video autoplay="" loop="" muted="" class="custom-video" poster="">
-            <source src="video/background2.mp4" type="video/mp4">
-    
-            Your browser does not support the video tag.
-        </video>
-        <div class="video-overlay">
-            <h1>Virtual Mechatronics Lab</h1>
-            <!-- <p>Your supporting text goes here.</p> -->
-        </div>
-    
-    </div>
+     
     <div class="content">
 
-    <div class="container-fluid  mt-30"> 
+    
+ 
+            <div class="video-wrap">
+                <video autoplay="" loop="" muted="" class="custom-video" poster="">
+                    <source src="video/background2.mp4" type="video/mp4">
+                    Your browser does not support the video tagections.
+                </video>
+              
+                <div class="video-overlay">
+                    <h1>Virtual Mechatronics Lab</h1>
+                    <div class="news-alert">
+                        <div class="news-ticker">
+                            <div class="news-item">
+                                <span class="news-text">SMSCP L1 students Results Available</span>
+                                <a href="news.html#smscp" class="see-more">See More Details</a>
+                            </div>
+                            <div class="news-item">
+                                <span class="news-text">EU Sifa Innovation Phase III</span>
+                                <a href="news.html#sifa" class="see-more">See More Details</a>
+                            </div>
+                            <div class="news-item">
+                                <span class="news-text">Ongoing Attachment At Siemens Training Center</span>
+                                <a href="news.html#attachment" class="see-more">See More Details</a>
+                            </div>
+                        </div>
+                    </div>
+            </div>
+            <script>
+                document.addEventListener('DOMContentLoaded', function() {
+                    const newsItems = document.querySelectorAll('.news-item');
+                    let currentIndex = 0;
+        
+                    function showNextItem() {
+                        newsItems[currentIndex].classList.remove('visible', 'fade-in');
+                        newsItems[currentIndex].classList.add('fade-out');
+                        
+                        setTimeout(() => {
+                            newsItems[currentIndex].classList.remove('fade-out');
+                            currentIndex = (currentIndex + 1) % newsItems.length;
+                            newsItems[currentIndex].classList.add('visible', 'fade-in');
+                        }, 500);
+                    }
+        
+                    // Show the first item immediately
+                    newsItems[0].classList.add('visible', 'fade-in');
+        
+                    // Change news item every 5 seconds
+                    setInterval(showNextItem, 5000);
+                });
+            </script>
+       
+            
+        
+    </div>
+
+    <div class="container-fluid"> 
         <div class="container">
             <div class="mx-auto text-center wow fadeIn" data-wow-delay="0.1s" style="max-width: 500px;">
                 <div class="btn btn-sm border rounded-pill text-primary px-3 mb-3">HOME</div>
@@ -417,7 +459,7 @@
                             Your browser does not support the video tag.
                         </video> 
 
-                         <!-- <img class="img-fluid" src="img/vr/VRMultiLab - MainScene - Android - Unity 2022.3.9f1 _DX11_ 11_30_2023 6_21_58 PM.png"> -->
+                         <!-- <img class="img-fluid" src="img/vr/VRMultiLab - MainScene - Android - Unity 2022.3.9f1 DX11 11_30_2023 6_21_58 PM.png"> -->
 
 </div>
                   

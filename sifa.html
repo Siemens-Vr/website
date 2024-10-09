@@ -20,20 +20,20 @@
     <!-- Icon Font Stylesheet -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
 
     <!-- Libraries Stylesheet -->
     <link href="lib/animate/animate.min.css" rel="stylesheet">
     <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
-    <script src="https://cdn.tailwindcss.com"></script>
 
     <!-- Customized Bootstrap Stylesheet -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+
 
     <!-- Template Stylesheet -->
     <link href="css/style.css" rel="stylesheet">
-    <link href="css/sifa.css" rel="stylesheet">
+    <link href="css/hero.css" rel ="stylesheet">
 
     <style>
             @media(min-width: 1366px){
@@ -73,11 +73,23 @@
                 </button>
                 <div class="collapse navbar-collapse" id="navbarCollapse">
                     <div class="navbar-nav ms-auto">
-                        <a href="index.html" class="nav-item nav-link fw-bolder blk ">Home</a>
-                        <a href="about.html" class="nav-item nav-link fw-bolder blk">About</a>
-                        <a href="wordskill.html" class="nav-item nav-link  fw-bolder blk">Worldskill</a>
-                        <a href="sifa.html" class="nav-item nav-link fw-bolder blk active">Sifa</a>
-                        <a href="blog.html" class="nav-item nav-link fw-bolder blk">Blog</a>
+                        <a href="index.html" class="nav-item nav-link fw-bolder blk  ">Home</a>
+                       
+                                <div class="nav-item dropdown">
+                                    <a href="#" class="nav-link dropdown-toggle fw-bolder blk" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                        About
+                                    </a>
+                                   <div class="bg-transparent text-white">
+                                        <ul class="dropdown-menu bg-transparent text-white" aria-labelledby="navbarDropdown">
+                                            <li><a href="about.html" class="nav-item nav-link font-bold text-white text-2xl">About</a></li>
+                                            <li><a href="readmore.html" class="nav-item nav-link font-bold text-white text-2xl">Team</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                        <a href="wordskill.html" class="nav-item nav-link  fw-bolder blk">Wordskill</a>
+                        <a href="sifa.html" class="nav-item nav-link fw-bolder blk">Sifa</a>
+                        <a href="blog.html" class="nav-item nav-link fw-bolder blk active">Blog</a>
+
                         <a href="contact.html" class="nav-item nav-link fw-bolder blk">Contact</a>
                     </div>
                     <butaton type="button" class="btn text-white p-0 d-none d-lg-block" data-bs-toggle="modal"
@@ -87,7 +99,7 @@
         </div>
       
     </div>
-      <div class="video-wrap-others">
+      <!-- <div class="video-wrap-others">
             <video autoplay="" loop="" muted="" class="custom-video-others" poster="">
                 <source src="video/background2.mp4" type="video/mp4">
 
@@ -95,15 +107,35 @@
             </video>
             <div class="video-overlay">
                 <h1>Virtual Mechatronics Lab</h1>
-                <!-- <p>Your supporting text goes here.</p> -->
+                 <p>Your supporting text goes here.</p> 
             </div>
-        </div>
+        </div> -->
     <!-- Navbar End -->
+    <div id="hero-container">
+        <section class="hero" id="hero">
+            <div class="hero-carousel">
+              <!-- Carousel images dynamically inserted here -->
+            </div>
+            <div class="hero-content">
+              <h1 class="hero-title"></h1>
+              <p class="hero-subtitle"></p>
+              <a href="#" class="hero-cta" target="_blank"></a>
+            </div>
+            <div class="hero-controls">
+              <button class="hero-control prev" aria-label="Previous slide">&lt;</button>
+              <button class="hero-control next" aria-label="Next slide">&gt;</button>
+            </div>
+          </section>
+    </div>
+
+
+
+
 
     <div class="content-container-sifa">
     <!--Case Start -->
     <div class="container-fluid py-1">
-        <div class="container mx-auto px-24 mt-5 py-3"> 
+        <div class="container">
             <div class="mx-auto text-center wow fadeIn" data-wow-delay="0.1s" style="max-width: 500px;">
                 <div class="btn btn-sm border rounded-pill text-primary px-3 mb-3">SIFA</div>
             </div>
@@ -146,7 +178,7 @@
         </div>
     </div>
     <div class="mx-auto text-center wow fadeIn " data-wow-delay="0.1s" style="max-width: 900px;">
-        <div class="btn btn-sm border rounded-pill bg-primary text-white fs-6 px-3 mb-3 mt-5">
+        <div class="btn btn-sm border rounded-pill bg-primary text-white fs-6 px-3 mb-3">
             How the Siemens Mechatronics
             Certification Centre and the Advanced Virtual Reality Lab at Dedan Kimathi University of Technology fit
             into this initiative
@@ -154,8 +186,10 @@
     </div>
     
 
-    <div class="container-fluid py-5 " style="background-color: var(--background)">
-        <div class="container mx-auto px-24 mt-5 py-3"> 
+
+     <!-- About Start -->
+     <div class="container-fluid py-5 ">
+        <div class="container">
             <div class="row g-5 align-items-center">
                 <div class="col-lg-6 wow fadeIn" data-wow-delay="0.5s">
                     <div class="btn btn-sm border rounded-pill text-primary px-3 mb-3">Purpose</div>
@@ -187,417 +221,275 @@
             </div>
         </div>
     </div>
-    
+    <!-- About End -->
+    </div>
+    <!-- About End -->
 
-    <!-- <style>
-       
-    </style>
-     -->
-       <!-- Milestones Section Start -->
-<div class="container mx-auto px-4" style="background-color: white;"> <!-- Set the container's background color to white -->
-    <div class="container mx-auto px-24 mt-5 py-8"> 
-        <h2 class="text-3xl font-bold text-center mb-8 text-gray-800">Project Milestones</h2>
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <!-- Milestone 1 -->
-            <div class="project-milestone-card">
-                <div class="p-6 flex-grow">
-                    <h5 class="text-xl font-semibold mb-3 text-center" style="color: rgb(10, 14, 224);">Milestone 1: Preparatory Phase</h5>
-                    <p class="text-black mb-4">This phase focuses on finalizing the project workplan and budget, ensuring all resources are in place.</p>
-                    <div id="milestone1Content" class="project-milestone-content p-3 hidden">
-                        <h6 class="font-semibold mb-2" style="color: rgb(41, 41, 49);">Activity 1: Preparing Final Project Workplan and Budget</h6>
-                        <ul class="list-disc pl-5 text-black space-y-1">
-                            <li>Engaging with project partners & SIFA FC - <span class="font-semibold">March 2024</span></li>
-                            <li>Writing Final Workplan & Budget - <span class="font-semibold">March 2024</span></li>
-                            <li>Process Listing of required inputs for Milestone 1 - <span class="font-semibold">March 2024</span></li>
-                            <li>Development of desktop-based Metaverse platform - <span class="font-semibold">March 2024</span></li>
-                            <li>Development of a Monitoring and Evaluation strategy - <span class="font-semibold">April 2024</span></li>
-                            <li>Writing Inception report, quarterly report, milestone report - <span class="font-semibold">April 2024</span></li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="px-6 pb-4">
-                    <button class="project-milestone-read-more text-indigo-600 font-semibold focus:outline-none" onclick="toggleContent('milestone1Content', this)">Read More</button>
-                </div>
+
+<!-- Service Start -->
+<div class="container-fluid bg-light mt-5 py-5">
+    <div class="container py-5">
+        <div class="row g-5 align-items-center">
+            <div class="col-lg-5 wow fadeIn" data-wow-delay="0.1s">
+                <div class="btn btn-sm border rounded-pill text-primary px-3 mb-3">Role</div>
+                <h1 class="mb-4">Siemens Mechatronics Certification Centre</h1>
+                <p class="mb-4">The Siemens Mechatronics Certification Centre at Dedan Kimathi University of Technology is a crucial
+                    component of SIFA, offering specialized training in mechatronics.</p>
+                <a class="btn btn-primary rounded-pill px-4" href="service.html">Read More</a>
             </div>
-
-                <!-- Milestone 2 -->
-                <div class="project-milestone-card" > <!-- White background color -->
-                    <div class="p-6 flex-grow">
-                        <h5 class="text-xl font-semibold mb-3 text-center text-black" style="color: rgb(10, 14, 224);">Milestone 2: Market Analysis and Market Validation Plan</h5> <!-- Black text -->
-                        <p class="text-black mb-4">This milestone involves conducting market surveys and developing tools to validate findings.</p> <!-- Black text -->
-                        <div id="milestone2Content" class="project-milestone-content p-3 hidden">
-                            <h6 class="font-semibold text-black mb-2" style="color: rgb(41, 41, 49);">Activity 2: Carry out a Market Survey</h6> <!-- Black text -->
-                            <ul class="list-disc pl-5 text-black space-y-1"> <!-- Black text -->
-                                <li>Integrating physical infrastructure with metaverse platform - <span class="font-semibold">May 2024</span></li>
-                                <li>Process Listing of inputs for Milestone 2 - <span class="font-semibold">May 2024</span></li>
-                                <li>Preparing market analysis tools - <span class="font-semibold">July 2024</span></li>
-                            </ul>
-                            <h6 class="font-semibold text-black mt-4 mb-2"  style="color: rgb(41, 41, 49);">Activity 3: Preparing Market Validation Plan</h6> <!-- Black text -->
-                            <ul class="list-disc pl-5 text-black space-y-1"> <!-- Black text -->
-                                <li>Develop a market validation plan - <span class="font-semibold">July 2024</span></li>
-                                <li>Develop a web-based metaverse platform - <span class="font-semibold">July 2024</span></li>
-                                <li>Develop a project website - <span class="font-semibold">July 2024</span></li>
-                                <li>Prepare Quarterly (1 & 2) report and milestone reports - <span class="font-semibold">May & August 2024</span></li>
-                                <li>Process listing inputs for 4IR Automation system - <span class="font-semibold">August 2024</span></li>
-                                <li>Development of digital content for the web-based metaverse platform - <span class="font-semibold">August 2024</span></li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="px-6 pb-4">
-                        <button class="project-milestone-read-more text-indigo-600 font-semibold focus:outline-none" onclick="toggleContent('milestone2Content', this)">Read More</button>
-                    </div>
-                </div>
-
-                <!-- Milestone 3 -->
-                <div class="project-milestone-card" > <!-- White background color -->
-                    <div class="p-6 flex-grow">
-                        <h5 class="text-xl font-semibold mb-3 text-center text-black" style="color: rgb(10, 14, 224);">Milestone 3: Market Validation on Site</h5> <!-- Black text -->
-                        <p class="text-black mb-4">This milestone focuses on validating the market survey findings through direct engagement with stakeholders.</p> <!-- Black text -->
-                        <div id="milestone3Content" class="project-milestone-content p-3 hidden">
-                            <h6 class="font-semibold text-gray-700 mb-2" style="color: rgb(48, 49, 56);">Activity 4: Conducting market validation on site</h6>
-                            <ul class="list-disc pl-5 text-gray-600 space-y-1">
-                                <li>Selecting 30 trainees comprising of 10 TVET Instructors and 20 TVET Students - <span class="font-semibold">September 2024</span></li>
-                                <li>Process listing required inputs for Milestone 3 - <span class="font-semibold">October 2024</span></li>
-                                <li>Develop training manual and digital content harmonized with 4IR skill occupation standards - <span class="font-semibold">October 2024</span></li>
-                                <li>Provision of physical and blended training to selected TVET trainees - <span class="font-semibold">November 2024</span></li>
-                                <li>Develop and allocate 10 distinctive projects to TVET trainees - <span class="font-semibold">December 2024</span></li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="px-6 pb-4">
-                        <button class="project-milestone-read-more text-indigo-600 font-semibold focus:outline-none" onclick="toggleContent('milestone3Content', this)">Read More</button>
-                    </div>
-                </div>
-
-                <!-- Milestone 4 -->
-                <div class="project-milestone-card" > <!-- White background color -->
-                    <div class="p-6 flex-grow">
-                        <h5 class="text-xl font-semibold mb-3 text-center text-black" style="color: rgb(10, 14, 224);">Milestone 4: Reporting and Recommendations</h5> <!-- Black text -->
-                        <p class="text-black mb-4">This phase entails documenting all findings and providing actionable recommendations based on the survey data.</p> <!-- Black text -->
-                        <div id="milestone4Content" class="project-milestone-content p-3 hidden">
-                                <h6 class="font-semibold text-gray-700 mb-2" style="color: rgb(59, 59, 70);">Activity 5: Writing/preparing the project completion Report/document</h6>
-                                <ul class="list-disc pl-5 text-gray-600 space-y-1">
-                                    <li>Preparation of metaverse platform documentation and implementation plan - <span class="font-semibold">May 2025</span></li>
-                                </ul>
-                                <h6 class="font-semibold text-gray-700 mt-4 mb-2" style="color: rgb(59, 59, 70);">Activity 6: Writing the Final Business Plan</h6>
-                                <ul class="list-disc pl-5 text-gray-600 space-y-1">
-                                    <li>Development of a business plan - <span class="font-semibold">May 2025</span></li>
-                                    <li>Prepare Quarterly (5 & 6) report and milestone reports - <span class="font-semibold">May 2025 & August 2025</span></li>
-                                </ul>
-                                <h6 class="font-semibold text-gray-700 mt-4 mb-2" style="color: rgb(59, 59, 70);">Activity 7: Conducting Final Project Audit</h6>
-                                <ul class="list-disc pl-5 text-gray-600 space-y-1">
-                                    <li>Drafting final report (project completion report) - <span class="font-semibold">August 2025</span></li>
-                                    <li>Facilitating Project auditing process - <span class="font-semibold">August 2025</span></li>
-                                    <li>Submitting Final report (Project completion report) - <span class="font-semibold">August 2025</span></li>
-                                </ul>
+            <div class="col-lg-7">
+                <div class="row g-4">
+                    <div class="col-md-6">
+                        <div class="row g-4">
+                            <div class="col-12 wow fadeIn" data-wow-delay="0.1s">
+                                <div class="service-item d-flex flex-column justify-content-center text-center rounded">
+                                    <div class="service-icon btn-square">
+                                        <i class="fa fa-book fa-2x"></i>
+                                    </div>
+                                    <h5 class="mb-3">Certification Programs</h5>
+                                    <p>Provides Siemens-certified mechatronics training, ensuring that students meet
+                                        international industry standards.</p>
+                                    <a class="btn px-3 mt-auto mx-auto" href="service.html">Read More</a>
+                                </div>
                             </div>
+                            <div class="col-12 wow fadeIn" data-wow-delay="0.5s">
+                                <div class="service-item d-flex flex-column justify-content-center text-center rounded">
+                                    <div class="service-icon btn-square">
+                                        <i class="fa fa-brain fa-2x"></i>
+                                    </div>
+                                    <h5 class="mb-3">Technical Expertise:</h5>
+                                    <p>Offers hands-on training in mechatronics, integrating mechanical engineering,
+                                        electronics, and computer science.</p>
+                                    <a class="btn px-3 mt-auto mx-auto" href="service.html">Read More</a>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <div class="px-6 pb-4">
-                        <button class="project-milestone-read-more text-indigo-600 font-semibold focus:outline-none" onclick="toggleContent('milestone4Content', this)">Read More</button>
+                    <div class="col-md-6 pt-md-4">
+                        <div class="row g-4">
+                            <div class="col-12 wow fadeIn" data-wow-delay="0.3s">
+                                <div class="service-item d-flex flex-column justify-content-center text-center rounded">
+                                    <div class="service-icon btn-square">
+                                        <i class="fa fa-industry fa-2x"></i>
+                                    </div>
+                                    <h5 class="mb-3">Industry Alignment:</h5>
+                                    <p>Ensures that the training is aligned with the latest technological advancements and
+                                        industry needs, enhancing the employability of graduates.</p>
+                                    <a class="btn px-3 mt-auto mx-auto" href="service.html">Read More</a>
+                                </div>
+                            </div>
+                            <div class="col-12 wow fadeIn" data-wow-delay="0.7s">
+                                <div class="service-item d-flex flex-column justify-content-center text-center rounded">
+                                    <div class="service-icon btn-square">
+                                        <i class="fa fa-vr-cardboard fa-2x"></i>
+                                    </div>
+                                    <h5 class="mb-3">Advanced Virtual Reality Lab</h5>
+                                    <p>The Advanced Virtual Reality Lab at Dedan Kimathi University of Technology enhances the training
+                                        provided by integrating virtual reality technology into the curriculum.</p>
+                                    <a class="btn px-3 mt-auto mx-auto" href="service.html">Read More</a>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
 </div>
-<!-- Milestones Section End -->
-
-<script>
-    function toggleContent(contentId, button) {
-        const content = document.getElementById(contentId);
-        const isHidden = content.classList.contains('hidden');
-
-        // Toggle visibility of the content
-        if (isHidden) {
-            content.classList.remove('hidden');
-            content.classList.add('active'); // Add active class to change max-height
-            button.textContent = 'Read Less';
-        } else {
-            content.classList.add('hidden');
-            content.classList.remove('active'); // Remove active class to reset max-height
-            button.textContent = 'Read More';
-        }
-    }
-</script>
-
-<div class="container-fluid bg-light py-5">
-    <div class="container mx-auto px-24 mt-5 py-3"> 
-      <div class="row align-items-center">
-        <div class="col-lg-4 mb-4 mb-lg-0">
-          <div class="btn btn-sm border rounded-pill text-primary px-3 mb-2">Role</div>
-          <h2 class="mb-3">Siemens Mechatronics Certification Centre</h2>
-          <p class="mb-3">The Siemens Mechatronics Certification Centre at Dedan Kimathi University of Technology is a crucial component of SIFA, offering specialized training in mechatronics.</p>
-          <a class="btn btn-primary btn-sm rounded-pill px-3" href="https://siemens.dkut.ac.ke/" target="_blank" rel="noopener noreferrer">Read More</a>
-
-        </div>
-        <div class="col-lg-8">
-          <div class="row g-3">
-            <div class="col-md-6 col-lg-3">
-              <div class="card h-100 border-0 shadow-sm">
-                <div class="card-body text-center">
-                  <i class="fa fa-book fa-2x text-primary mb-3"></i>
-                  <h5 class="card-title">Certification Programs</h5>
-                  <p class="card-text small">Provides Siemens-certified mechatronics training, ensuring students meet international industry standards.</p>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-6 col-lg-3">
-              <div class="card h-100 border-0 shadow-sm">
-                <div class="card-body text-center">
-                  <i class="fa fa-brain fa-2x text-primary mb-3"></i>
-                  <h5 class="card-title">Technical Expertise</h5>
-                  <p class="card-text small">Offers hands-on training in mechatronics, integrating mechanical engineering, electronics, and computer science.</p>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-6 col-lg-3">
-              <div class="card h-100 border-0 shadow-sm">
-                <div class="card-body text-center">
-                  <i class="fa fa-industry fa-2x text-primary mb-3"></i>
-                  <h5 class="card-title">Industry Alignment</h5>
-                  <p class="card-text small">Ensures training aligns with latest technological advancements and industry needs, enhancing graduate employability.</p>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-6 col-lg-3">
-              <div class="card h-100 border-0 shadow-sm">
-                <div class="card-body text-center">
-                  <i class="fa fa-vr-cardboard fa-2x text-primary mb-3"></i>
-                  <h5 class="card-title">Advanced VR Lab</h5>
-                  <p class="card-text small">Enhances training by integrating virtual reality technology into the curriculum.</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-  
 <!-- Service End -->
  
 <!--skills-->
 
-<!-- Feature Start -->
-<div class="container-fluid bg-background feature pt-5"> <!-- Added pt-5 for more space at the top -->
-    <div class="container mx-auto px-24 mt-5 py-3"> <!-- Removed additional pt-5 for consistency -->
-        <div class="row g-5 align-items-center"> <!-- Added align-items-center for vertical alignment -->
+<!--skills-->
+   <!-- Feature Start -->
+   <div class="container-fluid bg-primary feature pt-2">
+    <div class="container pt-2">
+        <div class="row g-5">
             <div class="col-lg-6 align-self-center mb-md-5 pb-md-5 wow fadeIn" data-wow-delay="0.3s">
-                <div class="btn btn-sm border rounded-pill bg-primary text-white px-3 mb-3">Features</div>
-                <h1 class="text-dark mb-3">Advanced Virtual Reality Lab</h1> <!-- Change to text-primary -->
-                <p class="text-dark mb-4">The Advanced Virtual Reality Lab at Dedan Kimathi University of Technology enhances training
-                    by integrating virtual reality technology into the curriculum.</p> <!-- Change to text-dark -->
-
-                <!-- Feature Items -->
-                <div class="d-flex align-items-center text-dark mb-3"> <!-- Change to text-dark -->
+                <div class="btn btn-sm border rounded-pill text-white px-3 mb-3">Features</div>
+                <h1 class="text-white mb-2">Advanced Virtual Reality Lab</h1>
+                <p class="text-light mb-4">The Advanced Virtual Reality Lab at Dedan Kimathi University of Technology enhances the training
+                    provided by integrating virtual reality technology into the curriculum.</p>
+                <div class="d-flex align-items-center text-white mb-3">
                     <div class="btn-sm-square bg-white text-primary rounded-circle me-3">
                         <i class="fa fa-check"></i>
                     </div>
-                    <span class="text-dark">Immersive Simulations: Uses VR to create interactive simulations of mechatronic systems.</span> <!-- Change to text-dark -->
+                    <span>Immersive Simulations: Uses virtual reality to create interactive and immersive simulations of
+                        mechatronic systems and processes.</span>
                 </div>
-                <div class="d-flex align-items-center text-dark mb-3"> <!-- Change to text-dark -->
+                <div class="d-flex align-items-center text-white mb-3">
                     <div class="btn-sm-square bg-white text-primary rounded-circle me-3">
                         <i class="fa fa-check"></i>
                     </div>
-                    <span class="text-dark">Hands-On Training: Provides practical learning opportunities without physical equipment.</span> <!-- Change to text-dark -->
+                    <span>Hands-On Training: Provides practical, experiential learning opportunities without the need for physical
+                        equipment</span>
                 </div>
-                <div class="d-flex align-items-center text-dark mb-3"> <!-- Change to text-dark -->
+                <div class="d-flex align-items-center text-white mb-3">
                     <div class="btn-sm-square bg-white text-primary rounded-circle me-3">
                         <i class="fa fa-check"></i>
                     </div>
-                    <span class="text-dark">Innovative Learning: Prepares students for future roles by incorporating advanced VR technology.</span> <!-- Change to text-dark -->
+                    <span>Innovative Learning: Incorporates advanced VR technology into education, preparing students for future
+                        roles in industries </span>
                 </div>
-
-                <!-- Stats Section -->
                 <div class="row g-4 pt-3">
                     <div class="col-sm-6">
-                        <div class="d-flex rounded p-3" style="background: #f5f8fc;"> <!-- Updated background color -->
-                            <i class="fa fa-users fa-3x text-primary"></i> <!-- Change icon color if needed -->
+                        <div class="d-flex rounded p-3" style="background: rgba(256, 256, 256, 0.1);">
+                            <i class="fa fa-users fa-3x text-white"></i>
                             <div class="ms-3">
-                                <h2 class="text-dark mb-0" data-toggle="counter-up">9999</h2> <!-- Changed to text-dark -->
-                                <p class="text-dark mb-0">Happy Students</p> <!-- Changed to text-dark -->
+                                <h2 class="text-white mb-0" data-toggle="counter-up">9999</h2>
+                                <p class="text-white mb-0">Happy students</p>
                             </div>
                         </div>
                     </div>
                     <div class="col-sm-6">
-                        <div class="d-flex rounded p-3" style="background: #f5f8fc;"> <!-- Updated background color -->
-                            <i class="fa fa-check fa-3x text-primary"></i> <!-- Change icon color if needed -->
+                        <div class="d-flex rounded p-3" style="background: rgba(256, 256, 256, 0.1);">
+                            <i class="fa fa-check fa-3x text-white"></i>
                             <div class="ms-3">
-                                <h2 class="text-dark mb-0" data-toggle="counter-up">9999</h2> <!-- Changed to text-dark -->
-                                <p class="text-dark mb-0">Projects Complete</p> <!-- Changed to text-dark -->
+                                <h2 class="text-white mb-0" data-toggle="counter-up">9999</h2>
+                                <p class="text-white mb-0">Project Complete</p>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-
-            <!-- Image Section -->
-            <div class="col-lg-6 text-center wow fadeIn" data-wow-delay="0.5s">
-                <img class="img-fluid rounded shadow" src="img/sifa/IMG-20240519-WA0010.jpg" alt="Advanced Virtual Reality Lab" style="max-width: 90%; height: auto; display: inline-block;">
+            <div class="col-lg-6 align-self-end text-center text-md-end wow fadeIn" data-wow-delay="0.5s">
+                <img class="img-fluid" src="img/sifa/IMG-20240519-WA0010.jpg" alt="">
             </div>
         </div>
     </div>
-</div>
-<!-- Feature End -->
-<!-- mx-auto px-10 mt-5 py-3" -->
-<!-- <style>
-    /* Button styling */
-    .btn-sm-square {
-        width: 40px; /* Adjust size for square buttons */
-        height: 40px; /* Adjust size for square buttons */
-        display: flex; /* Center icons in buttons */
-        align-items: center; /* Center icons */
-        justify-content: center; /* Center icons */
-        transition: background-color 0.3s; /* Smooth transition on hover */
-    }
-
-    .btn-sm-square:hover {
-        background-color: rgba(255, 255, 255, 0.2); /* Slight background change on hover */
-    }
-
-    /* Header styling */
-    h1 {
-        font-size: 2.5rem; /* Increase the font size of the title */
-        font-weight: bold; /* Bold title */
-    }
-
-    /* Stats section styling */
-    .rounded {
-        border: 1px solid rgba(255, 255, 255, 0.2); /* Light border around stats */
-    }
-</style> -->
+    </div>
     
-<div class="bg-background" style="background-color: #f5f8fc;"> <!-- Change this color to your desired background -->
-    <div class="container mx-auto px-24 mt-5 py-3"> <!-- Ensure there's padding on the sides -->
-        <h1 class="text-center mb-4 text-blue-600 text-3xl">INTEGRATION AND IMPACT</h1>
-        <div class="space-y-4">
-            <div>
-                <button class="w-full text-left bg-gray-200 p-4 rounded-md focus:outline-none hover:bg-blue-600 hover:text-white transition duration-300 relative" onclick="toggleAccordion('accordion1')">
-                    Comprehensive Skills Development
-                    <span class="absolute right-4 transform transition-transform duration-300" id="dropdown-icon1">▼</span>
-                </button>
-                <div id="accordion1" class="hidden bg-white p-4 rounded-md">
-                    <h6 class="text-blue-600">SIFA Framework:</h6>
-                    Provides the overarching structure and support for vocational and technical training across Africa.
-                    <h6 class="text-blue-600">Siemens Centre:</h6> Delivers high-quality mechatronics training and certification, ensuring that students gain relevant, industry-standard skills.
-                </div>
-            </div>
-            <div>
-                <button class="w-full text-left bg-gray-200 p-4 rounded-md focus:outline-none hover:bg-blue-600 hover:text-white transition duration-300 relative" onclick="toggleAccordion('accordion2')">
-                    Industry-Relevant Training
-                    <span class="absolute right-4 transform transition-transform duration-300" id="dropdown-icon2">▼</span>
-                </button>
-                <div id="accordion2" class="hidden bg-white p-4 rounded-md">
-                    <h6 class="text-blue-600">Alignment with Market Needs:</h6>
-                    Ensures that training programs meet the current and future needs of the job market, improving graduates’ employability and readiness for modern roles.
-                </div>
-            </div>
-            <div>
-                <button class="w-full text-left bg-gray-200 p-4 rounded-md focus:outline-none hover:bg-blue-600 hover:text-white transition duration-300 relative" onclick="toggleAccordion('accordion3')">
-                    Enhanced Learning Experience
-                    <span class="absolute right-4 transform transition-transform duration-300" id="dropdown-icon3">▼</span>
-                </button>
-                <div id="accordion3" class="hidden bg-white p-4 rounded-md">
-                    <h6 class="text-blue-600">Integration of Technology:</h6>
-                    Combines traditional hands-on training with innovative virtual reality experiences, providing a well-rounded education that prepares students for the evolving technological landscape.
-                </div>
-            </div>
-            <div>
-                <button class="w-full text-left bg-gray-200 p-4 rounded-md focus:outline-none hover:bg-blue-600 hover:text-white transition duration-300 relative" onclick="toggleAccordion('accordion4')">
-                    Economic and Regional Development
-                    <span class="absolute right-4 transform transition-transform duration-300" id="dropdown-icon4">▼</span>
-                </button>
-                <div id="accordion4" class="hidden bg-white p-4 rounded-md">
-                    <h6 class="text-blue-600">Boosting Employability:</h6>
-                    By equipping young people with relevant skills, the initiative contributes to economic growth and addresses unemployment challenges in the region.
-                    <h6 class="text-blue-600">Setting Standards:</h6> Demonstrates how integrating advanced technologies and international standards into educational programs can enhance their quality and impact.
-                </div>
+    <div class="container mt-5 py-3  ">
+        <div class="mx-auto text-center wow fadeIn" data-wow-delay="0.1s" style="max-width: 500px;">
+            <div class="btn btn-sm border rounded-pill bg-primary text-white px-5 py-3 mb-3 fs-6">
+                <!-- INTEGRATION AND IMPACT -->
+            <h3 class="text-light">INTEGRATION AND IMPACT</h3>
+
             </div>
         </div>
-    </div>
-</div>
-
-<script>
-    function toggleAccordion(id) {
-        const content = document.getElementById(id);
-        content.classList.toggle('hidden');
-
-        // Update the dropdown icon rotation
-        const icon = document.getElementById('dropdown-icon' + id.charAt(id.length - 1));
-        icon.classList.toggle('rotate-180');
-    }
-</script>
-
-<!-- sponsors Start -->
-<div class="container-fluid newsletter py-3" style="background-color: white;">
-    <div class="container mx-auto px-24 mt-5 py-3"> 
-        <h1 class="text-center" style="color: #1363C6; font-size: 2rem;">Partners</h1>
-        <div class="sponsor-logos-wrapper">
-            <div class="sponsor-logos">
-                <div class="logo-col">
-                    <a href="https://vml.dkut.ac.ke/sifa.html" target="_blank">
-                        <img src="./img/logos/SIFA FC.png" alt="Sponsor 1" class="sponsor-logo">
-                    </a>
+        <div class="align-items-center">
+            <div class="accordion accordion-flush" id="accordionFlushExample">
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                        Comprehensive Skills Development
+                    </button>
+                  </h2>
+                  <div id="flush-collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                    <div class="accordion-body"><h6>SIFA Framework:</h6> Provides the overarching structure and support for vocational and technical training
+                        across Africa.
+                        <h6>Siemens Centre:</h6>Delivers high-quality mechatronics training and certification, ensuring that students gain
+                        relevant, industry-standard skills.</div>
+                  </div>
                 </div>
-                <div class="logo-col">
-                    <a href="https://https://au.int/" target="_blank">
-                        <img src="./img/logos/AU_LOGO_ENGLISH_CMYK.png" alt="Sponsor 2" class="sponsor-logo">
-                    </a>
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+                        Industry-Relevant Training
+                    </button>
+                  </h2>
+                  <div id="flush-collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                    <div class="accordion-body"><h6>Alignment with Market Needs:</h6>Ensures that training programs meet the current and future needs of the
+                        job market, improving graduates’ employability and readiness for modern roles.</div>
+                  </div>
                 </div>
-                <div class="logo-col">
-                    <a href="https://www.nepad.org/" target="_blank">
-                        <img src="./img/logos/AUDA-NEPAD_LOGO_EN.png" alt="Sponsor 3" class="sponsor-logo">
-                    </a>
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+                        Enhanced Learning Experience
+                    </button>
+                  </h2>
+                  <div id="flush-collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                    <div class="accordion-body"><h6>Integration of Technology:</h6>Combines traditional hands-on training with innovative virtual reality
+                        experiences, providing a well-rounded education that prepares students for the evolving technological
+                        landscape.</div>
+                  </div>
                 </div>
-                <div class="logo-col">
-                    <a href="https://www.bmz.de/en" target="_blank">
-                        <img src="./img/logos/BMZ Logo.png" alt="Sponsor 4" class="sponsor-logo">
-                    </a>
-                </div>
-                <div class="logo-col">
-                    <a href="https://www.europanostra.org/agora/en-co-funded-by-the-eu_pantone/" target="_blank">
-                        <img src="./img/logos/EN Co-funded by the EU_PANTONE.jpg" alt="Sponsor 5" class="sponsor-logo">
-                    </a>
-                </div>
-                <div class="logo-col">
-                    <a href="https://www.kfw-entwicklungsbank.de/International-financing/KfW-Entwicklungsbank/" target="_blank">
-                        <img src="./img/logos/KfW_LOGO.png" alt="Sponsor 6" class="sponsor-logo">
-                    </a>
-                </div>
-                <div class="logo-col">
-                    <a href="https://vml.dkut.ac.ke/" target="_blank">
-                        <img src="./img/logos/Virtual Mechatronics Lab Logo V2-01.png" alt="Sponsor 7" class="sponsor-logo">
-                    </a>
-                </div>
-                <div class="logo-col">
-                    <a href="https://www.epr.eu/event/epr-communications-network-meeting-2/attachment/en-co-funded-by-the-eu_pos-6/" target="_blank">
-                        <img src="./img/logos/EN Co-Funded by the EU_POS.png" alt="Sponsor 8" class="sponsor-logo">
-                    </a>
-                </div>
-                <div class="logo-col">
-                    <a href="https://www.nepad.org/" target="_blank">
-                        <img src="./img/logos/AU+NEPAD Logo.png" alt="Sponsor 9" class="sponsor-logo">
-                    </a>
-                </div>
-                <!-- <div class="logo-col">
-                    <a href="https://festo-link.com" target="_blank">
-                        <img src="./img/logos/FESTO.png" alt="Sponsor 10" class="sponsor-logo">
-                    </a>
-                </div>
-                <div class="logo-col">
-                    <a href="https://siemens-link.com" target="_blank">
-                        <img src="./img/logos/SIEMENS.png" alt="Sponsor 11" class="sponsor-logo">
-                    </a>
-                </div> -->
-            </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseFour" aria-expanded="false" aria-controls="flush-collapseThree">
+                        Economic and Regional Development
+                      </button>
+                    </h2>
+                    <div id="flush-collapseFour" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                      <div class="accordion-body"><h6>Boosting Employability:</h6> By equipping young people with relevant skills, the initiative contributes to
+                        economic growth and addresses unemployment challenges in the region.
+                        <h6>Setting Standards:</h6> Demonstrates how integrating advanced technologies and international standards
+                        into educational programs can enhance their quality and impact.</div>
+                    </div>
+                  </div>
+              </div>
         </div>
     </div>
+<!-- Feature End -->
+
+
+  
+
+
+   <!-- sponsors Start -->
+   <div class="container-fluid bg-light  newsletter py-5">
+    <div class="container">
+                 <h1 style="color:#1363C6; text-align:center" >Partners</h1>
+        <div class="row g-5 align-items-center">
+            <!-- <div class="col-md-5 ps-lg-0 pt-5 pt-md-0 text-start wow fadeIn" data-wow-delay="0.3s"> -->
+              
+                    <div class="sponsor-logos">
+                       <div class="row justify-content-center">
+                           <div class="col-auto">
+                               <img src="./img/logos/SIFA FC.png" alt="Sponsor 1">
+                           </div>
+                           <div class="col-auto">
+                            <img src="./img/logos/AU_LOGO_ENGLISH_CMYK.png" alt="Sponsor 4">
+                          </div>
+                          <div class="col-auto">
+                            <img src="./img/logos/AUDA-NEPAD_LOGO_EN.png" alt="Sponsor 5">
+                          </div>
+                          <div class="col-auto">
+                            <img src="./img/logos/BMZ Logo.png" alt="Sponsor 2">
+                            </div>
+                            <div class="col-auto">
+                                <img src="./img/logos/EN Co-funded by the EU_PANTONE.jpg" alt="Sponsor 4">
+                              </div>
+                          <div class="col-auto">
+                            <img src="./img/logos/KfW_LOGO.png" alt="Sponsor 3">
+                          </div>
+                          <div class="col-auto">
+                            <img src="img/SSF_Logo_transparent_RGB.png" alt="Sponsor 3">
+                          </div>
+                          <div class="col-auto">
+                            <img src="img/TVETA.png" alt="Sponsor 3">
+                          </div>
+                          <div class="col-auto">
+                            <img src="img/ARSO-LOGO-2-pr.jpg" alt="Sponsor 3">
+                          </div>
+                          <div class="col-auto">
+                            <img src="img/FESTO.png" alt="Sponsor 3">
+                          </div>
+                          <div class="col-auto">
+                            <img src="img/SIEMENS.png" alt="Sponsor 3">
+                          </div>
+                          
+                           
+                          
+                          
+                        </div>
+           
+                 </div>
+           
+             
+            
+        <!-- </div> -->
+    </div>
+</div>
 </div>
 
-<!-- Footer Start -->
-<div class="container-fluid bg-dark text-white footer pt-4">
-    <div class="container py-4">
-        <div class="row g-4">
+
+
+ <!-- Footer Start -->
+ <div class="container-fluid bg-dark text-white-50 footer pt-5">
+    <div class="container py-5">
+        <div class="row g-5">
             <div class="col-md-6 col-lg-3 wow fadeIn" data-wow-delay="0.1s">
                 <a href="index.html" class="d-inline-block mb-3">
                     <h1 class="text-white">Virtual Mechatronics</h1>
@@ -605,33 +497,33 @@
                 <p class="mb-0">Unlocking the potential: Virtually</p>
             </div>
             <div class="col-md-6 col-lg-3 wow fadeIn" data-wow-delay="0.3s">
-                <h5 class="text-white mb-3">Get In Touch</h5>
-                <p><i class="fa fa-map-marker-alt me-2"></i>Nyeri, Kenya</p>
-                <p><i class="fa fa-phone-alt me-2"></i>+25416150627</p>
-                <p><i class="fa fa-envelope me-2"></i>vr.africa@dkut.ac.ke</p>
+                <h5 class="text-white mb-4">Get In Touch</h5>
+                <p><i class="fa fa-map-marker-alt me-3"></i>Nyeri, Kenya</p>
+                <p><i class="fa fa-phone-alt me-3"></i>+25416150627</p>
+                <p><i class="fa fa-envelope me-3"></i>vr.africa@dkut.ac.ke</p>
                 <div class="d-flex pt-2">
-                    <a class="btn btn-outline-light btn-social me-2" href="#"><i class="fab fa-twitter"></i></a>
-                    <a class="btn btn-outline-light btn-social me-2" href="#"><i class="fab fa-facebook-f"></i></a>
-                    <a class="btn btn-outline-light btn-social me-2" href="#"><i class="fab fa-youtube"></i></a>
-                    <a class="btn btn-outline-light btn-social me-2" href="#"><i class="fab fa-instagram"></i></a>
-                    <a class="btn btn-outline-light btn-social" href="#"><i class="fab fa-linkedin-in"></i></a>
+                    <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-twitter"></i></a>
+                    <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-facebook-f"></i></a>
+                    <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-youtube"></i></a>
+                    <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-instagram"></i></a>
+                    <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-linkedin-in"></i></a>
                 </div>
             </div>
             <div class="col-md-6 col-lg-3 wow fadeIn" data-wow-delay="0.5s">
-                <h5 class="text-white mb-3">Popular Links</h5>
-                <a class="btn btn-link text-white-50" href="#">About Us</a>
-                <a class="btn btn-link text-white-50" href="#">Contact Us</a>
-                <a class="btn btn-link text-white-50" href="#">Privacy Policy</a>
-                <a class="btn btn-link text-white-50" href="#">Terms & Conditions</a>
-                <a class="btn btn-link text-white-50" href="#">Careers</a>
+                <h5 class="text-white mb-4">Popular Link</h5>
+                <a class="btn btn-link" href="">About Us</a>
+                <a class="btn btn-link" href="">Contact Us</a>
+                <a class="btn btn-link" href="">Privacy Policy</a>
+                <a class="btn btn-link" href="">Terms & Condition</a>
+                <a class="btn btn-link" href="">Career</a>
             </div>
             <div class="col-md-6 col-lg-3 wow fadeIn" data-wow-delay="0.7s">
-                <h5 class="text-white mb-3">Our Projects</h5>
-                <a class="btn btn-link text-white-50" href="#">Virtual Reality</a>
-                <a class="btn btn-link text-white-50" href="#">Virtual Mechatronics</a>
-                <a class="btn btn-link text-white-50" href="#">Designs</a>
-                <a class="btn btn-link text-white-50" href="#">Trainings</a>
-                <a class="btn btn-link text-white-50" href="#">Virtual Reality</a>
+                <h5 class="text-white mb-4">Our Projects</h5>
+                <a class="btn btn-link" href="">Virtual Reality</a>
+                <a class="btn btn-link" href="">virtual Mechatronics</a>
+                <a class="btn btn-link" href="">Designs</a>
+                <a class="btn btn-link" href="">Trainings</a>
+                <a class="btn btn-link" href="">Virtual Reality</a>
             </div>
         </div>
     </div>
@@ -639,22 +531,22 @@
         <div class="copyright">
             <div class="row">
                 <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
-                    &copy; <a class="border-bottom text-white" href="#">Virtual Mechatronics</a>, All Rights Reserved.
+                    &copy; <a class="border-bottom" href="#">Virtual Mechatronics</a>, All Right Reserved.
+
+                   
                 </div>
                 <div class="col-md-6 text-center text-md-end">
                     <div class="footer-menu">
-                        <a class="text-white-50" href="#">Home</a>
-                        <a class="text-white-50" href="#">Cookies</a>
-                        <a class="text-white-50" href="#">Help</a>
-                        <a class="text-white-50" href="#">FAQs</a>
+                        <a href="">Home</a>
+                        <a href="">Cookies</a>
+                        <a href="">Help</a>
+                        <a href="">FAQs</a>
                     </div>
                 </div>
             </div>
         </div>
     </div>
 </div>
-<!-- Footer End -->
-
 <!-- Footer End -->
 
 
@@ -673,6 +565,23 @@
 
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
+    <script src="js/hero.js"></script>
+    <script>
+document.addEventListener('DOMContentLoaded', function() {
+            setHero(
+                'SIFA',
+                'Skills Initiative for Africa',
+                'See More',
+                'https://skillsafrica.org/',
+                [
+                  'img/sifa/IMG1 (1).jpeg',
+                  'img/sifa/IMG1 (2).jpeg',
+                  'img/sifa/IMG1 (3).jpeg',
+                  'img/sifa/IMG1 (4).jpeg',
+                ]
+            );
+        });
+    </script>
 </body>
 
 </html>

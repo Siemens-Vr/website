@@ -24,9 +24,13 @@
     <!-- Libraries Stylesheet -->
     <link href="lib/animate/animate.min.css" rel="stylesheet">
     <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+
 
     <!-- Customized Bootstrap Stylesheet -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/hero.css" rel="stylesheet">
 
     <!-- Template Stylesheet -->
     <link href="css/style.css" rel="stylesheet">
@@ -60,11 +64,23 @@
                 <div class="collapse navbar-collapse" id="navbarCollapse">
                     <div class="navbar-nav ms-auto">
                         <a href="index.html" class="nav-item nav-link fw-bolder blk  ">Home</a>
-                        <a href="about.html" class="nav-item nav-link fw-bolder blk">About</a>
-                        <a href="wordskill.html" class="nav-item nav-link  fw-bolder blk">Worldskill</a>
+                       
+                                <div class="nav-item dropdown">
+                                    <a href="#" class="nav-link dropdown-toggle fw-bolder blk" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                        About
+                                    </a>
+                                   <div class="bg-transparent text-white">
+                                        <ul class="dropdown-menu bg-transparent text-white" aria-labelledby="navbarDropdown">
+                                            <li><a href="about.html" class="nav-item nav-link font-bold text-white text-2xl">About</a></li>
+                                            <li><a href="readmore.html" class="nav-item nav-link font-bold text-white text-2xl">Team</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                        <a href="wordskill.html" class="nav-item nav-link  fw-bolder blk">Wordskill</a>
                         <a href="sifa.html" class="nav-item nav-link fw-bolder blk">Sifa</a>
-                        <a href="blog.html" class="nav-item nav-link fw-bolder blk">Blog</a>
-                        <a href="contact.html" class="nav-item nav-link fw-bolder blk active">Contact</a>
+                        <a href="blog.html" class="nav-item nav-link fw-bolder blk active">Blog</a>
+
+                        <a href="contact.html" class="nav-item nav-link fw-bolder blk">Contact</a>
                     </div>
                     <butaton type="button" class="btn text-white p-0 d-none d-lg-block" data-bs-toggle="modal"
                         data-bs-target="#searchModal"><i class="fa fa-search"></i></butaton>
@@ -76,7 +92,7 @@
  
         
     <!-- Navbar End -->
-    <div class="video-wrap-others ">
+    <!-- <div class="video-wrap-others ">
         <video autoplay="" loop="" muted="" class="custom-video-others" poster="">
             <source src="video/background2.mp4" type="video/mp4">
     
@@ -86,32 +102,75 @@
             <h1>Virtual Mechatronics Lab</h1>
         </div>
     
+    </div> -->
+    <div id="hero-container"><!--hero carousel -->
+        <section class="hero" id="hero">
+            <div class="hero-carousel">
+              <!-- Carousel images will be dynamically inserted here -->
+            </div>
+            <div class="hero-content">
+              <h1 class="hero-title"></h1>
+              <p class="hero-subtitle"></p>
+              <a href="#" class="hero-cta" id="hero-contact"></a>
+            </div>
+            <div class="hero-controls">
+              <button class="hero-control prev" aria-label="Previous slide">&lt;</button>
+              <button class="hero-control next" aria-label="Next slide">&gt;</button>
+            </div>
+          </section>
     </div>
-
 
     <!-- Contact Start -->
-    <div class="content-container   ">
-        <div class="container ">
-            <div class="mx-auto text-center wow fadeIn" data-wow-delay="0.1s" style="max-width: 500px;">
-                <div class="btn btn-sm border rounded-pill text-primary px-3 mb-3">Contact Us</div>
-                <h1 class="mb-4">If You Have Any Query, Please Contact Us</h1>
+    <section style="background-color: white; padding: 40px 20px; font-family: Arial, sans-serif;">
+        <div style="max-width: 1200px; margin: 0 auto;">
+          <h2 style="text-align: center; color: #333; margin-bottom: 40px;">Contact Us</h2>
+          <div style="display: flex; flex-wrap: wrap; justify-content: space-around; gap: 20px;">
+            <div style="text-align: center; margin-bottom: 30px; flex: 1 1 200px; min-width: 200px; max-width: 300px;box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);">
+              <div style="background-color: #3498db; width: 60px; height: 60px; border-radius: 50%; display: flex; justify-content: center; align-items: center; margin: 0 auto 20px;">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                </svg>
+              </div>
+              <h3 style="color: #333; margin-bottom: 10px;">Phone</h3>
+              <a href="tel:+254716150627" style="color: #3498db; text-decoration: none; transition: color 0.3s;">+254 716 150 627</a>
             </div>
-            
-            <!-- Contact Information Section -->
-            <div class="row justify-content-center mb-5">
-                <div class="col-lg-7">
-                    <div class="text-center wow fadeIn" data-wow-delay="0.2s">
-                        <h5 class="mb-1"><i class="bi bi-geo-alt-fill"></i> Nyeri, Kenya</p>
-                        <p class="mb-1"><i class="bi bi-telephone-fill"></i> +25416150627</p>
-                        <p class="mb-1"><i class="bi bi-envelope-fill"></i> vr.africa@dkut.ac.ke</p>
-                       
-                    </div>
-                </div>
+            <div style="text-align: center; margin-bottom: 30px; flex: 1 1 200px; min-width: 200px; max-width: 300px;box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);">
+              <div style="background-color: #2ecc71; width: 60px; height: 60px; border-radius: 50%; display: flex; justify-content: center; align-items: center; margin: 0 auto 20px;">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                  <polyline points="22,6 12,13 2,6"></polyline>
+                </svg>
+              </div>
+              <h3 style="color: #333; margin-bottom: 10px;">Email</h3>
+              <a href="mailto:siemens@dkut.ac.ke" style="color: #2ecc71; text-decoration: none; transition: color 0.3s;">siemens@dkut.ac.ke</a>
             </div>
-            
+            <div style="text-align: center; margin-bottom: 30px; flex: 1 1 200px; min-width: 200px; max-width: 300px;box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);">
+              <div style="background-color: #e74c3c; width: 60px; height: 60px; border-radius: 50%; display: flex; justify-content: center; align-items: center; margin: 0 auto 20px;">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                  <circle cx="12" cy="10" r="3"></circle>
+                </svg>
+              </div>
+              <h3 style="color: #333; margin-bottom: 10px;">Address</h3>
+              <a href="https://maps.google.com/?q=Dedan+Kimathi+University+of+Technology" target="_blank" rel="noopener noreferrer" style="color: #e74c3c; text-decoration: none; transition: color 0.3s;">
+                Dedan Kimathi University of Technology,<br>Nyeri, Kenya
+              </a>
+            </div>
+            <div style="text-align: center; margin-bottom: 30px; flex: 1 1 200px; min-width: 200px; max-width: 300px;">
+              <div style="width: 100%; height: 200px; border-radius: 8px; overflow: hidden;">
+                <iframe 
+                  width="100%" 
+                  height="100%" 
+                  frameborder="0" 
+                  style="border:0" 
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3989.7176650564924!2d36.96027731475205!3d-0.3923226997136056!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x18285f1e0c2c9c0f%3A0x9a0d2c4a8c1c1c1a!2sDedan%20Kimathi%20University%20of%20Technology!5e0!3m2!1sen!2sus!4v1620298270925!5m2!1sen!2sus" 
+                  allowfullscreen>
+                </iframe>
+              </div>
+            </div>
+          </div>
         </div>
-    </div>
-    
+      </section>
     <!-- Contact End -->
         
 
@@ -255,6 +314,25 @@
 
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
+    <script src="js/hero.js"></script>
+    <script>
+document.addEventListener('DOMContentLoaded', function() {
+            setHero(
+                'Virtual Mechatronics LAb',
+                'Discover amazing things with us',
+                '',
+                'index.html',
+                [
+                    'video/The-DeKUT-Vice-Chancellor-takes-a-Memory-photo-with-the-Officials-Delegates-Skill-Experts-and-Judges.png',
+                     'video/sifa.jpg',
+                    'video/elsie.jpg',
+                    'video/mallory.PNG',
+                    'video/murage.jpg',
+                                      
+                ]
+            );
+        });
+    </script>
 </body>
 
 </html>

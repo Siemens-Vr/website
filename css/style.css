@@ -830,5 +830,71 @@ h6,
   .artists-hover hr {
     margin: 1.5rem 0;
   }
-  
+
+
+
+/*** News Alert***/
+.news-alert {
+    width: 100%;
+    padding: 15px 0;
+    overflow: hidden;
+    position: relative;
+}
+
+.news-ticker {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.news-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 16px;
+    opacity: 0;
+    position: absolute;
+    width: 100%;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.news-item.visible {
+    opacity: 1;
+}
+
+.news-text {
+    margin-right: 10px;
+}
+
+.see-more {
+    color: #ff0000;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.see-more:hover {
+    text-decoration: underline;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes fadeOut {
+    from { opacity: 1; }
+    to { opacity: 0; }
+}
+
+.fade-in {
+    animation: fadeIn 0.5s ease-in-out forwards;
+}
+
+.fade-out {
+    animation: fadeOut 0.5s ease-in-out forwards;
+}
+
+
   

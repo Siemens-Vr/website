@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>News Page - Virtual Mechatronics Lab</title>
+    <!-- Favicon -->
+    <link href="img/favicon.icon" rel="icon" />
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Ubuntu:wght@500;700&display=swap" rel="stylesheet" />
+
+    <!-- Icon Font Stylesheet -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet" />
+
+    <!-- Libraries Stylesheet -->
+    <link href="lib/animate/animate.min.css" rel="stylesheet" />
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet" />
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/bootstrap.min.css" rel="stylesheet" />
+
+    <!-- Template Stylesheet -->
+    <link href="css/style.css" rel="stylesheet" />
+
+    <style>
+          body {
+        font-family: system-ui, -apple-system, sans-serif;
+        max-width: 1400px;
+        margin: 0 auto;
+        padding-top: 20px;
+        background-color: #f9fafb;
+      }
+
+
+        .news-container {
+            display: grid;
+            grid-template-columns: minmax(0, 1fr) 350px;
+            gap: 2rem;
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 0 1rem;
+            padding-top: 300px;
+        }
+
+        .main-news {
+            background-color: #fff;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+        }
+
+        .main-news img {
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+        }
+
+        .news-content {
+            padding: 1.5rem;
+        }
+
+        .side-news {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        .news-card {
+            display: grid;
+            grid-template-columns: 120px 1fr;
+            gap: 15px;
+            background-color: #fff;
+            border-radius: 8px;
+            align-items: center;
+            overflow: hidden;
+            padding: 10px;
+            transition: all 0.3s ease;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+            
+        }
+
+        .news-card img {
+        width: 100px;
+        height: 100px;
+        object-fit: cover;
+        border-radius: 4px;
+        transition: transform 0.3s ease;
+      }
+
+
+      .news-card:hover img {
+        transform: scale(1.05);
+      }
+      .news-card:hover h2 {
+        color: #1363c6;
+      }
+
+
+
+        .news-card img {
+            width: 100%;
+            height: 70%;
+            object-fit: cover;
+        }
+
+        .meta-info {
+            font-size: 0.875rem;
+            color: #6b7280;
+            margin-bottom: 0.5rem;
+        }
+
+        h1 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            color: #111827;
+        }
+
+        h2 {
+            font-size: 1.25rem;
+            margin-bottom: 0.5rem;
+            color: #111827;
+        }
+
+        p {
+            font-size: 1rem;
+            color: #4b5563;
+            line-height: 1.5;
+        }
+
+        @media (max-width: 768px) {
+            .news-container {
+                grid-template-columns: 1fr;
+            }
+
+            .news-card {
+                grid-template-columns: 1fr;
+            }
+
+            .news-card img {
+                height: 100px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar Start -->
+    <div class="container-fluid sticky-top">
+        <div class="container">
+            <nav class="navbar navbar-expand-lg navbar-dark p-0">
+                <a href="index.html" class="navbar-brand">
+                    <img class="logo" src="./img/logos/Virtual Mechatronics Lab Logo V2-01.png" alt="Virtual Mechatronics Lab Logo" />
+                </a>
+                <button type="button" class="navbar-toggler ms-auto me-0" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarCollapse">
+                    <div class="navbar-nav ms-auto">
+                        <a href="index.html" class="nav-item nav-link fw-bolder blk">Home</a>
+                        <a href="about.html" class="nav-item nav-link fw-bolder blk">About</a>
+                        <a href="wordskill.html" class="nav-item nav-link fw-bolder blk">Wordskill</a>
+                        <a href="sifa.html" class="nav-item nav-link fw-bolder blk">Sifa</a>
+                        <a href="blog.html" class="nav-item nav-link fw-bolder blk active">Blog</a>
+                        <a href="contact.html" class="nav-item nav-link fw-bolder blk">Contact</a>
+                    </div>
+                    <button type="button" class="btn text-white p-0 d-none d-lg-block" data-bs-toggle="modal" data-bs-target="#searchModal">
+                        <i class="fa fa-search"></i>
+                    </button>
+                </div>
+            </nav>
+        </div>
+    </div>
+    <!-- Navbar End -->
+
+    <!-- Video header -->
+    <div class="video-wrap-others mt-5">
+        <video autoplay loop muted class="custom-video-others" poster="">
+            <source src="video/background2.mp4" type="video/mp4" />
+            Your browser does not support the video tag.
+        </video>
+        <div class="video-overlay">
+            <h1>Virtual Mechatronics Lab</h1>
+        </div>
+    </div>
+
+    <!-- Main content -->
+    <div class="news-container">
+        <div class="main-news" id="smscp">
+            <img src="./img/news/VR-ROS-pic3.png" alt="VR and ROS setup" />
+            <div class="news-content">
+                <div class="news-header">
+                    <div class="tags">
+                        <span class="tag">Results</span>
+                    </div>
+                    <div class="meta-info">
+                        <span class="author">smscp</span>
+                        <span class="dot">·</span>
+                        <span class="date">7 Oct 2024</span>
+                    </div>
+                    <h1>The Release of the SMSCP Level 1 Results.</h1>
+                    <p class="brief">
+                        Prof. Jean Bosco Byiringiro has Approved the release of the results for The SMCSP Level 1 Students
+                    </p>
+                </div>
+                <div class="news-body">
+                    <h2>The Process</h2>
+                    <p>
+                        Through the office of Dr. John the much anticipated results are out where the training department is pleased with what the students have delivered.
+                    </p>
+                    <p>
+                        Through various channels and stakeholders are content with the delivery of the Level 1 training that was intense.
+                    </p>
+                    <h2>Students Reaction</h2>
+                    <p>
+                        The students are thrilled by the fairly well delivered results that have just been released by the Training center. And Thrilled to Share The Experience with others to join the program.
+                    </p>
+                </div>
+            </div>
+        </div>
+    
+        <div class="side-news">
+            <div class="news-card" id="sifa">
+                <img src="./img/news/sifa.jpg" alt="Prof Jean Bosco" />
+                <div class="news-content">
+                    <div class="meta-info">
+                        <span class="author">sifa</span>
+                        <span class="dot">·</span>
+                        <span class="date">14 Feb 2024</span>
+                    </div>
+                    <h2>EU sifa Innovation phase III</h2>
+                    <p>
+                        The project launch on 14 Feb with Prof. Jean Bosco (PhD, Reg.Eng) and Siemens Mechatronics DeKut..
+                    </p>
+                </div>
+            </div>
+    
+            <div class="news-card" id="attachment">
+                <img src="./img/news/attachment.jpg" alt="Business partners" />
+                <div class="news-content">
+                    <div class="meta-info">
+                        <span class="author">attachment</span>
+                        <span class="dot">·</span>
+                        <span class="date">03 Sept 2024</span>
+                    </div>
+                    <h2>Ongoing Attachment At Siemens Training Center</h2>
+                    <p>
+                       Thrilled to have a new set of IT attaches from school of Science and international students working with the newset set of skills.
+                    </p>
+                </div>
+            </div>
+    
+            <div class="news-card" id="scmp">
+                <img src="./img/project2.png" alt="Business partners" />
+                <div class="news-content">
+                    <div class="meta-info">
+                        <span class="author">scmp</span>
+                        <span class="dot">·</span>
+                        <span class="date">18 Aug 2024</span>
+                    </div>
+                    <h2>Ongoing SCMP 2 Classes</h2>
+                    <p>
+                        Variant SCMSP Level 2 classes taking place with a roller coaster experience with the able professional and team work
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+   
+    <!-- Partners section -->
+    <div class="container-fluid bg-light newsletter mt-5 py-5">
+        <div class="container">
+            <h1 style="color: #1363c6; text-align: center">Partners</h1>
+            <div class="row g-5 align-items-center">
+                <div class="sponsor-logos">
+                    <div class="row justify-content-center">
+                        <div class="col-auto">
+                            <img src="./img/logos/SIFA FC.png" alt="Sponsor 1" />
+                        </div>
+                        <div class="col-auto">
+                            <img src="./img/logos/AU_LOGO_ENGLISH_CMYK.png" alt="Sponsor 4" />
+                        </div>
+                        <div class="col-auto">
+                            <img src="./img/logos/AUDA-NEPAD_LOGO_EN.png" alt="Sponsor 5" />
+                        </div>
+                        <div class="col-auto">
+                            <img src="./img/logos/BMZ Logo.png" alt="Sponsor 2" />
+                        </div>
+                        <div class="col-auto">
+                            <img src="./img/logos/EN Co-funded by the EU_PANTONE.jpg" alt="Sponsor 4" />
+                        </div>
+                        <div class="col-auto">
+                            <img src="./img/logos/KfW_LOGO.png" alt="Sponsor 3" />
+                        </div>
+                        <div class="col-auto">
+                            <img src="img/SSF_Logo_transparent_RGB.png" alt="Sponsor 3" />
+                        </div>
+                        <div class="col-auto">
+                            <img src="img/TVETA.png" alt="Sponsor 3" />
+                        </div>
+                        <div class="col-auto">
+                            <img src="img/ARSO-LOGO-2-pr.jpg" alt="Sponsor 3" />
+                        </div>
+                        <div class="col-auto">
+                            <img src="img/FESTO.png" alt="Sponsor 3" />
+                        </div>
+                        <div class="col-auto">
+                            <img src="img/SIEMENS.png" alt="Sponsor 3" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer Start -->
+    <div class="container-fluid bg-dark text-white-50 footer pt-5">
+        <div class="container py-5">
+            <div class="row g-5">
+                <div class="col-md-6 col-lg-3 wow fadeIn" data-wow-delay="0.1s">
+                    <a href="index.html" class="d-inline-block mb-3">
+                        <h1 class="text-white">Virtual Mechatronics</h1>
+                    </a>
+                    <p class="mb-0">Unlocking the potential: Virtually</p>
+                </div>
+                <div class="col-md-6 col-lg-3 wow fadeIn" data-wow-delay="0.3s">
+                    <h5 class="text-white mb-4">Get In Touch</h5>
+                    <p><i class="fa fa-map-marker-alt me-3"></i>Nyeri, Kenya</p>
+                    <p><i class="fa fa-phone-alt me-3"></i>+25416150627</p>
+                    <p><i class="fa fa-envelope me-3"></i>vr.africa@dkut.ac.ke</p>
+                    <div class="d-flex pt-2">
+                        <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-twitter"></i></a>
+                        <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-facebook-f"></i></a>
+                        <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-youtube"></i></a>
+                        <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-instagram"></i></a>
+                        <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3 wow fadeIn" data-wow-delay="0.5s">
+                    <h5 class="text-white mb-4">Popular Link</h5>
+                    <a class="btn btn-link" href="">About Us</a>
+                    <a class="btn btn-link" href="">Contact Us</a>
+                    <a class="btn btn-link" href="">Privacy Policy</a>
+                    <a class="btn btn-link" href="">Terms & Condition</a>
+                    <a class="btn btn-link" href="">Career</a>
+                </div>
+                <div class="col-md-6 col-lg-3 wow fadeIn" data-wow-delay="0.7s">
+                    <h5 class="text-white mb-4">Our Projects</h5>
+                    <a class="btn btn-link" href="">Virtual Reality</a>
+                    <a class="btn btn-link" href="">Virtual Mechatronics</a>
+                    <a class="btn btn-link" href="">Designs</a>
+                    <a class="btn btn-link" href="">Trainings</a>
+                    <a class="btn btn-link" href="">Virtual Reality</a>
+                </div>
+            </div>
+        </div>
+        <div class="container wow fadeIn" data-wow-delay="0.1s">
+            <div class="copyright">
+                <div class="row">
+                    <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+                        &copy; <a class="border-bottom" href="#">Virtual Mechatronics</a>, All Right Reserved.
+                    </div>
+                    <div class="col-md-6 text-center text-md-end">
+                        <div class="footer-menu">
+                            <a href="">Home</a>
+                            <a href="">Cookies</a>
+                            <a href="">Help</a>
+                            <a href="">FAQs</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Footer End -->
+
+    <!-- JavaScript Libraries -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/wow/wow.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/counterup/counterup.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+
+    <!-- Template Javascript -->
+<script>
+    const newsData = {
+        smscp: {
+          id: 'smscp',
+          image: './img/news/VR-ROS-pic3.png',
+          title: 'The Release of the SMSCP Level 1 Results.',
+          author: 'smscp',
+          date: '7 Oct 2024',
+          tags: ['Results'],
+          brief: 'Prof. Jean Bosco Byiringiro has Approved the release of the results for The SMCSP Level 1 Students',
+          content: `
+            <h2>The Process</h2>
+            <p>Through the office of Dr. John the much anticipated results are out where the training department is pleased with what the students have delivered.</p>
+            <p>Through various channels and stakeholders are content with the delivery of the Level 1 training that was intense.</p>
+            <h2>Students Reaction</h2>
+            <p>The students are thrilled by the fairly well delivered results that have just been released by the Training center. And Thrilled to Share The Experience with others to join the program.</p>
+          `
+        },
+        sifa: {
+          id: 'sifa',
+          image: './img/news/sifa.jpg',
+          title: 'EU sifa Innovation phase III',
+          author: 'sifa',
+          date: '14 Feb 2024',
+          content: 'The project launch on 14 Feb with Prof. Jean Bosco (PhD, Reg.Eng) and Siemens Mechatronics DeKut..'
+        },
+        attachment: {
+          id: 'attachment',
+          image: './img/news/attachment.jpg',
+          title: 'Ongoing Attachment At Siemens Training Center',
+          author: 'attachment',
+          date: '03 Sept 2024',
+          content: 'Thrilled to have a new set of IT attaches from school of Science and international'
+        },
+        scmp: {
+          id: 'scmp',
+          image: './img/project2.png',
+          title: 'Ongoing SCMP 2 Classes',
+          author: 'scmp',
+          date: '18 Aug 2024',
+          content: 'Variant SCMSP Level 2 classes taking place with a roller coaster experience...'
+        },
+
+      };
+      
+      function updateMainNews(newsId) {
+        const news = newsData[newsId];
+        const mainNewsContent = document.querySelector('.main-news');
+        
+        mainNewsContent.innerHTML = `
+          <img src="${news.image}" alt="${news.title}" />
+          <div class="news-content">
+            <div class="news-header">
+              <div class="tags">
+                ${news.tags ? news.tags.map(tag => <span class="tag">${tag}</span>).join('') : ''}
+              </div>
+              <div class="meta-info">
+                <span class="author">${news.author}</span>
+                <span class="dot">·</span>
+                <span class="date">${news.date}</span>
+              </div>
+              <h1>${news.title}</h1>
+              ${news.brief ? <p class="brief">${news.brief}</p> : ''}
+            </div>
+            <div class="news-body">
+              ${news.content}
+            </div>
+          </div>
+        `;
+      }
+      
+      function updateSideNews() {
+        const sideNewsContainer = document.querySelector('.side-news');
+        const sideNewsIds = ['sifa', 'attachment', 'scmp'];
+        
+        sideNewsContainer.innerHTML = sideNewsIds.map(id => {
+          const news = newsData[id];
+          return `
+            <div class="news-card" id="${id}">
+              <img src="${news.image}" alt="${news.title}" />
+              <div class="news-content">
+                <div class="meta-info">
+                  <span class="author">${news.author}</span>
+                  <span class="dot">·</span>
+                  <span class="date">${news.date}</span>
+                </div>
+                <h2>${news.title}</h2>
+                <p>${news.content}</p>
+              </div>
+            </div>
+          `;
+        }).join('');
+      }
+      
+      document.addEventListener('DOMContentLoaded', function() {
+        updateSideNews();
+        
+        const newsCards = document.querySelectorAll('.news-card');
+        newsCards.forEach(card => {
+          card.addEventListener('click', function() {
+            const newsId = this.getAttribute('id');
+            updateMainNews(newsId);
+            
+            // Add active class to clicked card and remove from others
+            newsCards.forEach(c => c.classList.remove('active'));
+            this.classList.add('active');
+          });
+        });
+        
+        // Initialize with the main news
+        updateMainNews('smscp');
+        
+        // Add event listener for the ambassador news card
+        const ambassadorCard = document.getElementById('ambassador');
+        if (ambassadorCard) {
+          ambassadorCard.addEventListener('click', function() {
+            updateMainNews('ambassador');
+            newsCards.forEach(c => c.classList.remove('active'));
+            this.classList.add('active');
+          });
+        }
+      });
+   </script>
+    <script src="js/main.js"></script>
+</body>
+</html>

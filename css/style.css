@@ -594,6 +594,53 @@ h6,
 
 
 /*** Footer ***/
+.sponsor-logos-wrapper {
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+    background: white;
+    padding: 20px 0;
+}
+
+.sponsor-logos {
+    display: flex;
+    animation: scroll 20s linear infinite;
+    min-width: 150%;
+}
+
+.logo-col {
+    flex: 0 0 auto;
+    width: 180px;
+    height: 180px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 20px;
+    background-color: transparent; /* Set to transparent to remove background */
+    border-radius: 0; /* Remove rounded corners */
+}
+
+.sponsor-logo {
+    max-width: 100%;
+    max-height: 100%;
+    transition: transform 0.3s;
+}
+
+.sponsor-logo:hover {
+    transform: scale(1.1);
+}
+
+/* Scrolling animation */
+@keyframes scroll {
+    0% {
+        transform: translateX(100%);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+/* Footer */
 .footer {
     background: url(../img/footer.png) center center no-repeat;
     background-size: contain;
@@ -669,6 +716,46 @@ h6,
     border-right: none;
 }
 
+
+/* Additional styles for the footer */
+.footer {
+    background-color: #343a40; /* Dark background color */
+}
+
+.btn-link {
+    padding: 0; /* Remove padding from links */
+    color: white; /* White color for links */
+    transition: color 0.3s ease; /* Smooth transition for hover effect */
+}
+
+.btn-link:hover {
+    color: #f8f9fa; /* Lighter color on hover */
+}
+
+.btn-social {
+    width: 38px; /* Adjust size for social buttons */
+    height: 38px; /* Adjust size for social buttons */
+    border-radius: 50%; /* Make buttons circular */
+    display: flex; /* Center icons in buttons */
+    align-items: center; /* Center icons in buttons */
+    justify-content: center; /* Center icons in buttons */
+    margin-right: 5px; /* Add spacing between buttons */
+    transition: background-color 0.3s ease; /* Smooth transition for hover effect */
+}
+
+.btn-social:hover {
+    background-color: rgba(255, 255, 255, 0.2); /* Slightly lighter background on hover */
+}
+
+.footer-menu a {
+    margin: 0 10px; /* Space out footer menu links */
+    color: white; /* White color for footer menu links */
+    transition: color 0.3s ease; /* Smooth transition for hover effect */
+}
+
+.footer-menu a:hover {
+    color: #f8f9fa; /* Lighter color on hover */
+}
 
 
 /*---------------------------------------

@@ -110,6 +110,24 @@
                 <h1 class="text-4xl md:text-6xl font-bold mb-4">Virtual Mechatronics Lab</h1>
                 <p class="text-xl md:text-2xl text-center">Welcome to the pioneering Siemens Mechatronics Certiﬁcation Centre in Africa.</p>
             </div>
+                   <div class="news-alert">
+                        <div class="news-ticker">
+                            <div class="news-item">
+                                <span class="news-text">SMSCP L1 students Results Available</span>
+                                <a href="news.html#smscp" class="see-more">See More Details</a>
+                            </div>
+                            <div class="news-item">
+                                <span class="news-text">EU Sifa Innovation Phase III</span>
+                                <a href="news.html#sifa" class="see-more">See More Details</a>
+                            </div>
+                            <div class="news-item">
+                                <span class="news-text">Ongoing Attachment At Siemens Training Center</span>
+                                <a href="news.html#attachment" class="see-more">See More Details</a>
+                            </div>
+                        </div>
+                    </div>
+            </div>
+            
         </div>
 </div>
  
@@ -732,6 +750,28 @@
 
     images[currentIndex].classList.add('active'); // Ensure the first image is visible initially
     setInterval(showNextImage, 1000);
+
+     document.addEventListener('DOMContentLoaded', function() {
+                    const newsItems = document.querySelectorAll('.news-item');
+                    let currentIndex = 0;
+        
+                    function showNextItem() {
+                        newsItems[currentIndex].classList.remove('visible', 'fade-in');
+                        newsItems[currentIndex].classList.add('fade-out');
+                        
+                        setTimeout(() => {
+                            newsItems[currentIndex].classList.remove('fade-out');
+                            currentIndex = (currentIndex + 1) % newsItems.length;
+                            newsItems[currentIndex].classList.add('visible', 'fade-in');
+                        }, 500);
+                    }
+        
+                    // Show the first item immediately
+                    newsItems[0].classList.add('visible', 'fade-in');
+        
+                    // Change news item every 5 seconds
+                    setInterval(showNextItem, 5000);
+                });
 });
 </script>
 

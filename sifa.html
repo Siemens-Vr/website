@@ -20,6 +20,7 @@
     <!-- Icon Font Stylesheet -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
 
     <!-- Libraries Stylesheet -->
     <link href="lib/animate/animate.min.css" rel="stylesheet">
@@ -32,6 +33,74 @@
     <link href="css/style.css" rel="stylesheet">
 
     <style>
+        .sifa-section {
+            background-color: #7796b8; /* Light background for sections */
+            border-radius: 8px;
+            padding: 20px; /* Add some padding */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+        }
+
+        .sifa-title {
+            position: relative; /* Needed for border styling */
+        }
+
+        .sifa-title::after {
+            content: '';
+            display: block;
+            height: 2px;
+            width: 50px; /* Width of the bottom border */
+            background: #4f46e5; /* Indigo color */
+            margin-top: 8px;
+            border-radius: 2px;
+        }
+
+        .sifa-image-container {
+            transition: transform 0.3s; /* Smooth scaling on hover */
+        }
+
+        .sifa-image-container:hover {
+            transform: scale(1.05); /* Slight scale on hover */
+        }
+
+        .sifa-content {
+            padding: 0 15px; /* Add horizontal padding */
+        }
+
+        /* Read More Button */
+        .sifa-read-more {
+            display: inline-flex;
+            align-items: center;
+            padding: 10px 20px;
+            background-color: #4f46e5; /* Indigo background */
+            color: #fff; /* White text */
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+
+        .sifa-read-more:hover {
+            background-color: #4338ca; /* Darker indigo on hover */
+        }
+
+        /* Animation for the arrow */
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% {
+                transform: translateY(0);
+            }
+            40% {
+                transform: translateY(-5px);
+            }
+            60% {
+                transform: translateY(-2.5px);
+            }
+        }
+
+        .animate-bounce {
+            animation: bounce 1s infinite; /* Continuous bounce effect */
+        }
+
+
         @media(min-width: 1366px){
             .content-container-sifa{
                 /* margin-top: 400px; */
@@ -578,124 +647,204 @@
     
 
     <!-- About End -->
-
-
-
-    <!-- Milestones Section Start -->
-    <div class="bg-gray-100">
-        <div class="container mx-auto px-4 py-8">
-            <h2 class="text-3xl font-bold text-center mb-8 text-gray-800">Project Milestones</h2>
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                <!-- Milestone 1 -->
-                <div class="project-milestone-card">
-                    <div class="p-6 flex-grow">
-                        <h5 class="text-xl font-semibold mb-3 text-indigo-600">Milestone 1: Preparatory Phase</h5>
-                        <p class="text-gray-600 mb-4">This phase focuses on finalizing the project workplan and budget, ensuring all resources are in place.</p>
-                        <div id="milestone1Content" class="project-milestone-content">
-                            <h6 class="font-semibold text-gray-700 mb-2">Activity 1: Preparing Final Project Workplan and Budget</h6>
-                            <ul class="list-disc pl-5 text-gray-600 space-y-1">
-                                <li>Engaging with project partners & SIFA FC - <span class="font-semibold">March 2024</span></li>
-                                <li>Writing Final Workplan & Budget - <span class="font-semibold">March 2024</span></li>
-                                <li>Process Listing of required inputs for Milestone 1 - <span class="font-semibold">March 2024</span></li>
-                                <li>Development of desktop-based Metaverse platform - <span class="font-semibold">March 2024</span></li>
-                                <li>Development of a Monitoring and Evaluation strategy - <span class="font-semibold">April 2024</span></li>
-                                <li>Writing Inception report, quarterly report, milestone report - <span class="font-semibold">April 2024</span></li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="px-6 pb-4">
-                        <button class="project-milestone-read-more text-indigo-600 font-semibold focus:outline-none" onclick="toggleContent('milestone1Content', this)">Read More</button>
+    <div class="container mx-auto px-4">
+        <!-- About SIFA Section -->
+        <section class="sifa-section mb-16">
+            <h2 class="sifa-title text-3xl font-semibold text-indigo-600 mb-6 text-center">About SIFA</h2>
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="sifa-image-container md:w-1/2 md:pr-8 mb-6 md:mb-0">
+                    <div class="bg-gray-200 h-64 flex items-center justify-center rounded-lg shadow-md">
+                        <p class="text-gray-500">Placeholder for SIFA image</p>
                     </div>
                 </div>
-
-                <!-- Milestone 2 -->
-                <div class="project-milestone-card">
-                    <div class="p-6 flex-grow">
-                        <h5 class="text-xl font-semibold mb-3 text-indigo-600">Milestone 2: Market Analysis and Market Validation Plan</h5>
-                        <p class="text-gray-600 mb-4">This milestone involves conducting market surveys and developing tools to validate findings.</p>
-                        <div id="milestone2Content" class="project-milestone-content">
-                            <h6 class="font-semibold text-gray-700 mb-2">Activity 2: Carry out a Market Survey</h6>
-                            <ul class="list-disc pl-5 text-gray-600 space-y-1">
-                                <li>Integrating physical infrastructure with metaverse platform - <span class="font-semibold">May 2024</span></li>
-                                <li>Process Listing of inputs for Milestone 2 - <span class="font-semibold">May 2024</span></li>
-                                <li>Preparing market analysis tools - <span class="font-semibold">July 2024</span></li>
-                            </ul>
-                            <h6 class="font-semibold text-gray-700 mt-4 mb-2">Activity 3: Preparing Market Validation Plan</h6>
-                            <ul class="list-disc pl-5 text-gray-600 space-y-1">
-                                <li>Develop a market validation plan - <span class="font-semibold">July 2024</span></li>
-                                <li>Develop a web-based metaverse platform - <span class="font-semibold">July 2024</span></li>
-                                <li>Develop a project website - <span class="font-semibold">July 2024</span></li>
-                                <li>Prepare Quarterly (1 & 2) report and milestone reports - <span class="font-semibold">May & August 2024</span></li>
-                                <li>Process listing inputs for 4IR Automation system - <span class="font-semibold">August 2024</span></li>
-                                <li>Development of digital content for the web-based metaverse platform - <span class="font-semibold">August 2024</span></li>
-                            </ul>
-                        </div>
+                <div class="sifa-content md:w-1/2">
+                    <p class="text-gray-700 mb-4">
+                        The Skills Initiative for Africa (SIFA) is a strategic effort led by the African Union Commission (AUC) and
+                        the African Union Development Agency (AUDA-NEPAD), with support from the German Government and
+                        the European Union. This initiative aims to enhance the occupational prospects of young people in Africa
+                        by improving vocational and technical training.
+                    </p>
+                    <div class="mb-4">
+                        <h3 class="sifa-subtitle text-xl font-semibold text-indigo-500 mb-2">Key Stakeholders</h3>
+                        <ul class="list-disc pl-5 text-gray-600">
+                            <li>African Union Commission (AUC)</li>
+                            <li>African Union Development Agency (AUDA-NEPAD)</li>
+                            <li>German Government</li>
+                            <li>European Union</li>
+                        </ul>
                     </div>
-                    <div class="px-6 pb-4">
-                        <button class="project-milestone-read-more text-indigo-600 font-semibold focus:outline-none" onclick="toggleContent('milestone2Content', this)">Read More</button>
+                    <div>
+                        <h3 class="sifa-subtitle text-xl font-semibold text-indigo-500 mb-2">Purpose</h3>
+                        <p class="text-gray-600">
+                            SIFA is designed to address the skills gap in Africa by strengthening technical and vocational education
+                            and training. The initiative aims to enhance the employability of young Africans and align educational
+                            outcomes with the demands of the job market.
+                        </p>
+                    </div>
+                    <!-- Read More Section -->
+                    <div class="flex justify-center mt-6">
+                        <button id="readMoreBtn" class="sifa-read-more flex items-center text-indigo-600 hover:text-indigo-800 transition-colors duration-300">
+                            <span class="mr-2">Read More</span>
+                            <svg class="w-6 h-6 transform transition-transform duration-300 animate-bounce" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6" />
+                            </svg>
+                        </button>
+                    </div>
+                    <div id="moreContent" class="hidden mt-4">
+                        <p class="text-gray-600">
+                            The initiative also aims to facilitate access to quality education and training, ensuring that young people
+                            have the necessary skills to meet the demands of modern workplaces. Through partnerships with various stakeholders,
+                            SIFA seeks to foster sustainable economic growth across the continent.
+                        </p>
+                        <p class="text-gray-600">
+                            SIFA prioritizes hands-on training and real-world applications, allowing students to gain valuable experience
+                            that enhances their career readiness. By aligning education with industry needs, SIFA contributes to a more
+                            competitive workforce in Africa.
+                        </p>
+                        <p class="text-gray-600">
+                            Ultimately, SIFA is committed to transforming the landscape of vocational education in Africa, ensuring that
+                            young people are equipped with the skills and knowledge required for success in their chosen careers.
+                        </p>
                     </div>
                 </div>
-
-                <!-- Milestone 3 -->
-                <div class="project-milestone-card">
-                    <div class="p-6 flex-grow">
-                        <h5 class="text-xl font-semibold mb-3 text-indigo-600">Milestone 3: Market Validation on Site</h5>
-                        <p class="text-gray-600 mb-4">This milestone focuses on validating market conditions through practical assessments and training.</p>
-                        <div id="milestone3Content" class="project-milestone-content">
-                            <h6 class="font-semibold text-gray-700 mb-2">Activity 4: Conducting Market Validation on Site</h6>
-                            <ul class="list-disc pl-5 text-gray-600 space-y-1">
-                                <li>Selecting 30 trainees comprising of 10 TVET Instructors and 20 TVET Students - <span class="font-semibold">September 2024</span></li>
-                                <li>Process listing required inputs for Milestone 3 - <span class="font-semibold">October 2024</span></li>
-                                <li>Develop training manual and digital content harmonized with 4IR skill occupation standards - <span class="font-semibold">October 2024</span></li>
-                                <li>Provision of physical and blended training to selected TVET trainees - <span class="font-semibold">November 2024</span></li>
-                                <li>Develop and allocate 10 distinctive projects to TVET trainees - <span class="font-semibold">December 2024</span></li>
-                            </ul>
+            </div>
+        </section>
+    
+        <!-- Milestones Section Start -->
+        <div class="container mx-auto px-4">
+            <!-- Milestones Section Start -->
+            <div class="bg-gray-100">
+                <div class="container mx-auto px-4 py-8">
+                    <h2 class="text-3xl font-bold text-center mb-8 text-gray-800">Project Milestones</h2>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                        <!-- Milestone 1 -->
+                        <div class="project-milestone-card">
+                            <div class="p-6 flex-grow">
+                                <h5 class="text-xl font-semibold mb-3 text-center text-indigo-600">Milestone 1: Preparatory Phase</h5>
+                                <p class="text-gray-600 mb-4">This phase focuses on finalizing the project workplan and budget, ensuring all resources are in place.</p>
+                                <div id="milestone1Content" class="project-milestone-content p-3 hidden">
+                                    <h6 class="font-semibold text-gray-700 mb-2">Activity 1: Preparing Final Project Workplan and Budget</h6>
+                                    <ul class="list-disc pl-5 text-gray-600 space-y-1">
+                                        <li>Engaging with project partners & SIFA FC - <span class="font-semibold">March 2024</span></li>
+                                        <li>Writing Final Workplan & Budget - <span class="font-semibold">March 2024</span></li>
+                                        <li>Process Listing of required inputs for Milestone 1 - <span class="font-semibold">March 2024</span></li>
+                                        <li>Development of desktop-based Metaverse platform - <span class="font-semibold">March 2024</span></li>
+                                        <li>Development of a Monitoring and Evaluation strategy - <span class="font-semibold">April 2024</span></li>
+                                        <li>Writing Inception report, quarterly report, milestone report - <span class="font-semibold">April 2024</span></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="px-6 pb-4">
+                                <button class="project-milestone-read-more text-indigo-600 font-semibold focus:outline-none" onclick="toggleContent('milestone1Content', this)">Read More</button>
+                            </div>
                         </div>
-                    </div>
-                    <div class="px-6 pb-4">
-                        <button class="project-milestone-read-more text-indigo-600 font-semibold focus:outline-none" onclick="toggleContent('milestone3Content', this)">Read More</button>
-                    </div>
-                </div>
-
-                <!-- Milestone 4 -->
-                <div class="project-milestone-card">
-                    <div class="p-6 flex-grow">
-                        <h5 class="text-xl font-semibold mb-3 text-indigo-600">Milestone 4: Project Completion</h5>
-                        <p class="text-gray-600 mb-4">The final milestone focuses on completing documentation and finalizing reports for the project.</p>
-                        <div id="milestone4Content" class="project-milestone-content">
-                            <h6 class="font-semibold text-gray-700 mb-2">Activity 5: Writing/Preparing the Project Completion Report/Document</h6>
-                            <ul class="list-disc pl-5 text-gray-600 space-y-1">
-                                <li>Preparation of metaverse platform documentation and implementation plan - <span class="font-semibold">May 2025</span></li>
-                            </ul>
-                            <h6 class="font-semibold text-gray-700 mt-4 mb-2">Activity 6: Writing the Final Business Plan</h6>
-                            <ul class="list-disc pl-5 text-gray-600 space-y-1">
-                                <li>Development of a business plan - <span class="font-semibold">May 2025</span></li>
-                                <li>Prepare Quarterly (5 & 6) report and milestone reports - <span class="font-semibold">May 2025 & August 2025</span></li>
-                            </ul>
-                            <h6 class="font-semibold text-gray-700 mt-4 mb-2">Activity 7: Conducting Final Project Audit</h6>
-                            <ul class="list-disc pl-5 text-gray-600 space-y-1">
-                                <li>Drafting final report (project completion report) - <span class="font-semibold">August 2025</span></li>
-                                <li>Facilitating Project auditing process - <span class="font-semibold">August 2025</span></li>
-                                <li>Submitting Final report (Project completion report) - <span class="font-semibold">August 2025</span></li>
-                            </ul>
+        
+                        <!-- Milestone 2 -->
+                        <div class="project-milestone-card">
+                            <div class="p-6 flex-grow">
+                                <h5 class="text-xl font-semibold mb-3 text-center text-indigo-600">Milestone 2: Market Analysis and Market Validation Plan</h5>
+                                <p class="text-gray-600 mb-4">This milestone involves conducting market surveys and developing tools to validate findings.</p>
+                                <div id="milestone2Content" class="project-milestone-content p-3 hidden">
+                                    <h6 class="font-semibold text-gray-700 mb-2">Activity 2: Carry out a Market Survey</h6>
+                                    <ul class="list-disc pl-5 text-gray-600 space-y-1">
+                                        <li>Integrating physical infrastructure with metaverse platform - <span class="font-semibold">May 2024</span></li>
+                                        <li>Process Listing of inputs for Milestone 2 - <span class="font-semibold">May 2024</span></li>
+                                        <li>Preparing market analysis tools - <span class="font-semibold">July 2024</span></li>
+                                    </ul>
+                                    <h6 class="font-semibold text-gray-700 mt-4 mb-2">Activity 3: Preparing Market Validation Plan</h6>
+                                    <ul class="list-disc pl-5 text-gray-600 space-y-1">
+                                        <li>Develop a market validation plan - <span class="font-semibold">July 2024</span></li>
+                                        <li>Develop a web-based metaverse platform - <span class="font-semibold">July 2024</span></li>
+                                        <li>Develop a project website - <span class="font-semibold">July 2024</span></li>
+                                        <li>Prepare Quarterly (1 & 2) report and milestone reports - <span class="font-semibold">May & August 2024</span></li>
+                                        <li>Process listing inputs for 4IR Automation system - <span class="font-semibold">August 2024</span></li>
+                                        <li>Development of digital content for the web-based metaverse platform - <span class="font-semibold">August 2024</span></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="px-6 pb-4">
+                                <button class="project-milestone-read-more text-indigo-600 font-semibold focus:outline-none" onclick="toggleContent('milestone2Content', this)">Read More</button>
+                            </div>
                         </div>
-                    </div>
-                    <div class="px-6 pb-4">
-                        <button class="project-milestone-read-more text-indigo-600 font-semibold focus:outline-none" onclick="toggleContent('milestone4Content', this)">Read More</button>
+        
+                        <!-- Milestone 3 -->
+                        <div class="project-milestone-card">
+                            <div class="p-6 flex-grow">
+                                <h5 class="text-xl font-semibold mb-3 text-center text-indigo-600">Milestone 3: Market Validation on Site</h5>
+                                <p class="text-gray-600 mb-4">This milestone focuses on validating the market survey findings through direct engagement with stakeholders.</p>
+                                <div id="milestone3Content" class="project-milestone-content p-3 hidden">
+                                    <h6 class="font-semibold text-gray-700 mb-2">Activity 4: Conduct Market Validation Surveys</h6>
+                                    <ul class="list-disc pl-5 text-gray-600 space-y-1">
+                                        <li>Conduct interviews with key stakeholders - <span class="font-semibold">September 2024</span></li>
+                                        <li>Gather feedback from participants - <span class="font-semibold">October 2024</span></li>
+                                        <li>Analyze results and prepare a report - <span class="font-semibold">November 2024</span></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="px-6 pb-4">
+                                <button class="project-milestone-read-more text-indigo-600 font-semibold focus:outline-none" onclick="toggleContent('milestone3Content', this)">Read More</button>
+                            </div>
+                        </div>
+        
+                        <!-- Milestone 4 -->
+                        <div class="project-milestone-card">
+                            <div class="p-6 flex-grow">
+                                <h5 class="text-xl font-semibold mb-3 text-center text-indigo-600">Milestone 4: Reporting and Recommendations</h5>
+                                <p class="text-gray-600 mb-4">This phase entails documenting all findings and providing actionable recommendations based on the survey data.</p>
+                                <div id="milestone4Content" class="project-milestone-content p-3 hidden">
+                                    <h6 class="font-semibold text-gray-700 mb-2">Activity 5: Prepare Final Report</h6>
+                                    <ul class="list-disc pl-5 text-gray-600 space-y-1">
+                                        <li>Draft final report including findings and recommendations - <span class="font-semibold">November 2024</span></li>
+                                        <li>Present findings to stakeholders - <span class="font-semibold">December 2024</span></li>
+                                        <li>Finalize report based on feedback - <span class="font-semibold">December 2024</span></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="px-6 pb-4">
+                                <button class="project-milestone-read-more text-indigo-600 font-semibold focus:outline-none" onclick="toggleContent('milestone4Content', this)">Read More</button>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-
-        <!-- JavaScript for Toggle Functionality -->
-        <script>
-            function toggleContent(contentId, button) {
-                const content = document.getElementById(contentId);
-                content.classList.toggle('active');
-                button.textContent = content.classList.contains('active') ? 'Read Less' : 'Read More';
-            }
-        </script>
+        
+        
     </div>
+    
+    <script>
+        function toggleContent(contentId, button) {
+            const content = document.getElementById(contentId);
+            const isHidden = content.classList.contains('hidden');
+    
+            // Toggle visibility of the content
+            if (isHidden) {
+                content.classList.remove('hidden');
+                content.classList.add('active'); // Add active class to change max-height
+                button.textContent = 'Read Less';
+            } else {
+                content.classList.add('hidden');
+                content.classList.remove('active'); // Remove active class to reset max-height
+                button.textContent = 'Read More';
+            }
+        }
+    
+        document.getElementById('readMoreBtn').addEventListener('click', function() {
+            const moreContent = document.getElementById('moreContent');
+            const isHidden = moreContent.classList.contains('hidden');
+    
+            // Toggle visibility of the more content
+            if (isHidden) {
+                moreContent.classList.remove('hidden');
+                this.querySelector('span').textContent = 'Read Less';
+            } else {
+                moreContent.classList.add('hidden');
+                this.querySelector('span').textContent = 'Read More';
+            }
+        });
+    </script>
+    
+    
     
 
        
